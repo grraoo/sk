@@ -1,6 +1,10 @@
-@import "lib/helpers/project", "lib/helpers/mixins", "lib/helpers/smart-grid";
+@import "lib/helpers/_project.scss", "lib/helpers/_mixins.scss", "lib/helpers/_smart-grid.scss";
 @include normalize();
-@import "lib/helpers/helpers";
-@import "lib/helpers/container";
-@import "lib/header/page-header";
-@import "lib/header/header-top";
+@import "lib/helpers/_helpers.scss";
+@import "lib/helpers/_container.scss";
+@import "lib/header/_page-header.scss";
+@import "lib/header/_header-top.scss";
+@import "lib/header/_logo.scss";
+@import "lib/header/_main-menu.scss";
+@import "lib/header/_callback.scss";
+@import "lib/common/_btn.scss";

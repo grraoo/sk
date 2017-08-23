@@ -1,0 +1,32 @@
+.btn {
+  border: 2px solid currentColor;
+  background-color: transparent;
+  padding: 8px 18px;
+  line-height: 1;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: .3s;
+
+  &--white {
+    color: $c-white;
+    
+    &:hover {
+      color: $c-green;
+      background-color: $c-white;
+    }
+  }
+  
+  &--green {
+    color: $c-white;
+    background-color: $c-green;
+    border-color: $c-darkgreen;
+    
+    &:hover {
+      color: $c-green;
+      background-color: $c-white;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    width: 70px;
+    height: auto;
+    margin-right: 1em;
+  }
+
+  &__name {
+    color: $c-white;
+    margin: 0;
+
+    span {
+      display: block;
+    }
+
+    &-big {
+      font-size: 31px;
+      line-height: 1.1;
+    }
+
+    &-small {
+      font-size: 11px;
+      text-align-last: justify;
+      letter-spacing: .7px;
+    }
+  }
+}
