@@ -1,8 +1,0 @@
-{
-  "html": {
-      "snippets": {
-          "newsec": "section>h2.section-header",
-          "txt": "{This is random text not markup or abbreviation}"
-      }
-  }
-}
