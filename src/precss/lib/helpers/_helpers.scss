@@ -40,3 +40,15 @@ body {
     box-sizing: inherit;
   }
 }
+
+
+main > section {
+  padding-top: 100px;
+}
+
+.promo-header {
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 25px;
+  text-align: center;
+}

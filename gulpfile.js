@@ -5,7 +5,6 @@ var sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 var gcmq = require('gulp-group-css-media-queries');
 var cleanCSS = require('gulp-clean-css');
-var cleanCSS = require('gulp-clean-css');
 
 var config = {
 	src: 'src/',
@@ -36,7 +35,8 @@ gulp.task('browserSync', function() {
   browserSync.init({
     server: {
       baseDir: './build'
-    }
+		},
+		ghostMode: false
   });
 });
 
