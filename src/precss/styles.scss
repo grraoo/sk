@@ -1,5 +1,6 @@
-@import "lib/project", "lib/mixins", "lib/smart-grid";
+@import "lib/helpers/project", "lib/helpers/mixins", "lib/helpers/smart-grid";
 @include normalize();
-@import "lib/helpers";
-@import "lib/container";
-@import "lib/page-header";
+@import "lib/helpers/helpers";
+@import "lib/helpers/container";
+@import "lib/header/page-header";
+@import "lib/header/header-top";
