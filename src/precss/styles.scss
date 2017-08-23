@@ -1,2 +1,4 @@
 @import "lib/project", "lib/mixins", "lib/smart-grid";
-@import "lib/wrappers", "lib/_helpers.scss";
+@include normalize();
+@import "lib/helpers";
+@import "lib/container";

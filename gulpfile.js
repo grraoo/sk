@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 var gcmq = require('gulp-group-css-media-queries');
 var cleanCSS = require('gulp-clean-css');
+var cleanCSS = require('gulp-clean-css');
 
 var config = {
 	src: 'src/',
@@ -31,13 +32,6 @@ gulp.task('imgmin', () =>
 				.pipe(gulp.dest(config.dest + '/img'))
 );
 
-gulp.task('svgo', function() {
-
-    gulp.src('svg/*')
-        .pipe(svgo())
-        .pipe(gulp.dest('svg/opt/'));
-});
-
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
@@ -56,7 +50,7 @@ gulp.task('build', function() {
 			cascade: false
 		}))
 		.pipe(gcmq())
-		// .pipe(cleanCSS())
+		.pipe(cleanCSS())
 		.pipe(gulp.dest(config.dest + config.css.dest))
 
 		.pipe(browserSync.reload({

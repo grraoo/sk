@@ -1,28 +1,9 @@
-@font-face {
-  font-family: "Lobster";
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/lobster-400-normal.woff2") format("woff2"),
-  url("../fonts/lobster-400-normal.woff") format("woff"),
-  url("../fonts/lobster-400-normal.ttf") format("truetype");
-}
-
-
-html {
-  width: 320px;
-}
-
 body {
-  width: 320px;
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 1.2;
-}
-
-a {
-  text-decoration: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  box-sizing: border-box;
 }
 
 img {
@@ -30,11 +11,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-.slider {
-  margin: 0 -15px;
-}
-
 
 .visually-hidden {
   position: absolute;
@@ -48,12 +24,17 @@ img {
 }
 
 template {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
+  display: none;
+}
+
+body {
+}
+
+* {
+  box-sizing: inherit;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
 }
