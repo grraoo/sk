@@ -1,8 +1,20 @@
 @keyframes animatedBackground {
   from {
     background-position: 0 0;
-}
-to {
+  }
+  to {
     background-position: 100% 0;
+  }
 }
+
+@keyframes arrowblink {
+  0% {
+    opacity: 0;
+    right: -20px;
+  }
+  100% {
+    right: -40px;
+    opacity: 1;
+  }
 }
+

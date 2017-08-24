@@ -20,8 +20,8 @@
     &:not(:last-child)::after {
       content: '';
       position: absolute;
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       background-image: url('../img/icons/arrow.svg');
       background-position: center;
       background-repeat: no-repeat;
@@ -29,6 +29,17 @@
       top: 50%;
       transform: translateY(-50%);
       right: -15px;
+      animation: arrowblink 1.5s linear infinite;
+    }
+
+    &:nth-child(2)::after {
+      animation-delay: .3s;
+    }
+    &:nth-child(3)::after {
+      animation-delay: .6s;
+    }
+    &:nth-child(4)::after {
+      animation-delay: .9s;
     }
 
     &--step-1 {
