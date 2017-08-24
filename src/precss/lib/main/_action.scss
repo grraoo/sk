@@ -1,0 +1,42 @@
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/bg/action.jpg');
+  position: relative;
+  @include fixed-bg();
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(11, 13, 13, 0.6);
+    z-index: 0;
+  }
+  &::after {
+    @include angles();
+  }
+  &__header {
+    position: relative;
+    z-index: 1;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    line-height: 1.4;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  &__btn {
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+  }
+  &__contacts {
+    position: relative;
+    z-index: 1;
+  }
+}
