@@ -1,4 +1,4 @@
-
+@include normalize();
 
 body {
   margin: 0;
@@ -44,6 +44,7 @@ body {
 
 main > section {
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .promo-header {

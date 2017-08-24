@@ -1,14 +1,20 @@
-@import "lib/helpers/_project.scss", "lib/helpers/_mixins.scss", "lib/helpers/_smart-grid.scss";
-@include normalize();
-@import "lib/helpers/_helpers.scss";
-@import "lib/helpers/_container.scss";
-@import "lib/header/_page-header.scss";
-@import "lib/header/_header-top.scss";
-@import "lib/header/_logo.scss";
-@import "lib/header/_main-menu.scss";
-@import "lib/header/_callback.scss";
-@import "lib/header/_head-slider.scss";
-@import "lib/common/_btn.scss";
-@import "lib/common/_scroll-btn.scss";
-@import "lib/common/_section-header.scss";
-@import "lib/main/_compare.scss";
+@import "lib/helpers/project", "lib/helpers/mixins", "lib/helpers/smart-grid";
+
+@import "lib/helpers/helpers";
+@import "lib/helpers/container";
+
+@import "lib/header/page-header";
+@import "lib/header/header-top";
+@import "lib/header/logo";
+@import "lib/header/main-menu";
+@import "lib/header/callback";
+@import "lib/header/head-slider";
+
+@import "lib/common/btn";
+@import "lib/common/subheader";
+@import "lib/common/text";
+@import "lib/common/scroll-btn";
+@import "lib/common/section-header";
+
+@import "lib/main/compare";
+@import "lib/main/stats";

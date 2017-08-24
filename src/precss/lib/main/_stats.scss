@@ -1,0 +1,38 @@
+.stats {
+  background-image: url(../img/bg/timber.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 15 10" style="enable-background:new 0 0 15 10;" xml:space="preserve" width="15px" height="10px"><path fill="white" d="M0 10 L 7 0 L 15 10"/></svg>');
+    transform: rotate(180deg);
+  }
+
+  &__container {
+    padding: 50px 0;
+    background-color: rgba(255, 255, 255, .55);
+  }
+  &__table {
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    td {
+      padding: 10px;
+      color: #000;
+      font-size: 16px;
+    }
+    :not(thead) tr:nth-child(2n - 1) {
+      background-color: rgba(255, 255, 255, 0.60);
+    }
+  }
+}
