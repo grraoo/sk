@@ -1,0 +1,39 @@
+.advantages {
+
+  &__wrap {
+    @include row-flex();
+  }
+
+  &__item {
+    @include col();
+    @include size(4);
+  }
+  
+
+  &__descr {
+    padding: 15px;
+    padding-top: 180px;
+    background-position: top;
+    background-size: 150px;
+    background-repeat: no-repeat;
+
+    &--process {
+      background-image: url('../img/icons/list.svg');
+    }
+    &--time {
+      background-image: url('../img/icons/calendar.svg');
+    }
+    &--recommend {
+      background-image: url('../img/icons/recommended.svg');
+    }
+    &--recommend {
+      background-image: url('../img/icons/recommended.svg');
+    }
+    &--three {
+      background-image: url('../img/icons/three-users.svg');
+    }
+    &--flat {
+      background-image: url('../img/icons/plans.svg');
+    }
+  }
+}
