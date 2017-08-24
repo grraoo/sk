@@ -3,4 +3,23 @@ background-color: #f0f0f0;
   background-image: url(../img/bg/cube-pattern.png);
   animation: animatedBackground 80s linear infinite;
   background-attachment: fixed;
+  text-align: center;
+
+  &__wrap {
+    @include row-flex();
+  }
+
+  &__item {
+    @include col();
+    @include size(4);
+    background: #ffffff;
+    padding-bottom: 16px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__square {
+    line-height: 1;
+  }
+
 }
