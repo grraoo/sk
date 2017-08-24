@@ -328,63 +328,68 @@
     <section class="calculator">
       <div class="container">
         <h2 class="section-header">РАССЧИТАЙТЕ СТОИМОСТЬ СВОЕГО ДОМА</h2>
-
-        <div class="calculator__wrap container">
-          <label for="timber" class="calculator__label">Брус</label>
-          <select name="timber" class="calculator__select">
-            <option value="0" class="calculator__option">Выберите размер</option>
-            <option value="1" class="calculator__option">245х165 мм</option>
-            <option value="2" class="calculator__option">220х165 мм</option>
-            <option value="2" class="calculator__option">185х165 мм</option>
-            <option value="2" class="calculator__option">145х165 мм</option>
-          </select>
-        </div>
-        <div class="calculator__wrap">
-          <label for="width" class="calculator__label">Ширина дома</label>
-          <input type="text" class="calculator__input" id="width" placeholder="(м.)">
-        </div>
-        <div class="calculator__wrap">
-          <label for="length" class="calculator__label">Длина дома</label>
-          <input type="text" class="calculator__input" id="length" placeholder="(м.)">
-        </div>
-        <div class="calculator__wrap">
-          <label for="height" class="calculator__label">Высота стен</label>
-          <input type="text" class="calculator__input" id="height" placeholder="(м.)">
-        </div>
-        <div class="calculator__wrap">
-          <label for="fund-select" class="calculator__label">Фудамент</label>
-          <select id="fund-select" name="fund" class="calculator__select calculator__toggled">
-            <option value="1" class="calculator__option">Ленточный</option>
-            <option value="2" class="calculator__option">Плита</option>
-          </select>
-        </div>
-
-        <div class="calculator__wrap">
-          <label for="roof-select" class="calculator__label">Кровля</label>
-          <select name="roof" id="roof-select" class="calculator__select calculator__toggled">
-            <option value="1" class="calculator__option">Мягкая</option>
-            <option value="2" class="calculator__option">Черепица</option>
-          </select>
-        </div>
-
-        <div class="calc__descr">
-          <div class="calc__sum">
-            1 535 654 &#8381; <sup>*</sup>
+        <div class="calculator__outer">
+          
+          <div class="calculator__inputs">
+          
+            <div class="calculator__wrap">
+              <label for="timber" class="calculator__label">Брус</label>
+              <select name="timber" class="calculator__select">
+                <option value="0" class="calculator__option">Выберите размер</option>
+                <option value="1" class="calculator__option">245х165 мм</option>
+                <option value="2" class="calculator__option">220х165 мм</option>
+                <option value="2" class="calculator__option">185х165 мм</option>
+                <option value="2" class="calculator__option">145х165 мм</option>
+              </select>
+            </div>
+            <div class="calculator__wrap">
+              <label for="width" class="calculator__label">Ширина дома</label>
+              <input type="text" class="calculator__input" id="width" placeholder="(м.)">
+            </div>
+            <div class="calculator__wrap">
+              <label for="length" class="calculator__label">Длина дома</label>
+              <input type="text" class="calculator__input" id="length" placeholder="(м.)">
+            </div>
+            <div class="calculator__wrap">
+              <label for="height" class="calculator__label">Высота стен</label>
+              <input type="text" class="calculator__input" id="height" placeholder="(м.)">
+            </div>
+            <div class="calculator__wrap">
+              <label for="fund-select" class="calculator__label">Фудамент</label>
+              <select id="fund-select" name="fund" class="calculator__select calculator__toggled">
+                <option value="1" class="calculator__option">Ленточный</option>
+                <option value="2" class="calculator__option">Плита</option>
+              </select>
+            </div>
+          
+            <div class="calculator__wrap">
+              <label for="roof-select" class="calculator__label">Кровля</label>
+              <select name="roof" id="roof-select" class="calculator__select calculator__toggled">
+                <option value="1" class="calculator__option">Мягкая</option>
+                <option value="2" class="calculator__option">Черепица</option>
+              </select>
+            </div>
+          
           </div>
-          <div class="calc-list__wrap"><sup>*</sup>Ориентировочная стоимость строительства:
-            <ul class="calc-list">
-              <li class="calc-list__item">Брус 245 x 165 мм: 32.5 м<sup>3</sup> <span class="price">800 000 &#8381;</span></li>
-              <li class="calc-list__item">Фундамент ленточный: 45 м <span class="price">200 000 &#8381;</span></li>
-              <li class="calc-list__item">Окна: 4шт <span class="price">50 000 &#8381;</span></li>
-              <li class="calc-list__item">Черепица: 38 м<sup>2</sup> <span class="price">200 000 &#8381;</span></li>
-            </ul>
+          <div class="calculator__descr">
+            <div class="calculator__sum">
+              1 535 654 &#8381; <sup>*</sup>
+            </div>
+            <div class="calculator-list__wrap text"><sup>*</sup>Ориентировочная стоимость строительства:
+              <ul class="calculator-list">
+                <li class="calculator-list__item">Брус 245 x 165 мм: 32.5 м<sup>3</sup> <span class="price">800 000 &#8381;</span></li>
+                <li class="calculator-list__item">Фундамент ленточный: 45 м <span class="price">200 000 &#8381;</span></li>
+                <li class="calculator-list__item">Окна: 4шт <span class="price">50 000 &#8381;</span></li>
+                <li class="calculator-list__item">Черепица: 38 м<sup>2</sup> <span class="price">200 000 &#8381;</span></li>
+              </ul>
+            </div>
+            <div class="calculator__btns">
+              <a href="#" class="btn btn--green calculator__btn">Заказать такой дом</a>
+              <a href="#" class="btn btn--green calculator__btn">Рассчитать другой проект</a>
+            </div>
           </div>
-          <div class="calc__btns">
-            <a href="#" class="btn btn--green">Заказать такой дом</a>
-            <a href="#" class="btn btn--green">Рассчитать другой проект</a>
-          </div>
+          
         </div>
-
       </div>
     </section>
     <div class="log"></div>

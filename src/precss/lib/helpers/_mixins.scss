@@ -29,6 +29,14 @@
   background-attachment: fixed;
 }
 
+
+@mixin animatedBg() {
+  background-color: #f0f0f0;
+  background-image: url(../img/bg/cube-pattern.png);
+  animation: animatedBackground 80s linear infinite;
+  background-attachment: fixed;
+}
+
 @mixin normalize() {/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
   
   /* Document

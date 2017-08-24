@@ -1,0 +1,95 @@
+.calculator {
+  @include animatedBg();
+  &__outer {
+    display: flex;
+  }
+  &__inputs {
+    width: 48%;
+  }
+  &__descr {
+    width: 48%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__wrap {
+    display: flex;
+    min-height: 50px;
+    padding: 10px 0;
+    align-items: center;
+  }
+  &__input[type="text"] {
+    border: 2px solid $c-blue;
+    margin-bottom: 0;
+    line-height: 1;
+    flex-grow: 1;
+    padding: 10px;
+    height: auto !important;
+  }
+  &__label {
+    margin-right: 10px;
+    cursor: pointer;
+    text-align: right;
+    position: relative;
+    flex: 0 0 150px;
+    font-size: 16px;
+    color: black;
+  }
+  
+  &__select {
+      border: 2px solid $c-blue;
+      padding: 10px;
+      font-size: 16px;
+      line-height: 1;
+      flex-grow: 1;
+  }
+  .calculator__input[type="text"]:focus,
+  .calculator__select:focus {
+  	border-color: $c-darkgreen;
+  }
+  
+  .calculator__option {
+      line-height: 1.4;
+  }
+
+  &-list__wrap {
+      font-size: 16px;
+      margin-bottom: 0;
+      margin-top: auto;
+  }
+  &-list__item {
+      display: flex;
+      line-height: 1.6;
+  }
+  span.price {
+      display: flex;
+      flex-grow: 1;
+  }
+  span.price::before {
+      content: '';
+      border-bottom: 1px dotted black;
+      flex-grow: 1;
+      margin-bottom: 3px;
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+  &__sum {
+      font-size: 35px;
+      color: $c-blue;
+      font-weight: 600;
+      line-height: 2;
+      
+  }
+  &__btns {
+      display: block;
+  }
+
+  &__btn {
+    margin-top: 15px;
+  }
+  &-list {
+      text-align: left;
+      margin-top: .5em;
+  }
+}
