@@ -1,5 +1,18 @@
+@mixin scroll-btn() {
+  width: 40px;
+  height: 40px;
+  background-color: $c-green;
+  border-radius: 0;
+  border-color: $c-darkgreen;
+  
+  &::before {
+    height: 15px;
+    width: 15px;
+  }
+}
 .scroll-btn {
   position: absolute;
+  outline: 0;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
@@ -28,23 +41,35 @@
     border-left: 0;
     transform: translate(-50%, -65%) rotate(45deg);
   }
-
+  
   &--top {
     position: fixed;
     right: 50px;
     bottom: 50px;
-    width: 40px;
-    height: 40px;
-    transform: rotate(180deg);
-    background-color: $c-green;
     left: auto;
-    border-radius: 0;
-    border-color: $c-darkgreen;
     z-index: 0;
-
-    &::before {
-      height: 15px;
-      width: 15px;
-    }
+    transform: rotate(180deg);
+    
+    @include scroll-btn();
+  }
+  
+  &--left {
+    @include scroll-btn();
+    position: absolute;
+    font-size: 0;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+  }
+  
+  &--right {
+    @include scroll-btn();
+    position: absolute;
+    font-size: 0;
+    right: -40px;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
   }
 }
+

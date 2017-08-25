@@ -4,16 +4,16 @@
   padding: 75px 0;
   &__wrap {
     display: flex !important;
-    overflow: hidden;
     justify-content: center;
+    
   }
   &__item {
-    min-width: 25%;
     margin: 15px;
     display: flex !important;
     flex-direction: column;
     box-shadow: 0 0 5px $c-blue;
     background-color: $c-white;
+
   }
   &__inner {
     margin-bottom: auto;

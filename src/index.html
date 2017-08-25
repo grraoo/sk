@@ -7,6 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Строительство домов из клеёного бруса — компания Строй Комфорт</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/lib/slick.css">
+  <link rel="stylesheet" href="css/lib/slick-theme.css">
+  <script src="js/lib/jquery-1.11.0.min.js"></script>
+  <script src="js/lib/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/lib/slick.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ5zYZm8MbG4CPOH4uIy6Uhpc7jGFQzRU"></script> 
 </head>
 
 <body>
@@ -130,6 +136,22 @@
       <div class="container">
         <h2 class="section-header">ПРОЕКТЫ ДОМОВ ИЗ КЛЕЁНОГО БРУСА</h2>
         <div class="projects__wrap">
+          <article class="projects__item">
+            <img src="img/plan1.jpg" alt="placeholder-service">
+            <h4 class="subheader projects__name">Проект дома №1</h4>
+            <ul class="projects__props">
+              <li>Площадь: <b>150 м<sup>2</sup></b></li>
+              <li>Этажей: <b>2</b></li>
+              <li>Скорость возведения: <b>80 дня</b></li>
+              <li>Стоимость: <b>1 350 350 &#8381;</b></li>
+            </ul>
+            <div class="projects__includes" aria-label="В стоимость входит:">
+              <div class="projects__icon projects__icon--house" data-title="коробка">коробка</div>
+              <div class="projects__icon projects__icon--windows" data-title="окна">окна</div>
+              <div class="projects__icon projects__icon--roof" data-title="кровля">кровля</div>
+            </div>
+            <a href="#contact" class="projects__btn btn btn--green">Заказать этот проект</a>
+          </article>
           <article class="projects__item">
             <img src="img/plan1.jpg" alt="placeholder-service">
             <h4 class="subheader projects__name">Проект дома №1</h4>
@@ -441,11 +463,15 @@
       <div class="container">
         <h2 class="section-header">НАМ ДОВЕРЯЮТ</h2>
         <div class="trust__wrap">
-          <div class="trust__item"><img class="trust__img" src="//placehold.it/200x150" alt="logo"></div>
-          <div class="trust__item"><img class="trust__img" src="//placehold.it/200x150" alt="logo"></div>
-          <div class="trust__item"><img class="trust__img" src="//placehold.it/200x150" alt="logo"></div>
-          <div class="trust__item"><img class="trust__img" src="//placehold.it/200x150" alt="logo"></div>
-          <div class="trust__item"><img class="trust__img" src="//placehold.it/200x150" alt="logo"></div>
+          <div class="trust__item"><img class="trust__img" src="img/02-partners.png" alt="logo"></div>
+          <div class="trust__item"><img class="trust__img" src="img/dorojka.png" alt="logo"></div>
+          <div class="trust__item"><img class="trust__img" src="img/finestra.jpg" alt="logo"></div>
+          <div class="trust__item"><img class="trust__img" src="img/giprador.png" alt="logo"></div>
+          <div class="trust__item"><img class="trust__img" src="img/02-partners.png" alt="logo"></div>
+          <div class="trust__item"><img class="trust__img" src="img/dorojka.png" alt="logo"></div>
+          <div class="trust__item"><img class="trust__img" src="img/02-partners.png" alt="logo"></div>
+          <div class="trust__item"><img class="trust__img" src="img/finestra.jpg" alt="logo"></div>
+          
         </div>
       </div>
     </section>
@@ -489,9 +515,9 @@
     </section>
   </main>
   <footer class="page-footer">
-    <section class="map">
+    <section id="map" class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <div id="map"></div>
+      <img src="img/bg/map.jpg" alt="">
     </section>
     <section class="page-footer__bottom">
       <article class="social">

@@ -1,12 +1,14 @@
 .trust {
   &__wrap {
     display: flex;
+    align-items: center;
   }
 
   &__item {
     margin: 0 15px;
     filter: grayscale(1);
     opacity: .7;
+        align-self: center !important;
     &:hover {
       filter: none;
       opacity: 1;
