@@ -1,5 +1,4 @@
 .action {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,17 +41,16 @@
     font-size: 20px;
     margin-bottom: 0;
     text-align: center;
-    a, p {
+    a,
+    p {
       color: $c-gray;
     }
   }
-
   &--contacts {
     background-image: url('../img/bg/bg-map-2.jpg');
     .action__header {
       color: $c-gray;
     }
-    
     &::before {
       content: '';
       background-color: rgba(250, 250, 250, 0.6);
@@ -73,7 +71,6 @@
         text-decoration: none;
       }
     }
-
     &--phone a {
       background-image: url('../img/icons/phone.svg');
       margin-top: 0;
@@ -86,3 +83,4 @@
     }
   }
 }
+
