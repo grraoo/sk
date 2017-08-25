@@ -1,7 +1,4 @@
-@import "lib/helpers/project", "lib/helpers/mixins", "lib/helpers/smart-grid";
-
-@import "lib/helpers/helpers";
-@import "lib/helpers/container";
+@import "lib/helpers/project", "lib/helpers/mixins", "lib/helpers/smart-grid", "lib/helpers/helpers";
 
 @import "lib/header/page-header";
 @import "lib/header/header-top";
@@ -10,6 +7,7 @@
 @import "lib/header/callback";
 @import "lib/header/head-slider";
 
+@import "lib/common/container";
 @import "lib/common/btn";
 @import "lib/common/subheader";
 @import "lib/common/text";
