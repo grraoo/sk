@@ -5,5 +5,11 @@
 
   &__item {
     margin: 0 15px;
+    filter: grayscale(1);
+    opacity: .7;
+    &:hover {
+      filter: none;
+      opacity: 1;
+    }
   }
 }
