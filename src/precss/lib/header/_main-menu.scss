@@ -1,13 +1,23 @@
 .main-menu {
   display: flex;
   align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
 
+  
   &__link {
     color: $c-white;
-    padding: 15px;
+    padding: 15px 2%;
     text-decoration: none;
     font-size: 18px;
     text-transform: uppercase;
+    letter-spacing: .5px;
+    @include lg-block() {
+      padding: 15px 2% 0;
+      font-size: 16px;
+    }
 
     &:hover {
       text-decoration: underline;

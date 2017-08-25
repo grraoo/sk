@@ -10,11 +10,10 @@
   color: #fff;
   cursor: pointer;
   border-radius: 50%;
-  border: 1px solid;
+  border: 2px solid;
   // animation-name: arrowBlink;
   // animation-duration: 2s;
   // animation-iteration-count: infinite;
-  // font-size: 40px;
   // animation-timing-function: linear;
 
   &::before {
@@ -28,5 +27,28 @@
     border-top: 0;
     border-left: 0;
     transform: translate(-50%, -65%) rotate(45deg);
+  }
+
+  &--top {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+    transform: rotate(180deg);
+    background-color: $c-green;
+    left: auto;
+    border-radius: 0;
+    border-color: $c-darkgreen;
+    z-index: 0;
+
+    &::before {
+      height: 15px;
+      width: 15px;
+    }
+
+    &:hover {
+
+    }
   }
 }

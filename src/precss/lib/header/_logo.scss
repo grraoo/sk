@@ -1,6 +1,7 @@
 .logo {
   display: flex;
   align-items: center;
+  min-width: 320px;
 
   &__img {
     width: 70px;

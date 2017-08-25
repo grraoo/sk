@@ -4,6 +4,7 @@
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 1;
 
   &__slide {
     height: 100%;
@@ -21,7 +22,7 @@
       width: 100%;
       background-color: rgba(0, 0, 0, 0.4);
       background-image: url("../img/bg/bg-hex.png");
-      background-size: 25px;
+      background-size: 20px;
     }
   }
 

@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include lg-block() {
+    width: 200px;
+  }
 
   &__phone {
     color: #fff;
@@ -10,5 +13,8 @@
     font-size: 24px;
     margin: 0;
     text-decoration: none;
+    @include lg-block() {
+      font-size: 20px;
+    }
   }
 }

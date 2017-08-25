@@ -3,12 +3,12 @@
   font-size: 0;
 
   &-link {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: 2px solid $c-blue;
     display: inline-block;
     margin: 0 5px;
-    background-size: auto 30px;
+    background-size: auto 20px;
     background-repeat: no-repeat;
     background-position: center;
     transition-duration: .3s;
@@ -24,7 +24,7 @@
 
     &:hover {
       filter: hue-rotate(-125deg);
-      background-size: auto 35px;
+      background-size: auto 25px;
     }
   }
 }
