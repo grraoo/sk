@@ -1,4 +1,8 @@
 .feedback {
+  background-image: url(../img/timber-aside.jpg), url(../img/timber-aside-2.jpg);
+  background-position: left center, right 15%;
+  background-repeat: no-repeat;
+  background-size: 25%; // background-attachment: fixed;
   &__fields {
     @include row-flex();
     margin-bottom: 30px;
@@ -16,9 +20,13 @@
   }
   &__input {
     padding-left: 35px;
-    &:focus+label {
-      filter: none;
-      opacity: 1;
+    opacity: .8;
+    &:focus {
+      opacity: .95;
+      &+label {
+        filter: none;
+        opacity: 1;
+      }
     }
   }
   &__label {
@@ -51,3 +59,4 @@
     text-align: center;
   }
 }
+
