@@ -5,27 +5,25 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 4000,
+		autoplaySpeed: 4000
 	});
 
 	$('.thanks__wrap').slick({
 		arrows: true,
 		dots: false,
 		slidesToShow: 3,
-		slidesToScroll: 1,
+		slidesToScroll: 2,
 		autoplay: true,
-		autoplaySpeed: 4000,
+		autoplaySpeed: 4000
 	});
 
 	$('.trust__wrap').slick({
 		arrows: true,
 		dots: false,
 		slidesToShow: 4,
-		slidesToScroll: 1,
+		slidesToScroll: 4,
 		autoplay: true,
-		autoplaySpeed: 3000,
-		// variableWidth: true,
-		// centerMode: true
+		autoplaySpeed: 3000
 	});
 });
 
