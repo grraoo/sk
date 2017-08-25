@@ -1,0 +1,12 @@
+.text-input {
+  border: 2px solid $c-blue;
+  margin-bottom: 0;
+  line-height: 1;
+  width: 100%;
+  padding: 10px;
+
+  &:focus {
+    border-color: $c-darkgreen;
+    outline: 0;
+  }
+}

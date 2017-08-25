@@ -38,5 +38,17 @@
   &__contacts {
     position: relative;
     z-index: 1;
+    margin-top: .5em;
+    font-size: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    a, p {
+      color: white;
+    }
+
+    p {
+      margin: 0.5em;
+    }
   }
+
 }

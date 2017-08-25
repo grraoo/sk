@@ -1,0 +1,53 @@
+.feedback {
+  &__fields {
+    @include row-flex();
+    margin-bottom: 30px;
+  }
+  &__inputs {
+    @include col();
+    @include size(6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__item {
+    position: relative;
+    margin: 0;
+  }
+  &__input {
+    padding-left: 35px;
+    &:focus+label {
+      filter: none;
+      opacity: 1;
+    }
+  }
+  &__label {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    font-size: 0;
+    height: 20px;
+    width: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: grayscale(1);
+    opacity: .7;
+    transition-duration: .3s;
+    &--name {
+      background-image: url('../img/icons/user.svg');
+    }
+    &--email {
+      background-image: url('../img/icons/email.svg');
+    }
+    &--phone {
+      background-image: url('../img/icons/phone.svg');
+    }
+    &--area {
+      background-image: url('../img/icons/text.svg');
+    }
+  }
+  &__set {
+    text-align: center;
+  }
+}

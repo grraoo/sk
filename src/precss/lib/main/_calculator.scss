@@ -19,14 +19,7 @@
     padding: 10px 0;
     align-items: center;
   }
-  &__input[type="text"] {
-    border: 2px solid $c-blue;
-    margin-bottom: 0;
-    line-height: 1;
-    flex-grow: 1;
-    padding: 10px;
-    height: auto !important;
-  }
+  
   &__label {
     margin-right: 10px;
     cursor: pointer;
