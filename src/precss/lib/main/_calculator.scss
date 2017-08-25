@@ -19,7 +19,6 @@
     padding: 10px 0;
     align-items: center;
   }
-  
   &__label {
     margin-right: 10px;
     cursor: pointer;
@@ -29,60 +28,57 @@
     font-size: 16px;
     color: black;
   }
-  
   &__select {
-      border: 2px solid $c-blue;
-      padding: 10px;
-      font-size: 16px;
-      line-height: 1;
-      flex-grow: 1;
+    border: 2px solid $c-blue;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1;
+    flex-grow: 1;
   }
   .calculator__input[type="text"]:focus,
   .calculator__select:focus {
-  	border-color: $c-darkgreen;
+    border-color: $c-darkgreen;
   }
-  
   .calculator__option {
-      line-height: 1.4;
+    line-height: 1.4;
   }
-
   &-list__wrap {
-      font-size: 16px;
-      margin-bottom: 0;
-      margin-top: auto;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: auto;
   }
   &-list__item {
-      display: flex;
-      line-height: 1.6;
+    display: flex;
+    line-height: 1.4;
+    padding: 5px 0;
   }
   span.price {
-      display: flex;
-      flex-grow: 1;
+    display: flex;
+    flex-grow: 1;
   }
   span.price::before {
-      content: '';
-      border-bottom: 1px dotted black;
-      flex-grow: 1;
-      margin-bottom: 3px;
-      margin-left: 5px;
-      margin-right: 5px;
+    content: '';
+    border-bottom: 1px dotted black;
+    flex-grow: 1;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   &__sum {
-      font-size: 35px;
-      color: $c-blue;
-      font-weight: 600;
-      line-height: 2;
-      
+    font-size: 35px;
+    color: $c-blue;
+    font-weight: 600;
+    line-height: 2;
   }
   &__btns {
-      display: block;
+    display: block;
   }
-
   &__btn {
     margin-top: 15px;
   }
   &-list {
-      text-align: left;
-      margin-top: .5em;
+    text-align: left;
+    margin-top: .5em;
   }
 }
+

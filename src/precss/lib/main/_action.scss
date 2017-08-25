@@ -1,4 +1,5 @@
 .action {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,17 +39,43 @@
   &__contacts {
     position: relative;
     z-index: 1;
-    margin-top: .5em;
     font-size: 20px;
     margin-bottom: 0;
     text-align: center;
     a, p {
-      color: white;
-    }
-
-    p {
-      margin: 0.5em;
+      color: $c-gray;
     }
   }
 
+  &--contacts {
+    background-image: url('../img/bg/bg-map-2.jpg');
+    .action__header {
+      color: $c-gray;
+    }
+    
+    &::before {
+      content: '';
+      background-color: rgba(250, 250, 250, 0.6);
+    }
+  }
+  &__info {
+    padding-left: 40px;
+    text-align: left;
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: 1em;
+    font-weight: bold;
+
+    &--phone {
+      background-image: url('../img/icons/phone.svg');
+      margin-top: 0;
+    }
+    &--address {
+      background-image: url('../img/icons/home.svg');
+    }
+    &--email {
+      background-image: url('../img/icons/email.svg');
+    }
+  }
 }

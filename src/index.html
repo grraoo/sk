@@ -12,7 +12,7 @@
   <script src="js/lib/jquery-1.11.0.min.js"></script>
   <script src="js/lib/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/lib/slick.min.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ5zYZm8MbG4CPOH4uIy6Uhpc7jGFQzRU"></script> 
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ5zYZm8MbG4CPOH4uIy6Uhpc7jGFQzRU"></script>
 </head>
 
 <body>
@@ -352,9 +352,9 @@
       <div class="container">
         <h2 class="section-header">РАССЧИТАЙТЕ СТОИМОСТЬ СВОЕГО ДОМА</h2>
         <div class="calculator__outer">
-          
+
           <div class="calculator__inputs">
-          
+
             <div class="calculator__wrap">
               <label for="timber" class="calculator__label">Брус</label>
               <select name="timber" class="calculator__select">
@@ -384,7 +384,7 @@
                 <option value="2" class="calculator__option">Плита</option>
               </select>
             </div>
-          
+
             <div class="calculator__wrap">
               <label for="roof-select" class="calculator__label">Кровля</label>
               <select name="roof" id="roof-select" class="calculator__select calculator__toggled">
@@ -392,7 +392,7 @@
                 <option value="2" class="calculator__option">Черепица</option>
               </select>
             </div>
-          
+
           </div>
           <div class="calculator__descr">
             <div class="calculator__sum">
@@ -411,7 +411,7 @@
               <a href="#" class="btn btn--green calculator__btn">Рассчитать другой проект</a>
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>
@@ -471,16 +471,22 @@
           <div class="trust__item"><img class="trust__img" src="img/dorojka.png" alt="logo"></div>
           <div class="trust__item"><img class="trust__img" src="img/02-partners.png" alt="logo"></div>
           <div class="trust__item"><img class="trust__img" src="img/finestra.jpg" alt="logo"></div>
-          
+
         </div>
       </div>
     </section>
-    <section class="action">
-      <h2 class="action__header">Наши контакты</h2>
+    <section class="action action--contacts">
+      <h2 class="section-header">Наши контакты</h2>
       <div class="action__contacts">
-        <p><a href="#">+7 3952 67-66-00</a></p>
-        <p>г. Иркутск, ул. Пискунова, 160, оф. 504</p>
-        <p><a href="#">inbox@stroi-comfort.com</a></p>
+        <p class="action__info action__info--phone">
+          <a href="tel:+73952676600">+7 3952 67-66-00</a>
+        </p>
+        <p class="action__info action__info--address">
+          <a href="#map">г. Иркутск, ул. Пискунова, 160, оф. 504</a>
+        </p>
+        <p class="action__info action__info--email">
+          <a href="mailto:inbox@stroi-comfort.com">inbox@stroi-comfort.com</a>
+        </p>
       </div>
     </section>
     <section class="feedback">
@@ -504,7 +510,8 @@
                 </p>
               </section>
               <p class="feedback__item feedback__inputs">
-                <textarea class="feedback__input text-input" cols="30" rows="10" name="message" type="text" id="message" size="30" value="" placeholder="Сообщение"></textarea>
+                <textarea class="feedback__input text-input" cols="30" rows="10" name="message" type="text" id="message" size="30" value=""
+                  placeholder="Сообщение"></textarea>
                 <label class="feedback__label feedback__label--area" for="message" accesskey="U">Сообщение</label>
               </p>
             </div>
@@ -521,10 +528,10 @@
     </section>
     <section class="page-footer__bottom">
       <article class="social">
-        <a href="" class="social-link social-link--fb">Facebook</a>
-        <a href="" class="social-link social-link--vk">
+        <a href="#" class="social-link social-link--fb">Facebook</a>
+        <a href="#" class="social-link social-link--vk">
           Вконтакте</a>
-        <a href="" class="social-link social-link--inst">Instagram</a>
+        <a href="#" class="social-link social-link--inst">Instagram</a>
       </article>
       <p class="copyright text">&copy; Строй Комфорт, 2017</p>
     </section>
