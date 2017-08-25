@@ -59,22 +59,29 @@
     }
   }
   &__info {
-    padding-left: 40px;
     text-align: left;
-    background-size: contain;
-    background-position: left;
-    background-repeat: no-repeat;
-    margin: 1em;
-    font-weight: bold;
+    a {
+      padding-left: 40px;
+      background-size: contain;
+      background-position: left;
+      background-repeat: no-repeat;
+      margin: 1em;
+      font-weight: bold;
+    }
+    &:hover {
+      a {
+        text-decoration: none;
+      }
+    }
 
-    &--phone {
+    &--phone a {
       background-image: url('../img/icons/phone.svg');
       margin-top: 0;
     }
-    &--address {
+    &--address a {
       background-image: url('../img/icons/home.svg');
     }
-    &--email {
+    &--email a {
       background-image: url('../img/icons/email.svg');
     }
   }

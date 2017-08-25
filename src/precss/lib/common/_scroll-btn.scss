@@ -5,6 +5,14 @@
   border-radius: 0;
   border-color: $c-darkgreen;
   
+  &:hover {
+    background-color: white;
+
+    &::before {
+      border-color: $c-darkgreen;
+    }
+  }
+  
   &::before {
     height: 15px;
     width: 15px;
@@ -50,7 +58,6 @@
     z-index: 0;
     transform: rotate(180deg);
     
-    @include scroll-btn();
   }
   
   &--left {
@@ -70,6 +77,11 @@
     left: auto;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
+  }
+  
+  &--green {
+    @include scroll-btn();
+    
   }
 }
 
