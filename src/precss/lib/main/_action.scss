@@ -1,19 +1,26 @@
 .action {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url('../img/bg/action.jpg');
-  position: relative;
   @include fixed-bg();
+
+  display: flex;
+
+  flex-direction: column;
+
+  position: relative;
+
+  background-image: url('../img/bg/action.jpg');
+
+  align-items: center;
   &::before {
     content: '';
+
     position: absolute;
     top: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     left: 0;
-    background-color: rgba(11, 13, 13, 0.6);
     z-index: 0;
+
+    background-color: rgba(11, 13, 13, .6);
   }
   &::after {
     @include angles();
@@ -21,25 +28,33 @@
   &__header {
     position: relative;
     z-index: 1;
-    font-size: 28px;
-    color: #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    line-height: 1.4;
-    margin-bottom: 0;
+
     margin-top: 0;
+    margin-bottom: 0;
+
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
   }
   &__btn {
     position: relative;
     z-index: 1;
+
     margin-top: 30px;
   }
   &__contacts {
     position: relative;
     z-index: 1;
-    font-size: 20px;
+
     margin-bottom: 0;
+
+    font-size: 20px;
+
     text-align: center;
     a,
     p {
@@ -47,23 +62,34 @@
     }
   }
   &--contacts {
-    background-image: url('../img/bg/bg-map-2.jpg');
+    background-color: #f0f0f0;
+    background-image: url(../img/timber-aside.png), url(../img/timber-aside-2.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left center, right 15%;
+    background-size: 25%;
     .action__header {
       color: $c-gray;
     }
     &::before {
       content: '';
-      background-color: rgba(250, 250, 250, 0.6);
+
+      background-color: transparent;
+    }
+    &::after {
+      @include angles-top();
     }
   }
   &__info {
     text-align: left;
     a {
-      padding-left: 40px;
-      background-size: contain;
-      background-position: left;
-      background-repeat: no-repeat;
       margin: 1em;
+      padding-left: 40px;
+
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: contain;
+
       font-weight: bold;
     }
     &:hover {
@@ -72,8 +98,9 @@
       }
     }
     &--phone a {
-      background-image: url('../img/icons/phone.svg');
       margin-top: 0;
+
+      background-image: url('../img/icons/phone.svg');
     }
     &--address a {
       background-image: url('../img/icons/home.svg');
