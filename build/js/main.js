@@ -117,8 +117,8 @@ var calcConfig = {
 		[17000, 15000, 13000] //2 этажа
 	],
 	build: [
-		[6000, 5000, 4000],//1 этаж
-		[5500, 3500, 2500]//2 этажа
+		[6000, 5000, 4000], //1 этаж
+		[5500, 3500, 2500] //2 этажа
 	],
 	roof: [
 		[5500, 6500], //1 этаж
@@ -150,34 +150,41 @@ var calculatePrice = function () {
 	var index = 0;
 
 	floorNum = calcForm.floors.value;
+	console.log(calcForm.square.value);
+	if (calcForm.square.value > 0) {
+		calcForm.square.classList.remove('text-input--error');
+		calcForm.square.parentNode.dataset.error = '';
+		for (item in calcConfig) {
+			index = calcForm[item].value;
 
-	for (item in calcConfig) {
-		index = calcForm[item].value;
-	
-		currentContent = calcList.querySelector('.calculator-list__item--' + item + ' .list-content');
-		
-		if (currentContent) {
-			currentContent.innerText = calcForm[item][index].innerText;
+			currentContent = calcList.querySelector('.calculator-list__item--' + item + ' .list-content');
+
+			if (currentContent) {
+				currentContent.innerText = calcForm[item][index].innerText;
+			}
+
+			currentPrice = calcList.querySelector('.calculator-list__item--' + item + ' .price');
+
+			curValue = parseInt(calcForm.square.value * calcConfig[item][floorNum][index], 10);
+
+			currentPrice.innerHTML = spaces(curValue.toString()) + ' &#8381;';
+			totalSum += curValue;
+
 		}
-		
-		currentPrice = calcList.querySelector('.calculator-list__item--' + item + ' .price');
-
-		curValue = parseInt(calcForm.square.value * calcConfig[item][floorNum][index], 10);
-		
-		currentPrice.innerHTML = spaces(curValue.toString()) + ' &#8381;';
-		totalSum += curValue;
-		
+	} else {
+		calcForm.square.classList.add('text-input--error');
+		calcForm.square.focus();
+		calcForm.square.parentNode.dataset.error = calcForm.square.validationMessage;
 	}
 	calcForm.querySelector('#calcSum').innerHTML = spaces(totalSum.toString()) + ' &#8381;';
 };
 
 calculatePrice();
 
-calcForm.addEventListener('change', calculatePrice);
+calcForm.addEventListener('input', calculatePrice);
 calcForm.addEventListener('reset', function (e) {
 	var timerId = setTimeout(function () {
 		calculatePrice();
 		clearTimeout(timerId);
 	}, 100);
 });
-

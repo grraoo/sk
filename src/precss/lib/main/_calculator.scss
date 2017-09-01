@@ -26,6 +26,8 @@
   &__wrap {
     display: flex;
 
+    position: relative;
+
     min-height: 50px;
 
     padding: 10px 0;
@@ -37,6 +39,15 @@
     }
     &:last-child {
       padding-bottom: 0;
+    }
+    &::after {
+      content: attr(data-error);
+
+      position: absolute;
+      top: -5px;
+      right: 0;
+
+      line-height: 1.1;
     }
   }
 
