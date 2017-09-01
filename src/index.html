@@ -27,11 +27,11 @@
         </h1>
       </div>
       <nav class="main-menu">
-        <a href="" class="main-menu__link">Преимущества</a>
-        <a href="" class="main-menu__link">Кейсы</a>
-        <a href="" class="main-menu__link">работы</a>
-        <a href="" class="main-menu__link">Цены</a>
-        <a href="" class="main-menu__link">Контакты</a>
+        <a href="#compare" class="main-menu__link">Преимущества</a>
+        <a href="#projects" class="main-menu__link">Кейсы</a>
+        <a href="#portfolio" class="main-menu__link">работы</a>
+        <a href="#calculator" class="main-menu__link">Цены</a>
+        <a href="#contacts" class="main-menu__link">Контакты</a>
       </nav>
       <div class="callback">
         <a href="#" class="callback__phone">+7 3952 67-66-00</a>
@@ -135,7 +135,7 @@
 
       </div>
     </section>
-    <section class="projects">
+    <section id="projects" class="projects">
       <div class="container">
         <h2 class="section-header">ПРОЕКТЫ ДОМОВ ИЗ КЛЕЁНОГО БРУСА</h2>
         <div class="projects__wrap">
@@ -260,7 +260,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container">
 
         <h2 class="section-header">ПОСТРОЕННЫЕ ОБЪЕКТЫ</h2>
@@ -351,8 +351,8 @@
       <h2 class="action__header">Заголовок акции</h2>
       <a href="" class="btn btn--white btn--pointer action__btn">Заказать дом</a>
     </section>
-    <section class="calculator">
-      <form class="container calculator__form">
+    <section id="calculator" class="calculator">
+      <form class="container calculator__form" method="post">
         <h2 class="section-header">РАССЧИТАЙТЕ СТОИМОСТЬ СВОЕГО ДОМА</h2>
         <div class="calculator__outer">
 
@@ -366,7 +366,7 @@
               </select>
             </div>
             <div class="calculator__wrap">
-              <label for="square" class="calculator__label">Площадь (м<sup>2</sup>)</label>
+              <label for="square" class="calculator__label">Общая площадь (м<sup>2</sup>)</label>
               <input type="number" min="10" step="10" class="text-input" id="square" name="square" placeholder="(м.)" value="180">
             </div>
             
@@ -387,7 +387,7 @@
                 <option value="2" class="calculator__option">185х165 мм</option>
               </select>
             </div>
-            <div class="calculator__wrap visually-hidden">
+            <div class="calculator__wrap" style="display: none">
               <label for="build" class="calculator__label">Монтаж</label>
               <select name="build" id="build" class="calculator__select">
                 <option value="0" class="calculator__option">245х165 мм</option>
@@ -494,7 +494,7 @@
         </div>
       </div>
     </section>
-    <section class="action action--contacts">
+    <section id="contacts" class="action action--contacts">
       <h2 class="section-header">Наши контакты</h2>
       <div class="action__contacts">
         <p class="action__info action__info--phone">

@@ -34,6 +34,22 @@ $('.scroll-btn--top').click(function (e) {
 	}, 2000);
 });
 
+$('.scroll-btn--down').click(function(e) {
+	e.preventDefault();
+	$('html, body').animate({
+		scrollTop: $(e.target.getAttribute('href')).position().top
+	}, 2000);
+});
+
+$('.main-menu__link').click(function(e) {
+	e.preventDefault();
+	$('html, body').animate({
+		scrollTop: $(e.target.getAttribute('href')).position().top
+	}, 2000);
+});
+
+
+
 // Google Maps JS & Settings Coordinates
 // When the window has finished loading create our google map below
 // https://developers.google.com/maps/documentation/
