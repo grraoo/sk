@@ -147,20 +147,28 @@ timberSelect.addEventListener('change', function () {
 var calculatePrice = function () {
 	var totalSum = 0;
 	var curValue = 0;
+	var index = 0;
+
 	floorNum = calcForm.floors.value;
 
 	for (item in calcConfig) {
-		curValue = parseInt(calcForm.square.value * calcConfig[item][floorNum][calcForm[item].value], 10);
-		totalSum += curValue;
-		currentPrice = calcList.querySelector('.calculator-list__item--' + item + ' .price');
-		currentPrice.innerHTML = spaces(curValue.toString()) + ' &#8381;';
-
+		index = calcForm[item].value;
+	
 		currentContent = calcList.querySelector('.calculator-list__item--' + item + ' .list-content');
+		
 		if (currentContent) {
-			currentContent.innerText = calcForm[item][calcForm[item].value].innerText;
+			currentContent.innerText = calcForm[item][index].innerText;
 		}
-		calcForm.querySelector('#calcSum').innerHTML = spaces(totalSum.toString()) + ' &#8381;';
+		
+		currentPrice = calcList.querySelector('.calculator-list__item--' + item + ' .price');
+
+		curValue = parseInt(calcForm.square.value * calcConfig[item][floorNum][index], 10);
+		
+		currentPrice.innerHTML = spaces(curValue.toString()) + ' &#8381;';
+		totalSum += curValue;
+		
 	}
+	calcForm.querySelector('#calcSum').innerHTML = spaces(totalSum.toString()) + ' &#8381;';
 };
 
 calculatePrice();
