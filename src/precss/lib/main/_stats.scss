@@ -1,31 +1,64 @@
 .stats {
-  background-image: url(../img/bg/timber.jpg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding: 0;
   position: relative;
 
+  padding: 0;
+
+  background-image: url(../img/bg/timber.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
   &::before {
     @include angles-top();
   }
-
   &__container {
     padding: 50px 0;
+
     background-color: rgba(255, 255, 255, .55);
   }
   &__table {
-    margin: 0 auto;
     width: 100%;
+
+    margin: 0 auto;
+
     border-collapse: collapse;
+
     text-align: center;
     td {
-      padding: 10px;
-      color: #000;
+      padding: 10px 30px;
+
+      color: #000000;
       font-size: 16px;
     }
     :not(thead) tr:nth-child(2n - 1) {
-      background-color: rgba(255, 255, 255, 0.60);
+      background-color: rgba(255, 255, 255, .60);
+    }
+  }
+  &__mark {
+    &::before {
+      content: '';
+
+      display: inline-block;
+
+      width: 1.4em;
+      height: 1.4em;
+
+      margin: 0;
+
+      background-repeat: no-repeat;
+      background-position: center;
+
+      vertical-align: middle;
+    }
+    &--yes {
+      &::before {
+        background-image: url('../img/icons/checked.svg');
+      }
+    }
+    &--no {
+      &::before {
+        background-image: url('../img/icons/unchecked.svg');
+      }
     }
   }
 }
+
