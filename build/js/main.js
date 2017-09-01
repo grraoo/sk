@@ -104,3 +104,80 @@ function init() {
 	});
 
 }
+
+// Calculator
+
+var calcConfig = {
+	foundation: [
+		[2100, 4500, 6500], //1 этаж
+		[1600, 3500, 5500] //2 этажа
+	],
+	timber: [
+		[ //1 этаж
+			21000,
+			19000,
+			16000
+		],
+		[ //2 этажа
+			17000,
+			15000,
+			13000
+		]
+	],
+	build: [
+		[6000, 5000, 4000],
+		[5500, 3500, 2500]
+	],
+	roof: [
+		[5500, 6500], //1 этаж
+		[4500, 6000] //2 этажа
+	],
+	windows: [
+		[2800, 2200], //1 этаж
+		[2500, 1800] //2 этажа
+	]
+}
+
+var calcForm = document.querySelector('.calculator__form');
+var calcList = document.querySelector('.calculator-list');
+var buildSelect = calcForm.querySelector('#build');
+var timberSelect = calcForm.querySelector('#timber');
+var floorNum = 0;
+
+var spaces = function (str) {
+	return str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+};
+
+timberSelect.addEventListener('change', function () {
+	buildSelect.value = this.value;
+});
+
+var calculatePrice = function () {
+	var totalSum = 0;
+	var curValue = 0;
+	floorNum = calcForm.floors.value;
+
+	for (item in calcConfig) {
+		curValue = parseInt(calcForm.square.value * calcConfig[item][floorNum][calcForm[item].value], 10);
+		totalSum += curValue;
+		currentPrice = calcList.querySelector('.calculator-list__item--' + item + ' .price');
+		currentPrice.innerHTML = spaces(curValue.toString()) + ' &#8381;';
+
+		currentContent = calcList.querySelector('.calculator-list__item--' + item + ' .list-content');
+		if (currentContent) {
+			currentContent.innerText = calcForm[item][calcForm[item].value].innerText;
+		}
+		calcForm.querySelector('#calcSum').innerHTML = spaces(totalSum.toString()) + ' &#8381;';
+	}
+};
+
+calculatePrice();
+
+calcForm.addEventListener('change', calculatePrice);
+calcForm.addEventListener('reset', function (e) {
+	var timerId = setTimeout(function () {
+		calculatePrice();
+		clearTimeout(timerId);
+	}, 100);
+});
+

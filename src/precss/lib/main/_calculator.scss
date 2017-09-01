@@ -4,38 +4,69 @@
     display: flex;
   }
   &__inputs {
+    display: flex;
+
+    flex-direction: column;
+
     width: 48%;
+
+    justify-content: space-between;
   }
   &__descr {
-    width: 48%;
-    margin-left: auto;
     display: flex;
+
     flex-direction: column;
+
+    width: 48%;
+
+    margin-left: auto;
+
     text-align: center;
   }
   &__wrap {
     display: flex;
+
     min-height: 50px;
+
     padding: 10px 0;
+
     align-items: center;
+
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
+
+
+
   &__label {
-    margin-right: 10px;
-    cursor: pointer;
-    text-align: right;
     position: relative;
-    flex: 0 0 150px;
-    font-size: 16px;
+
+    margin-right: 10px;
+
     color: black;
+    font-size: 16px;
+
+    text-align: right;
+
+    cursor: pointer;
+
+    flex: 0 0 25%;
   }
   &__select {
-    border: 2px solid $c-blue;
     padding: 10px;
+
+    border: 2px solid $c-blue;
+
     font-size: 16px;
     line-height: 1;
+
     flex-grow: 1;
   }
-  .calculator__input[type="text"]:focus,
+  .calculator__input[type='text']:focus,
   .calculator__select:focus {
     border-color: $c-darkgreen;
   }
@@ -43,32 +74,39 @@
     line-height: 1.4;
   }
   &-list__wrap {
-    font-size: 16px;
-    margin-bottom: 0;
     margin-top: auto;
+    margin-bottom: 0;
+
+    font-size: 16px;
   }
   &-list__item {
     display: flex;
-    line-height: 1.4;
+
     padding: 5px 0;
+
+    line-height: 1.4;
   }
   span.price {
     display: flex;
+
     flex-grow: 1;
   }
   span.price::before {
     content: '';
-    border-bottom: 1px dotted black;
-    flex-grow: 1;
+
+    margin-right: 5px;
     margin-bottom: 3px;
     margin-left: 5px;
-    margin-right: 5px;
+
+    border-bottom: 1px dotted black;
+
+    flex-grow: 1;
   }
   &__sum {
-    font-size: 35px;
     color: $c-blue;
-    font-weight: 600;
+    font-size: 35px;
     line-height: 2;
+    font-weight: 600;
   }
   &__btns {
     display: block;
@@ -77,8 +115,9 @@
     margin-top: 15px;
   }
   &-list {
-    text-align: left;
     margin-top: .5em;
+
+    text-align: left;
   }
 }
 
