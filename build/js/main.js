@@ -25,6 +25,24 @@ $(document).ready(function () {
 		autoplay: true,
 		autoplaySpeed: 3000
 	});
+
+
+	$('.compare__slider').slick({
+		arrows: false,
+		dots: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		slickGoTo: 2
+	});
+
+	$('.compare__slider-item--control .compare__item').click(function(e) {
+		console.log(e.currentTarget);
+		$('.compare__slider').slick('slickGoTo', e.currentTarget.dataset.number);
+	});
+	$('.compare__back').click(function(e) {
+		console.log(e.currentTarget);
+		$('.compare__slider').slick('slickGoTo', 0);
+	});
 });
 
 $('.scroll-btn--top').click(function (e) {

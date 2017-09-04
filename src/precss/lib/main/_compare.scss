@@ -1,19 +1,32 @@
 .compare {
-
   &__items {
-    display: flex;
+    display: flex !important;
+
     margin: 0 -15px;
     margin-top: 50px;
+    &--active {
+      .text {
+        display: none;
+      }
+
+      img {
+        display: none;
+      }
+    }
   }
 
   &__item {
+    @include size(4);
+
     margin: 0 15px;
-    cursor: pointer;
     padding: 15px;
+
+    cursor: pointer;
     transition-duration: .3s;
 
     &:hover {
       box-shadow: 0 0 5px $c-lightgray;
+
       transform: scale(1.05);
     }
 
@@ -22,5 +35,14 @@
     }
   }
 
+  &__slider {
+    display: flex;
 
+    overflow: hidden;
+  }
+  &__back {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
 }
