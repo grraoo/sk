@@ -4,6 +4,7 @@
 
     margin: 0 -15px;
     margin-top: 50px;
+    padding-bottom: 15px;
     &--active {
       .text {
         display: none;
@@ -39,6 +40,11 @@
     display: flex;
 
     overflow: hidden;
+    &-item {
+      &:focus {
+        outline: 0;
+      }
+    }
   }
   &__back {
     position: absolute;

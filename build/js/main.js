@@ -1,11 +1,52 @@
 $(document).ready(function () {
+
+	var adoptSlider = [
+		{
+			breakpoint: 1000,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+			}
+		},
+		{
+			breakpoint: 780,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+	];
+	var adoptSlider4 = [
+		{
+			breakpoint: 1000,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+			}
+		},
+		{
+			breakpoint: 780,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+		},
+		{
+			breakpoint: 350,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+	];
 	$('.projects__wrap').slick({
 		arrows: true,
 		dots: false,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 4000
+		autoplaySpeed: 4000,
+		responsive: adoptSlider
 	});
 
 	$('.thanks__wrap').slick({
@@ -14,16 +55,18 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		slidesToScroll: 2,
 		autoplay: true,
-		autoplaySpeed: 4000
+		autoplaySpeed: 4000,
+		responsive: adoptSlider
 	});
-
+	
 	$('.trust__wrap').slick({
 		arrows: true,
 		dots: false,
 		slidesToShow: 4,
 		slidesToScroll: 4,
 		autoplay: true,
-		autoplaySpeed: 3000
+		autoplaySpeed: 3000,
+		responsive: adoptSlider4
 	});
 
 
@@ -36,11 +79,9 @@ $(document).ready(function () {
 	});
 
 	$('.compare__slider-item--control .compare__item').click(function(e) {
-		console.log(e.currentTarget);
 		$('.compare__slider').slick('slickGoTo', e.currentTarget.dataset.number);
 	});
 	$('.compare__back').click(function(e) {
-		console.log(e.currentTarget);
 		$('.compare__slider').slick('slickGoTo', 0);
 	});
 });
@@ -184,7 +225,6 @@ var calculatePrice = function () {
 	var index = 0;
 
 	floorNum = calcForm.floors.value;
-	console.log(calcForm.square.value);
 	if (calcForm.square.value > 0) {
 		calcForm.square.classList.remove('text-input--error');
 		calcForm.square.parentNode.dataset.error = '';
