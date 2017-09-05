@@ -1,66 +1,131 @@
 .work-scheme {
-
   &__wrap {
+    @include sm-block() {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    };
+
     display: flex;
-    justify-content: space-around;
+
+    padding: 0;
+
+    counter-reset: scheme;
+
+    justify-content: space-between;
   }
 
   &__item {
+    @include sm-block() {
+      width: 45%;
+
+      background-position: center 25px;
+    }; @include xs-block() {
+      width: 90%;
+    };
+
     display: flex;
+
     flex-direction: column;
-    margin: 0 10px;
-    padding-top: 50px;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 40px;
-    width: 17%;
-    text-align: center;
+
     position: relative;
 
-    &:not(:last-child)::after {
+    width: 15%;
+
+    margin: 15px 10px;
+    padding-top: 50px;
+
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 40px;
+
+    text-align: center;
+
+    &::after {
+      @include sm-block() {
+        content: counter(scheme);
+
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+
+        width: auto;
+        height: 35px;
+
+        margin: 0 auto;
+
+        background: 0 0;
+
+        color: #599a42;
+        font-size: 35px;
+        line-height: 1;
+        font-weight: 700;
+
+        text-align: center;
+
+        counter-increment: scheme;
+
+        animation-name: opacityBlink;
+        animation-duration: 1.5s;
+        animation-direction: alternate;
+      };
+
       content: '';
+
       position: absolute;
+      top: 50%;
+      right: -15px;
+
       width: 30px;
       height: 30px;
+
       background-image: url('../img/icons/arrow.svg');
-      background-position: center;
       background-repeat: no-repeat;
+      background-position: center;
       background-size: contain;
-      top: 50%;
+
       transform: translateY(-50%);
-      right: -15px;
       animation: arrowblink 1.5s linear infinite;
     }
 
-    &:nth-child(2)::after {
-      animation-delay: .3s;
-    }
-    &:nth-child(3)::after {
-      animation-delay: .6s;
-    }
-    &:nth-child(4)::after {
-      animation-delay: .9s;
-    }
+
 
     &--step-1 {
       background-image: url('../img/icons/phone-call.svg');
     }
     &--step-2 {
       background-image: url('../img/icons/chat.svg');
+      &::after {
+        animation-delay: .3s;
+      }
     }
     &--step-3 {
       background-image: url('../img/icons/work-list.svg');
+      &::after {
+        animation-delay: .6s;
+      }
     }
     &--step-4 {
       background-image: url('../img/icons/truck.svg');
+      &::after {
+        animation-delay: .9s;
+      }
     }
     &--step-5 {
       background-image: url('../img/icons/home.svg');
+      &::after {
+        @include sm-block() {
+          display: block;
+        };
+
+        display: none;
+      }
     }
   }
 
   &__txt {
     margin: 0;
+
     font-size: 14px;
   }
 }

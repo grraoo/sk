@@ -75,7 +75,8 @@ $(document).ready(function () {
 		dots: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		slickGoTo: 2
+		draggable: false,
+		swipe: false
 	});
 
 	$('.compare__slider-item--control .compare__item').click(function(e) {

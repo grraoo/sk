@@ -1,27 +1,35 @@
 @include normalize();
 
 body {
+  box-sizing: border-box;
+
   margin: 0;
+
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4;
-  box-sizing: border-box;
 }
 
 img {
   display: block;
+
   max-width: 100%;
   height: auto;
 }
 
 .visually-hidden {
   position: absolute;
+
   overflow: hidden;
+
   clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
+
   margin: -1px;
   padding: 0;
+
   border: 0;
 }
 
@@ -29,8 +37,7 @@ template {
   display: none;
 }
 
-body {
-}
+
 
 * {
   box-sizing: inherit;
@@ -48,8 +55,10 @@ main > section {
 }
 
 .promo-header {
+  margin-bottom: 25px;
+
   font-size: 28px;
   line-height: 36px;
-  margin-bottom: 25px;
+
   text-align: center;
 }

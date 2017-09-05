@@ -11,6 +11,10 @@
 
 @include size(6);
 
+@include xs-block() {
+      @include size(12);
+    };
+
     display: flex;
 
     flex-direction: column;
@@ -18,6 +22,16 @@
     justify-content: space-between;
   }
   &__item {
+    @include xs-block() {
+      margin-bottom: 10px;
+
+      &.feedback__inputs {
+        margin-top: 15px;
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+    };
+
     position: relative;
 
     margin: 0;
@@ -71,4 +85,3 @@
     text-align: center;
   }
 }
-

@@ -9,12 +9,28 @@
 
 @keyframes arrowblink {
   0% {
-    opacity: 0;
     right: -20px;
+
+    opacity: 0;
   }
   100% {
     right: -40px;
+
     opacity: 1;
   }
 }
+@keyframes opacityBlink {
+  0% {
+    opacity: .3;
+
+    transform: scale(.95);
+  }
+  100% {
+    opacity: .8;
+
+    transform: scale(1.1);
+  }
+}
+
+
 

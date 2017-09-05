@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 var gcmq = require('gulp-group-css-media-queries');
 var cleanCSS = require('gulp-clean-css');
+var deletefile = require('gulp-delete-file');
 
 var config = {
 	src: 'src/',
@@ -30,6 +31,14 @@ gulp.task('imgmin', () =>
 				}))
 				.pipe(gulp.dest(config.dest + '/img'))
 );
+
+gulp.task('imgdel', ['imgmin'], function() {
+	gulp.src('src/img/**/*')
+	.pipe(deletefile({
+		reg: '((.+).jpg)|((.+).png)|((.+).svg)',
+		deleteMatch: true
+	}))
+});
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -69,6 +78,10 @@ gulp.task('copyHtml', function() {
 
 
 gulp.task('watch', ['browserSync'], function() {
-	gulp.watch(config.src + config.css.src, ['build']);
+	gulp.watch(config.src + config.css.src, function() {
+		setTimeout(function(){
+			gulp.start('build');
+		}, 500);
+	});
 	gulp.watch(config.src + config.html.src, ['copyHtml']);
 });

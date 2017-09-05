@@ -1,29 +1,44 @@
 .compare {
   &__items {
+    @include md-block() {
+      flex-wrap: wrap;
+    };
+
     display: flex !important;
 
-    margin: 0 -15px;
+    margin: 0;
     margin-top: 50px;
-    padding-bottom: 15px;
-    &--active {
-      .text {
-        display: none;
-      }
-
-      img {
-        display: none;
-      }
-    }
+    padding: 0 30px 15px;
   }
 
   &__item {
     @include size(4);
+
+@include xs-block() {
+      @include size(12);
+
+      padding: 0;
+      &:hover {
+        box-shadow: none;
+
+        transform: none;
+      }
+      .subheader {
+        margin: 0;
+      }
+    };
 
     margin: 0 15px;
     padding: 15px;
 
     cursor: pointer;
     transition-duration: .3s;
+
+    .text {
+      @include xs-block() {
+        display: none;
+      };
+    }
 
     &:hover {
       box-shadow: 0 0 5px $c-lightgray;
@@ -32,6 +47,11 @@
     }
 
     img {
+      @include xs-block() {
+        width: auto;
+        max-height: 150px;
+      };
+
       margin: 0 auto;
     }
   }
@@ -48,7 +68,13 @@
   }
   &__back {
     position: absolute;
-    top: 50px;
-    left: 50px;
+    top: 0;
+    left: 0;
+
+    transform: rotate(90deg);
+  }
+
+  &__slider-item {
+    overflow: auto;
   }
 }
