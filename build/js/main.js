@@ -239,7 +239,7 @@ var calculatePrice = function () {
 				currentContent.innerText = calcForm[item][index].innerText;
 			}
 
-			currentPrice = calcList.querySelector('.calculator-list__item--' + item + ' .price');
+			currentPrice = calcList.querySelector('.calculator-list__item--' + item + ' .price span');
 
 			curValue = parseInt(calcForm.square.value * calcConfig[item][floorNum][index], 10);
 
