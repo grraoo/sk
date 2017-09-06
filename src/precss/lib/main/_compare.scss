@@ -17,7 +17,7 @@
 @include xs-block() {
       @include size(12);
 
-      padding: 0;
+      padding: 0 5%;
       &:hover {
         box-shadow: none;
 

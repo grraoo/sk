@@ -1,8 +1,6 @@
 .stats {
   position: relative;
 
-  overflow: auto;
-
   padding: 0;
 
   background-image: url(../img/bg/timber.jpg);
@@ -40,6 +38,9 @@
 
       color: #000000;
       font-size: 16px;
+    }
+    &-wrap {
+      overflow: auto;
     }
     :not(thead) tr:nth-child(2n - 1) {
       background-color: rgba(255, 255, 255, .60);

@@ -32,7 +32,7 @@ $(document).ready(function () {
 			}
 		},
 		{
-			breakpoint: 350,
+			breakpoint: 500,
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1
@@ -43,7 +43,7 @@ $(document).ready(function () {
 		arrows: true,
 		dots: false,
 		slidesToShow: 3,
-		slidesToScroll: 1,
+		slidesToScroll: 2,
 		autoplay: true,
 		autoplaySpeed: 4000,
 		responsive: adoptSlider
@@ -76,7 +76,8 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		draggable: false,
-		swipe: false
+		swipe: false,
+		speed: 500
 	});
 
 	$('.compare__slider-item--control .compare__item').click(function(e) {
