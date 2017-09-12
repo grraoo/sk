@@ -1,0 +1,46 @@
+.modal {
+  position: relative;
+
+  max-width: 500px;
+
+  margin: auto;
+
+  background: white;
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+// border: 2px solid $c-blue;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 90%;
+      height: 2px;
+
+      border-radius: 1px;
+
+      background-color: $c-blue;
+    }
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
