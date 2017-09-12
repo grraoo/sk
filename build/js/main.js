@@ -279,11 +279,14 @@ var changeClass = function (item, newClass, add) {
 var modal = document.querySelector('.overlay');
 
 var openModal = function(e) {
-	console.log(e.target);
-	if(e.target.classList.contains('js-modalOpen')) {
-		changeClass(modal, 'overlay--active', 1);
-	} else if (e.target.classList.contains('modal__close')) {
-		changeClass(modal, 'overlay--active', 0);
+	var btn = e.target;
+	if(btn.classList.contains('js-modalOpen')) {
+		e.preventDefault();
+		changeClass(modal, 'overlay--active', true);
+		var title = btn.dataset.title;
+		modal.querySelector('.section-header').innerText = title;
+	} else if (btn.classList.contains('modal__close')) {
+		changeClass(modal, 'overlay--active', false);
 	}
 };
 
