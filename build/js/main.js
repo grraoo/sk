@@ -264,3 +264,27 @@ calcForm.addEventListener('reset', function (e) {
 		clearTimeout(timerId);
 	}, 100);
 });
+
+
+/* modal */
+
+var changeClass = function (item, newClass, add) {
+	if(add) {
+		item.classList.add(newClass);
+	} else {
+		item.classList.remove(newClass);
+	}
+};
+
+var modal = document.querySelector('.overlay');
+
+var openModal = function(e) {
+	console.log(e.target);
+	if(e.target.classList.contains('js-modalOpen')) {
+		changeClass(modal, 'overlay--active', 1);
+	} else if (e.target.classList.contains('modal__close')) {
+		changeClass(modal, 'overlay--active', 0);
+	}
+};
+
+document.addEventListener('click', openModal);
