@@ -7,6 +7,7 @@ $break_lg: 1200px;
 $break_md: 960px;
 $break_sm: 768px;
 $break_xs: 600px;
+$break_xxs: 400px;
 
 @mixin reset(){
     body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,input,textarea,p,blockquote,th,td{
@@ -79,6 +80,11 @@ $break_xs: 600px;
     }
 
     @media screen and (max-width: $break_xs){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @media screen and (max-width: $break_xxs){
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -830,6 +836,161 @@ $break_xs: 600px;
 }
 @mixin xs-block(){
     @media screen and (max-width: $break_xs){
+        @content;
+    }
+}
+@mixin size-xxs($n){
+    @media screen and (max-width: $break_xxs){
+        $value: $atom * $n;
+        width: #{calc(#{$value} - #{$offset})};
+    }
+}
+@mixin col-xxs-1(){
+    @include size-xxs(1);
+}
+@mixin col-xxs-2(){
+    @include size-xxs(2);
+}
+@mixin col-xxs-3(){
+    @include size-xxs(3);
+}
+@mixin col-xxs-4(){
+    @include size-xxs(4);
+}
+@mixin col-xxs-5(){
+    @include size-xxs(5);
+}
+@mixin col-xxs-6(){
+    @include size-xxs(6);
+}
+@mixin col-xxs-7(){
+    @include size-xxs(7);
+}
+@mixin col-xxs-8(){
+    @include size-xxs(8);
+}
+@mixin col-xxs-9(){
+    @include size-xxs(9);
+}
+@mixin col-xxs-10(){
+    @include size-xxs(10);
+}
+@mixin col-xxs-11(){
+    @include size-xxs(11);
+}
+@mixin col-xxs-12(){
+    @include size-xxs(12);
+}
+@mixin offset-xxs($n){
+    @media screen and (max-width: $break_xxs){
+        $value: $atom * $n;
+        margin-left: #{calc(#{$value} + #{$offset_one_side})};
+        margin-right: #{calc(#{$value} + #{$offset_one_side})};
+    }
+}
+@mixin offset-left-xxs($n){
+    @media screen and (max-width: $break_xxs){
+        $value: $atom * $n;
+        margin-left: #{calc(#{$value} + #{$offset_one_side})};
+    }
+}
+@mixin offset-right-xxs($n){
+    @media screen and (max-width: $break_xxs){
+        $value: $atom * $n;
+        margin-right: #{calc(#{$value} + #{$offset_one_side})};
+    }
+}
+@mixin offset-padding-xxs($n){
+    @media screen and (max-width: $break_xxs){
+        $value: $atom * $n;
+        padding-left: #{calc(#{$value} + #{$offset_one_side})};
+        padding-right: #{calc(#{$value} + #{$offset_one_side})};
+    }
+}
+@mixin offset-left-padding-xxs($n){
+    @media screen and (max-width: $break_xxs){
+        $value: $atom * $n;
+        padding-left: #{calc(#{$value} + #{$offset_one_side})};
+    }
+}
+@mixin offset-right-padding-xxs($n){
+    @media screen and (max-width: $break_xxs){
+        $value: $atom * $n;
+        padding-right: #{calc(#{$value} + #{$offset_one_side})};
+    }
+}
+@mixin justify-content-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        justify-content: $value;
+    }
+}
+@mixin align-items-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        align-items: $value;
+    }
+}
+@mixin align-content-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        align-content: $value;
+    }
+}
+@mixin align-self-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        align-self: $value;
+    }
+}
+@mixin order-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        order: $value;
+    }
+}
+@mixin flex-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        flex: $value;
+    }
+}
+@mixin flex-grow-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        flex-grow: $value;
+    }
+}
+@mixin flex-shrink-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        flex-shrink: $value;
+    }
+}
+@mixin flex-basis-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        flex-basis: $value;
+    }
+}
+@mixin flex-direction-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        flex-direction: $value;
+    }
+}
+@mixin flex-wrap-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        flex-wrap: $value;
+    }
+}
+@mixin flex-flow-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        flex-flow: $value;
+    }
+}
+@mixin float-xxs($value){
+    @media screen and (max-width: $break_xxs){
+        float: $value;
+    }
+}
+@mixin xxs($name, $value){
+    @media screen and (max-width: $break_xxs){
+        #{$name}: $value;
+    }
+}
+@mixin xxs-block(){
+    @media screen and (max-width: $break_xxs){
         @content;
     }
 }

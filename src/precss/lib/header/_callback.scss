@@ -1,21 +1,52 @@
 .callback {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 230px;
   @include lg-block() {
     min-width: 200px;
   }
 
+@include xs-block() {
+    margin-top: 15px;
+    margin-right: 0;
+  }
+
+@include md-block() {
+    flex-direction: row;
+
+    min-width: 0;
+
+    margin-right: 80px;
+
+    justify-content: flex-end;
+  }  display: flex;
+
+  flex-direction: column;
+
+  min-width: 230px;
+
+  transition-duration: .3s;
+
+  align-items: center;
+  justify-content: center;
+
   &__phone {
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-    margin: 0;
-    text-decoration: none;
-    @include lg-block() {
-      font-size: 20px;
+    @include sm-block() {
+      font-size: 0;
     }
+
+// @include md-block() {
+    //       margin-right: 20px;
+    //     }
+    @include lg-block() {
+      margin-right: 15px;
+
+      font-size: 16px;
+    };
+
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+
+    text-decoration: none;
   }
 }

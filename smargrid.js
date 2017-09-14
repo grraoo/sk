@@ -15,15 +15,19 @@ var settings = {
             'fields': '15px' /* side fields */
         },
         md: {
-            'width': '960px', /* -> @media (max-width: 1200px) */
+            'width': '960px', /* -> @media (max-width: 960px) */
             'fields': '15px' /* side fields */
         },
         sm: {
-            'width': '768px', /* -> @media (max-width: 1100px) */
+            'width': '768px', /* -> @media (max-width: 768px) */
             'fields': '15px' /* side fields */
         },
         xs: {
-            'width': '600px', /* -> @media (max-width: 1100px) */
+            'width': '600px', /* -> @media (max-width: 600px) */
+            'fields': '15px' /* side fields */
+        },
+        xxs: {
+            'width': '400px', /* -> @media (max-width: 400px) */
             'fields': '15px' /* side fields */
         }
         /*

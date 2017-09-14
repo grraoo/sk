@@ -267,7 +267,7 @@ calcForm.addEventListener('reset', function (e) {
 
 
 /* modal */
-var t = 'toggle';
+var T = 'toggle';
 var changeClass = function (item, myClass, flag) {
 	if(flag == 'toggle') {
 		item.classList.toggle(myClass);
@@ -311,3 +311,25 @@ var showRecent = function(e) {
 }
 
 showMore.addEventListener('click', showRecent);
+
+var menu = document.querySelector('.main-menu');
+var menuSwitch = menu.querySelector('.main-menu__switch');
+var callbackBlock = document.querySelector('.callback');
+
+var switchMenu = function(e) {
+	changeClass(e.target, 'main-menu__switch--opened', T);
+	changeClass(menu, 'main-menu--opened', T);
+
+}
+var moveCallback = function() {
+	if(window.innerWidth < 601) {
+		menu.appendChild(callbackBlock);
+	} else {
+		menu.parentElement.insertBefore(callbackBlock, null);
+		
+	}
+};
+window.addEventListener('resize', moveCallback);
+menuSwitch.addEventListener('click', switchMenu);
+
+moveCallback();

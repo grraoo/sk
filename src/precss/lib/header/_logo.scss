@@ -1,6 +1,6 @@
 .logo {
-  @include sm-block() {
-    min-width: 0;
+  @include md-block() {
+    min-width: 50px;
   };
 
   display: flex;
@@ -10,7 +10,7 @@
   align-items: center;
   &__img {
     @include sm-block() {
-      width: 100px;
+      width: 50px;
     };
 
     width: 70px;
@@ -20,8 +20,8 @@
   }
 
   &__name {
-    @include sm-block() {
-      font-size: 0;
+    @include xs-block() {
+      // font-size: 0;
     };
 
     margin: 0;
@@ -33,15 +33,25 @@
 
     &-big {
       @include sm-block() {
+        font-size: 27px;
+      };
+
+@include xxs-block() {
         font-size: 0;
       };
 
       font-size: 31px;
       line-height: 1.1;
+
+      text-align-last: justify;
     }
 
     &-small {
       @include sm-block() {
+        font-size: 10px;
+      };
+
+@include xxs-block() {
         font-size: 0;
       };
 

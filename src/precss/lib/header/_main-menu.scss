@@ -1,5 +1,51 @@
 .main-menu {
+  @include md-block() {
+    visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 100%;
+    left: 100%;
+
+    &__link {
+      display: none;
+    }
+    .callback {
+      display: none;
+    }
+    &--opened {
+      visibility: visible;
+
+      flex-direction: column;
+
+      bottom: auto;
+      left: 0;
+
+      padding-top: 80px;
+      padding-right: 40px;
+      padding-bottom: 40px;
+      padding-left: 40px;
+
+      background-color: $c-blue;
+
+      align-items: flex-end;
+      .main-menu__link {
+        display: block;
+      }
+      .callback {
+        display: block;
+      }
+    }
+  };
+
+@include xs-block() {
+    padding-top: 40;
+  };
+
   display: flex;
+
+  transition-duration: .3s;
 
   align-items: center;
   align-content: center;
@@ -7,14 +53,67 @@
   flex-grow: 1;
   justify-content: center;
 
+  &__switch {
+    @include md-block() {
+      visibility: visible;
+
+      position: absolute;
+      top: 15px;
+      right: 40px;
+
+      width: 40px;
+      height: 40px;
+
+      border: 2px solid white;
+
+      &::after,
+      &::before {
+        content: '';
+
+        position: absolute;
+        right: 5px;
+        left: 5px;
+
+        height: 4px;
+
+        background-color: white;
+
+        transition-duration: .3s;
+      }
+      &::before {
+        top: 7px;
+
+        box-shadow: 0 9px 0 white;
+      }
+      &::after {
+        bottom: 7px;
+      }
+      &--opened {
+        &::before {
+          top: 50%;
+
+          box-shadow: 0 0 0 white;
+
+          transform: translateY(-50%) rotate(45deg);
+        }
+        &::after {
+          bottom: 50%;
+
+          transform: translateY(50%) rotate(-45deg);
+        }
+      }
+    }  cursor: pointer;
+  }
   &__link {
+    @include md-block() {
+      padding: 15px 0 0;
+    }
+
 @include lg-block() {
       padding: 15px 2% 0;
 
       font-size: 16px;
-    }
-
-    padding: 15px 2%;
+    }  padding: 15px 2%;
 
     color: $c-white;
     font-size: 18px;

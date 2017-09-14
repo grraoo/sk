@@ -1,4 +1,10 @@
 .text-input {
+  @include xxs-block() {
+    padding: 5px;
+
+    font-size: 14px;
+  };
+
   width: 100%;
 
   margin-bottom: 0;

@@ -1,10 +1,17 @@
 .header-top {
+  @include md-block() {
+    padding: 15px;
+
+    align-items: flex-start;
+  }  display: flex;
+
   position: absolute;
-  display: flex;
-  justify-content: space-between;
   top: 0;
-  left: 0;
   right: 0;
-  padding: 15px 40px;
+  left: 0;
   z-index: 5;
+
+  padding: 15px 40px;
+
+  justify-content: space-between;
 }
