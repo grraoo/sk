@@ -1,11 +1,17 @@
 .advantages {
   &__wrap {
     @include row-flex();
+
+@include xs-block() {
+      justify-content: center;
+    }
   }
 
   &__item {
     @include xs-block() {
       @include size(12);
+
+      max-width: 270px;
 
       text-align: center;
     };
@@ -21,13 +27,18 @@
 
 
   &__descr {
+    @include xs-block() {
+      padding-top: 80px;
+
+      background-size: auto 70px;
+    };
+
     padding: 15px;
     padding-top: 180px;
 
     background-repeat: no-repeat;
     background-position: top;
     background-size: 150px;
-
     &--process {
       background-image: url('../img/icons/list.svg');
     }

@@ -26,15 +26,15 @@
       </div>
       <nav class="main-menu">
         <a href="#compare" class="main-menu__link">Преимущества</a>
-        <a href="#projects" class="main-menu__link">Кейсы</a>
-        <a href="#portfolio" class="main-menu__link">работы</a>
+        <a href="#projects" class="main-menu__link">Проекты</a>
+        <a href="#portfolio" class="main-menu__link">Работы</a>
         <a href="#calculator" class="main-menu__link">Цены</a>
         <a href="#contacts" class="main-menu__link">Контакты</a>
         <div class="main-menu__switch"></div>
       </nav>
       <div class="callback">
         <a href="#" class="callback__phone">+7 3952 67-66-00</a>
-        <button class="btn btn--white js-modalOpen" data-title="Заказать обратный звонок">Заказать звонок</button>
+        <button class="btn btn--white js-modalOpen" data-target="#modal" data-title="Заказать обратный звонок">Заказать звонок</button>
       </div>
 
     </div>
@@ -593,7 +593,7 @@
     </section>
     <section class="action">
       <h2 class="action__header">Заключите договор на строительство и получите проект бесплатно!</h2>
-      <a href="" class="btn btn--white btn--pointer action__btn js-modalOpen" data-title="Акция: проект бесплатно!">Заказать дом</a>
+      <a href="" class="btn btn--white btn--pointer action__btn js-modalOpen" data-target="#modal" data-title="Акция: проект бесплатно!">Заказать дом</a>
     </section>
     <section class="advantages">
       <div class="container">
@@ -695,7 +695,7 @@
             <p class="portfolio__square">165 м<sup>2</sup></p>
             <p class="text portfolio__address">17 км Байкальского тракта"</p>
           </article>
-          
+
           <article class="portfolio__item portfolio__item--hidden">
             <div class="portfolio__img-wrap">
               <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/postroyennyye-obekt-7.jpg" alt="">
@@ -704,7 +704,47 @@
             <p class="portfolio__square">165 м<sup>2</sup></p>
             <p class="text portfolio__address">17 км Байкальского тракта"</p>
           </article>
-          
+
+          <article class="portfolio__item portfolio__item--hidden">
+            <div class="portfolio__img-wrap">
+              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/postroyennyye-obekt-8.jpg" alt="">
+            </div>
+            <h4 class="subheader">Дом из клееного бруса</h4>
+            <p class="portfolio__square">165 м<sup>2</sup></p>
+            <p class="text portfolio__address">17 км Байкальского тракта"</p>
+          </article>
+          <article class="portfolio__item portfolio__item--hidden">
+            <div class="portfolio__img-wrap">
+              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/postroyennyye-obekt-8.jpg" alt="">
+            </div>
+            <h4 class="subheader">Дом из клееного бруса</h4>
+            <p class="portfolio__square">165 м<sup>2</sup></p>
+            <p class="text portfolio__address">17 км Байкальского тракта"</p>
+          </article>
+          <article class="portfolio__item portfolio__item--hidden">
+            <div class="portfolio__img-wrap">
+              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/postroyennyye-obekt-8.jpg" alt="">
+            </div>
+            <h4 class="subheader">Дом из клееного бруса</h4>
+            <p class="portfolio__square">165 м<sup>2</sup></p>
+            <p class="text portfolio__address">17 км Байкальского тракта"</p>
+          </article>
+          <article class="portfolio__item portfolio__item--hidden">
+            <div class="portfolio__img-wrap">
+              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/postroyennyye-obekt-8.jpg" alt="">
+            </div>
+            <h4 class="subheader">Дом из клееного бруса</h4>
+            <p class="portfolio__square">165 м<sup>2</sup></p>
+            <p class="text portfolio__address">17 км Байкальского тракта"</p>
+          </article>
+          <article class="portfolio__item portfolio__item--hidden">
+            <div class="portfolio__img-wrap">
+              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/postroyennyye-obekt-8.jpg" alt="">
+            </div>
+            <h4 class="subheader">Дом из клееного бруса</h4>
+            <p class="portfolio__square">165 м<sup>2</sup></p>
+            <p class="text portfolio__address">17 км Байкальского тракта"</p>
+          </article>
           <article class="portfolio__item portfolio__item--hidden">
             <div class="portfolio__img-wrap">
               <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/postroyennyye-obekt-8.jpg" alt="">
@@ -715,6 +755,7 @@
           </article>
         </div>
         <button class="btn btn--green js-show-more">Посмотреть больше проектов</button>
+        <button class="btn btn--hidden btn--green js-hide" >Скрыть</button>
 
       </div>
     </section>
@@ -747,11 +788,12 @@
     </section>
     <section class="action">
       <h2 class="action__header">Заголовок акции</h2>
-      <a href="" class="btn btn--white btn--pointer action__btn js-modalOpen"  data-title="Акция: Заголовок акции">Заказать дом</a>
+      <a href="" class="btn btn--white btn--pointer action__btn js-modalOpen" data-target="#modal" data-title="Акция: Заголовок акции">Заказать дом</a>
     </section>
     <section id="calculator" class="calculator">
       <form class="container calculator__form" method="get" action="#">
         <h2 class="section-header">РАССЧИТАЙТЕ СТОИМОСТЬ СВОЕГО ДОМА</h2>
+        <button class="btn btn--green calculator__btn-top js-modalOpen" data-title="Ценовая политика" data-target="#info">Ценовая политика</button>
         <div class="calculator__outer">
 
           <div class="calculator__inputs">
@@ -820,28 +862,33 @@
                   <span class="calculator-list__name">
                     Фундамент&nbsp;<span class="list-content"></span>
                   </span>
-                  <span class="price"><span>&#8381;</span></span></li>
+                  <span class="price"><span>&#8381;</span></span>
+                </li>
                 <li class="calculator-list__item calculator-list__item--timber">
                   <span class="calculator-list__name">
                   Домокомплект клеённого бруса&nbsp;<span class="list-content"></span>
                   </span>
-                  <span class="price"><span>&#8381;</span></span></li>
+                  <span class="price"><span>&#8381;</span></span>
+                </li>
                 <li class="calculator-list__item calculator-list__item--build">
                   <span class="calculator-list__name">
                     Доставка и монтаж домокомплекта
                   </span>
-                  <span class="price"><span>&#8381;</span></span></li>
+                  <span class="price"><span>&#8381;</span></span>
+                </li>
                 <li class="calculator-list__item calculator-list__item--roof">
                   <span class="calculator-list__name">
                   Кровля&nbsp;
                   <span class="list-content"></span>
                   </span>
-                  <span class="price"><span>&#8381;</span></span></li>
+                  <span class="price"><span>&#8381;</span></span>
+                </li>
                 <li class="calculator-list__item calculator-list__item--windows">
                   <span class="calculator-list__name">
                     Окна&nbsp;<span class="list-content"></span>
                   </span>
-                  <span class="price"><span>&#8381;</span></span></li>
+                  <span class="price"><span>&#8381;</span></span>
+                </li>
               </ul>
             </div>
             <div class="calculator__btns">
@@ -859,7 +906,8 @@
         <h2 class="section-header">Отзывы наших клиентов</h2>
         <div class="thanks__wrap">
           <aricle class="thanks__item">
-            <div class="thanks__inner thanks__inner--video" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)">
+            <div class="thanks__inner thanks__inner--video js-modalOpen" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)"
+              data-target="#video" data-video="zWBRry4cO9g">
             </div>
             <div class="thanks__name">
               Отзыв Иван Иваныча
@@ -874,21 +922,24 @@
             </div>
           </aricle>
           <aricle class="thanks__item">
-            <div class="thanks__inner thanks__inner--video" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)">
+              <div class="thanks__inner thanks__inner--video js-modalOpen" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)"
+              data-target="#video" data-video="zWBRry4cO9g">
             </div>
             <div class="thanks__name">
               Отзыв Кузьмы Семёныча
             </div>
           </aricle>
           <aricle class="thanks__item">
-            <div class="thanks__inner thanks__inner--video" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)">
+              <div class="thanks__inner thanks__inner--video js-modalOpen" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)"
+              data-target="#video" data-video="zWBRry4cO9g">
             </div>
             <div class="thanks__name">
               Отзыв Анны Никогдаевны
             </div>
           </aricle>
           <aricle class="thanks__item">
-            <div class="thanks__inner thanks__inner--video" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)">
+              <div class="thanks__inner thanks__inner--video js-modalOpen" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)"
+              data-target="#video" data-video="zWBRry4cO9g">
             </div>
             <div class="thanks__name">
               Отзыв соседа с дрелью
@@ -975,29 +1026,85 @@
     </section>
   </footer>
   <a href="#page-top" class="scroll-btn scroll-btn--green scroll-btn--top">наверх</a>
-<div class="overlay">
-  
-    <div class="modal">
-      <div class="modal__close"></div>
-      <form class="feedback__form">
-        <h2 class="section-header">ЗАКАЗ ОБРАТНОГО ЗВОНКА</h2>
-        <section class="feedback__inputs feedback__inputs--callback">
-              <p class="feedback__item feedback__item--callback">
-                <input class="feedback__input text-input" name="name" type="text" id="name-2" size="30" value="" placeholder="Ваше имя">
-                <label class="feedback__label feedback__label--name" for="name-2" accesskey="U">Ваше имя</label>
-              </p>
-               <p class="feedback__item feedback__item--callback">
-                <input class="feedback__input text-input" name="phone" type="text" id="phone-2" size="30" value="" placeholder="Ваш телефон">
-                <label class="feedback__label feedback__label--phone" for="phone-2" accesskey="U">Ваш телефон</label>
-              </p>
-            </section>
-            <button class="btn feedback__btn" type="submit">
-              Заказать звонок
-            </button>
-      </form>
+
+  <template id="template">
+
+    <div class="overlay overlay--active" id="modal">
+
+      <div class="modal">
+        <div class="modal__close"></div>
+        <form class="feedback__form">
+          <h2 class="section-header">ЗАКАЗ ОБРАТНОГО ЗВОНКА</h2>
+          <section class="feedback__inputs feedback__inputs--callback">
+            <p class="feedback__item feedback__item--callback">
+              <input class="feedback__input text-input" name="name" type="text" id="name-2" size="30" value="" placeholder="Ваше имя">
+              <label class="feedback__label feedback__label--name" for="name-2" accesskey="U">Ваше имя</label>
+            </p>
+            <p class="feedback__item feedback__item--callback">
+              <input class="feedback__input text-input" name="phone" type="text" id="phone-2" size="30" value="" placeholder="Ваш телефон">
+              <label class="feedback__label feedback__label--phone" for="phone-2" accesskey="U">Ваш телефон</label>
+            </p>
+          </section>
+          <button class="btn feedback__btn" type="submit">
+            Заказать звонок
+          </button>
+        </form>
+      </div>
     </div>
-  
-</div>
+
+    <div class="overlay overlay--active" id="info">
+
+      <div class="modal modal__info">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+          <h2 class="section-header">ЗАКАЗ ОБРАТНОГО ЗВОНКА</h2>
+
+
+          <div class="subheader">Стоимость строительства дома для каждого проекта рассчитывается индивидуально и зависит от целого ряда факторов,
+            основные из которых:</div>
+          <ol class="text list">
+
+            <li>Разновидность фундамента. Исходя из типа грунта, предназначения строения и пожеланий клиента, возможно выбрать
+              фундамент, начиная от самого простого свайно-винтового и заканчивая тяжелым и дорогим цокольным этажом.</li>
+
+            <li>Этажность и площадь постройки. 1 м2 двухэтажного дома будет дешевле, чем 1 м2 одноэтажного, так как цена строительства
+              фундамента и кровли распределяется на два этажа.</li>
+
+            <li>Толщина стен Стена дома из клееного бруса может быть от 185 до 245 мм.</li>
+
+            <li>Разновидность отделочных материалов. Этот фактор является существенным на этапе строительства и в большей степени
+              влияет на итоговую стоимость дома.</li>
+
+            <li>Объем работ.</li>
+
+          </ol>
+
+          <b class="text modal__text">В вопросах ценовой политики компания  «Строй Комфорт»  действует  гибко и предлагает своим клиентам выгодные цены и условия финансирования.</b>
+          <div class="subheader">На период строительства мы предоставляем:</div>
+          <ul class="text list">
+            <li>возможность рассрочки.</li>
+            <li>возможность поэтапного строительства.</li>
+          </ul>
+          <b>Графики платежей и этапы работ согласовываются индивидуально.</b>
+
+
+        </div>
+      </div>
+
+    </div>
+    <div class="overlay overlay--active" id="video">
+
+      <div class="modal modal__info modal__info--video">
+          <div class="modal__close"></div>
+        <div class="modal__content">
+          <div style="position:relative;height:0;padding-bottom:56.25%">
+            <iframe id="videoFrame" src="#" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
   <script src="js/main.js"></script>
 </body>
 

@@ -22,7 +22,7 @@
 }
 .scroll-btn {
   position: absolute;
-  bottom: 40px;
+  bottom: 15px;
   left: 50%;
   z-index: 2;
 
@@ -74,6 +74,10 @@
   &--left {
     @include scroll-btn();
 
+@include xxs-block() {
+      left: 20px;
+    };
+
     position: absolute;
     top: 50%;
     left: -40px;
@@ -85,6 +89,10 @@
 
   &--right {
     @include scroll-btn();
+
+@include xxs-block() {
+      right: 20px;
+    };
 
     position: absolute;
     top: 50%;

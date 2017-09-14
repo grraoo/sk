@@ -1,5 +1,5 @@
 .header-top {
-  @include md-block() {
+  @include lg-block() {
     padding: 15px;
 
     align-items: flex-start;

@@ -1,6 +1,10 @@
 /* Slider */
 .slick-slider {
-  //   }
+  @include xxs-block() {
+    margin-right: 0;
+    margin-left: 0;
+  };
+
   display: block;
 
   position: relative;

@@ -1,41 +1,56 @@
 .btn {
-  border: 2px solid currentColor;
-  background-color: transparent;
-  padding: 10px 18px;
-  line-height: 1;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition-duration: .3s;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
+@include lg-block() {
+    padding: 10px;
 
-  @include lg-block() {
     font-size: 12px;
     line-height: 1.2;
-    padding: 10px;
   }
+
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border: 2px solid currentColor;
+
+  background-color: transparent;
+
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  letter-spacing: .2em;
+
+  cursor: pointer;
+  transition-duration: .3s;
 
   &--white {
     color: $c-white;
-    
+
     &:hover {
-      color: black;
       background-color: $c-white;
+
+      color: black;
     }
   }
-  
+
   &--green {
-    color: $c-white;
-    background-color: $c-green;
     border-color: $c-darkgreen;
-    
+
+    background-color: $c-green;
+
+    color: $c-white;
+
     &:hover {
-      color: $c-darkgreen;
       background-color: $c-white;
+
+      color: $c-darkgreen;
     }
+  }
+  &--hidden {
+    display: none;
   }
 }

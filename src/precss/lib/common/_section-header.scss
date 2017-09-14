@@ -1,21 +1,30 @@
 .section-header {
-  position: relative;
+  @include xxs-block() {
+    font-size: 24px;
+  }  position: relative;
+
   font-size: 28px;
   line-height: 36px;
   font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  text-align: center;
 
+  text-align: center;
+  text-transform: uppercase;
+
+  letter-spacing: .15em;
 
   &::after {
     content: '';
+
     display: block;
+
     width: 20%;
     min-width: 250px;
     height: 2px;
-    background: $c-darkgreen;
-    border: 0;
+
     margin: 50px auto 35px;
+
+    border: 0;
+
+    background: $c-darkgreen;
   }
 }

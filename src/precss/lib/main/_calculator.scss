@@ -68,7 +68,7 @@
 
 
   &__label {
-@include xxs-block() {
+    @include xxs-block() {
       font-size: 14px;
     };
 
@@ -117,6 +117,10 @@
     font-size: 16px;
   }
   &-list__item {
+@include xs-block() {
+      flex-direction: column;
+    };
+
     display: flex;
 
     padding: 5px 0;
@@ -168,6 +172,13 @@
     margin-top: .5em;
 
     text-align: left;
+  }
+  &__btn-top {
+    display: block;
+
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
   }
 }
 

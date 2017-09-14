@@ -278,17 +278,27 @@ var changeClass = function (item, myClass, flag) {
 	}
 };
 
-var modal = document.querySelector('.overlay');
+var template = document.querySelector('#template').content || document.querySelector('#template');
+var modal;
 
 var openModal = function(e) {
 	var btn = e.target;
+	
 	if(btn.classList.contains('js-modalOpen')) {
-		e.preventDefault();
-		changeClass(modal, 'overlay--active', true);
-		var title = btn.dataset.title;
-		modal.querySelector('.section-header').innerText = title;
+		if(btn.dataset.video){
+			console.log('ok');
+			modal = template.querySelector(btn.dataset.target).cloneNode(true);
+			modal.querySelector('#videoFrame').src = 'https://www.youtube.com/embed/' + btn.dataset.video + '?ecver=2';
+			modal = document.body.appendChild(modal);
+		}  else {
+			modal = template.querySelector(btn.dataset.target).cloneNode(true);
+			e.preventDefault();
+			modal = document.body.appendChild(modal);
+			var title = btn.dataset.title;
+			modal.querySelector('.section-header').innerText = title;
+		} 
 	} else if (btn.classList.contains('modal__close')) {
-		changeClass(modal, 'overlay--active', false);
+		document.body.removeChild(modal);
 	}
 };
 
@@ -296,21 +306,42 @@ document.addEventListener('click', openModal);
 
 var showMore = document.querySelector('.js-show-more');
 var hiddenProjects = document.querySelectorAll('.portfolio__item--hidden');
-
+var btnHidden = document.querySelector('.btn--hidden');
+var started = false;
 var showRecent = function(e) {
 	if(hiddenProjects) {
-		for(i = 0; i < hiddenProjects.length; i++) {
-			changeClass(hiddenProjects[i], 'portfolio__item--hidden', t);
+		if(!started) {
+			projectsToShow = [].slice.call(hiddenProjects);
 		}
+		console.log(hiddenProjects.length);
+		for(var i = 0; i < 3; i++) {
+			if(projectsToShow[0] ){
+				changeClass(projectsToShow[0], 'portfolio__item--hidden', 0);
+			} else {
+				changeClass(showMore, 'btn--hidden', 1);
+			}
+			projectsToShow.splice(0, 1);
+			console.log(projectsToShow.length);
+		}
+		changeClass(btnHidden, 'btn--hidden', 0);
+		started = true;
 	}
-	if(e.target.textContent == 'Скрыть') {
-		e.target.textContent = 'Посмотреть больше проектов';
-	} else {
-		e.target.textContent = 'Скрыть';
+}
+
+var hideRecent = function(e) {
+	if(hiddenProjects) {
+		for(i = 0; i < hiddenProjects.length; i++) {
+			changeClass(hiddenProjects[i], 'portfolio__item--hidden', 1);
+		}
+		changeClass(btnHidden, 'btn--hidden', 1);
+		started = false;
+		changeClass(showMore, 'btn--hidden', 0);
+		
 	}
 }
 
 showMore.addEventListener('click', showRecent);
+btnHidden.addEventListener('click', hideRecent);
 
 var menu = document.querySelector('.main-menu');
 var menuSwitch = menu.querySelector('.main-menu__switch');

@@ -86,12 +86,15 @@
   &__info {
     text-align: left;
     a {
+      display: block;
+
       margin: 1em;
       padding-left: 40px;
 
+      background-color: transparent;
       background-repeat: no-repeat;
       background-position: left;
-      background-size: contain;
+      background-size: auto 1.2em;
 
       font-weight: bold;
     }

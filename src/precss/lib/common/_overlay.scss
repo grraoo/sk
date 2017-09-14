@@ -8,16 +8,10 @@
   left: 0;
   z-index: 10;
 
-  opacity: 0;
+  opacity: 1;
 
   background: rgba(0, 0, 0, .5);
 
   transition-duration: .3s;
-  pointer-events: none;
-
-  &--active {
-    opacity: 1;
-
-    pointer-events: all;
-  }
+  pointer-events: all;
 }

@@ -27,7 +27,7 @@
       padding-bottom: 40px;
       padding-left: 40px;
 
-      background-color: $c-blue;
+      background-color: $c-darkgreen;
 
       align-items: flex-end;
       .main-menu__link {
@@ -116,12 +116,13 @@
     }  padding: 15px 2%;
 
     color: $c-white;
-    font-size: 18px;
+    font-size: 16px;
 
     text-decoration: none;
     text-transform: uppercase;
 
     letter-spacing: .5px;
+
     &:hover {
       text-decoration: underline;
     }
