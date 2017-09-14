@@ -3,6 +3,18 @@
     display: flex;
 
     align-items: center;
+    .slick-arrow {
+      top: 125%;
+    }
+
+    .scroll-btn--right {
+      right: auto;
+      left: 51%;
+    }
+    .scroll-btn--left {
+      right: 51%;
+      left: auto;
+    }
   }
 
   &__item {

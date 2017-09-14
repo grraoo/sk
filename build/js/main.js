@@ -34,7 +34,7 @@ $(document).ready(function () {
 		{
 			breakpoint: 500,
 			settings: {
-				slidesToShow: 1,
+				slidesToShow: 2,
 				slidesToScroll: 1
 			}
 		}
@@ -278,27 +278,58 @@ var changeClass = function (item, myClass, flag) {
 	}
 };
 
+/*
+вытаскиваем конент из шаблона
+*/
 var template = document.querySelector('#template').content || document.querySelector('#template');
 var modal;
 
+
+/* 
+открываем/закрыываем модалку
+*/
 var openModal = function(e) {
 	var btn = e.target;
-	
+	/**
+	 * проверяем, что кликнули по нужной кнопке
+	 */
 	if(btn.classList.contains('js-modalOpen')) {
 		if(btn.dataset.video){
-			console.log('ok');
+			/**
+			* видео отзыв
+			* достаем нужную модалку по id
+			* для iframe собираем src
+			*/
 			modal = template.querySelector(btn.dataset.target).cloneNode(true);
 			modal.querySelector('#videoFrame').src = 'https://www.youtube.com/embed/' + btn.dataset.video + '?ecver=2';
+
+			/**
+			* выводим в DOM
+			*/
 			modal = document.body.appendChild(modal);
 		}  else {
-			modal = template.querySelector(btn.dataset.target).cloneNode(true);
+			/**
+			 * модалка с формой
+			 */
+			
 			e.preventDefault();
+			modal = template.querySelector(btn.dataset.target).cloneNode(true);
+			/**
+			 * тут, до вставки в DOM можно например добавлять нужные инпуты или атрибуты форме, для идентификации
+			 */
 			modal = document.body.appendChild(modal);
 			var title = btn.dataset.title;
 			modal.querySelector('.section-header').innerText = title;
 		} 
+		document.body.style.position = 'fixed';
+		document.body.style.width = '100vw';
 	} else if (btn.classList.contains('modal__close')) {
+		/**
+		 * закрываем открытую модалку
+		 */
 		document.body.removeChild(modal);
+		document.body.style.position = 'static';
+		document.body.style.width = 'initial';
 	}
 };
 
@@ -308,12 +339,15 @@ var showMore = document.querySelector('.js-show-more');
 var hiddenProjects = document.querySelectorAll('.portfolio__item--hidden');
 var btnHidden = document.querySelector('.btn--hidden');
 var started = false;
+
+/**
+* открываем по три проекта в портфолио за раз
+ */
 var showRecent = function(e) {
 	if(hiddenProjects) {
 		if(!started) {
 			projectsToShow = [].slice.call(hiddenProjects);
 		}
-		console.log(hiddenProjects.length);
 		for(var i = 0; i < 3; i++) {
 			if(projectsToShow[0] ){
 				changeClass(projectsToShow[0], 'portfolio__item--hidden', 0);
@@ -327,7 +361,9 @@ var showRecent = function(e) {
 		started = true;
 	}
 }
-
+/**
+ * прячем все открытые выше проекты
+ */
 var hideRecent = function(e) {
 	if(hiddenProjects) {
 		for(i = 0; i < hiddenProjects.length; i++) {
@@ -336,7 +372,6 @@ var hideRecent = function(e) {
 		changeClass(btnHidden, 'btn--hidden', 1);
 		started = false;
 		changeClass(showMore, 'btn--hidden', 0);
-		
 	}
 }
 
@@ -352,6 +387,10 @@ var switchMenu = function(e) {
 	changeClass(menu, 'main-menu--opened', T);
 
 }
+
+/**
+ * засовываем на маленьких экранах кнопку обратного зваонка в меню
+ */
 var moveCallback = function() {
 	if(window.innerWidth < 601) {
 		menu.appendChild(callbackBlock);
@@ -360,6 +399,7 @@ var moveCallback = function() {
 		
 	}
 };
+
 window.addEventListener('resize', moveCallback);
 menuSwitch.addEventListener('click', switchMenu);
 

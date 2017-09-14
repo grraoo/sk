@@ -67,6 +67,10 @@
       font-size: 35px;
     };
 
+@include xxs-block() {
+      font-size: 27px;
+    };
+
     margin-top: 0;
     margin-bottom: 2vh;
 
@@ -83,6 +87,10 @@
 
 @include xs-block() {
       font-size: 30px;
+    };
+
+@include xxs-block() {
+      font-size: 27px;
     };
 
     display: block;
