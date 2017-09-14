@@ -267,12 +267,14 @@ calcForm.addEventListener('reset', function (e) {
 
 
 /* modal */
-
-var changeClass = function (item, newClass, add) {
-	if(add) {
-		item.classList.add(newClass);
+var t = 'toggle';
+var changeClass = function (item, myClass, flag) {
+	if(flag == 'toggle') {
+		item.classList.toggle(myClass);
+	} else if(flag) {
+		item.classList.add(myClass);
 	} else {
-		item.classList.remove(newClass);
+		item.classList.remove(myClass);
 	}
 };
 
@@ -291,3 +293,21 @@ var openModal = function(e) {
 };
 
 document.addEventListener('click', openModal);
+
+var showMore = document.querySelector('.js-show-more');
+var hiddenProjects = document.querySelectorAll('.portfolio__item--hidden');
+
+var showRecent = function(e) {
+	if(hiddenProjects) {
+		for(i = 0; i < hiddenProjects.length; i++) {
+			changeClass(hiddenProjects[i], 'portfolio__item--hidden', t);
+		}
+	}
+	if(e.target.textContent == 'Скрыть') {
+		e.target.textContent = 'Посмотреть больше проектов';
+	} else {
+		e.target.textContent = 'Скрыть';
+	}
+}
+
+showMore.addEventListener('click', showRecent);

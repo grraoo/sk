@@ -8,15 +8,9 @@
   }
 
   &__item {
-    @include col();
-
-@include size(4);
-
-@include sm-block() {
+    @include col();@include size(4);@include sm-block() {
       @include size(6);
-    };
-
-@include xs-block() {
+    };@include xs-block() {
       @include size(12);
     };
 
@@ -26,10 +20,26 @@
     background: #ffffff;
 
     text-align: center;
+
+    transition-duration: .3s;
+
+    &--hidden {
+      overflow: hidden;
+
+      height: 0;
+
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &__img {
+    width: 370px;
+    height: 250px;
+
     border: 3px solid #cbcdca;
+
+    background-color: lightgrey;
   }
 
   &__square {
