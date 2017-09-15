@@ -21,12 +21,16 @@ var modal;
 /* 
 открываем/закрыываем модалку
 */
+var offsetTop;
+var offsetX;
 var openModal = function (e) {
 	/**
 	 * проверяем, что кликнули по нужной кнопке
 	 */
 	var btn = e.target;
 	if (btn.classList.contains('js-modalOpen')) {
+		offsetTop = window.pageYOffset;
+		offsetX = window.pageXOffset;
 		var title = btn.dataset.title;
 		modal = template.querySelector(btn.dataset.target).cloneNode(true);
 
@@ -60,7 +64,8 @@ var openModal = function (e) {
 			slides.forEach(function (img) {
 				var imgWrap = document.createElement('div');
 				changeClass(imgWrap, 'modal__img-wrap', 1);
-				imgWrap.appendChild(img);
+				imgWrap.style.backgroundImage = 'url(' +img.src+ ')';
+				// imgWrap.appendChild(img);
 				imgSlider.appendChild(imgWrap);
 			});
 
@@ -77,8 +82,10 @@ var openModal = function (e) {
 			 */
 			modal.querySelector('.section-header').innerText = title;
 		}
-		// document.body.style.position = 'fixed';
-		// document.body.style.width = '100vw';
+		
+		document.body.style.top = '-' + offsetTop + 'px';
+		document.body.style.position = 'fixed';
+		document.body.style.width = '100vw';
 		modal = document.body.appendChild(modal);
 
 		/**
@@ -97,11 +104,12 @@ var openModal = function (e) {
 		/**
 		 * закрываем открытую модалку
 		 */
-		console.log(modal);
-		console.log('close');
+console.log(offsetX, offsetTop);
 		document.body.removeChild(modal);
-		// document.body.style.position = 'static';
-		// document.body.style.width = 'initial';
+		document.body.style.position = 'relative';
+		document.body.style.width = 'initial';
+		document.body.style.top = 'auto';
+		window.scrollTo(offsetX, offsetTop)
 	}
 };
 
