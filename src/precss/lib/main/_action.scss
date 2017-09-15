@@ -65,6 +65,11 @@
     }
   }
   &--contacts {
+    @include xxs-block() {
+      padding-right: 0;
+      padding-left: 0;
+    };
+
     background-color: #f0f0f0;
     background-image: url(../img/timber-aside.png), url(../img/timber-aside-2.png);
     background-repeat: no-repeat;

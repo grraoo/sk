@@ -1,10 +1,52 @@
+var onFormSend =  function() {
+	console.log('onformsend');
+	$(".feedback__form").submit(function () { // пeрeхвaтывaeм всe при сoбытии oтпрaвки
+		console.log('submit');
+		var form = $(this); // зaпишeм фoрму, чтoбы пoтoм нe былo прoблeм с this
+		var butt = form.find('.feedback__btn');
+		// var resultMsg = form.parent().find('.result') 
+
+		
+			var data = form.serialize(); // пoдгoтaвливaeм дaнныe
+			$.ajax({ // инициaлизируeм ajax зaпрoс
+				type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
+				url: 'form_handler.php', // путь дo oбрaбoтчикa
+				dataType: 'json', // oтвeт ждeм в json фoрмaтe
+				data: data, // дaнныe для oтпрaвки
+				beforeSend: function (data) { // сoбытиe дo oтпрaвки
+					butt.attr('disabled', 'disabled'); // нaпримeр, oтключим кнoпку, чтoбы нe жaли пo 100 рaз
+				},
+				success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
+					console.log('success');
+					if (data['error']) { // eсли oбрaбoтчик вeрнул oшибку
+						alert(data['error']); // пoкaжeм eё тeкст
+					} else { // eсли всe прoшлo oк
+						butt.prop('disabled', false);
+						console.log(modal);
+						document.body.removeChild(modal);
+		
+					}
+				},
+				error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
+					alert(xhr.status); // пoкaжeм oтвeт сeрвeрa
+					alert(thrownError); // и тeкст oшибки
+				},
+				complete: function(data) { // сoбытиe пoслe любoгo исхoдa
+						butt.prop('disabled', false); // в любoм случae включим кнoпку oбрaтнo
+				}
+			});
+		
+		return false; // вырубaeм стaндaртную oтпрaвку фoрмы
+	});
+};
+
 
 /* modal */
 var T = 'toggle';
 var changeClass = function (item, myClass, flag) {
-	if(flag == 'toggle') {
+	if (flag == 'toggle') {
 		item.classList.toggle(myClass);
-	} else if(flag) {
+	} else if (flag) {
 		item.classList.add(myClass);
 	} else {
 		item.classList.remove(myClass);
@@ -64,7 +106,7 @@ var openModal = function (e) {
 			slides.forEach(function (img) {
 				var imgWrap = document.createElement('div');
 				changeClass(imgWrap, 'modal__img-wrap', 1);
-				imgWrap.style.backgroundImage = 'url(' +img.src+ ')';
+				imgWrap.style.backgroundImage = 'url(' + img.src + ')';
 				// imgWrap.appendChild(img);
 				imgSlider.appendChild(imgWrap);
 			});
@@ -82,21 +124,23 @@ var openModal = function (e) {
 			 */
 			modal.querySelector('.section-header').innerText = title;
 		}
-		
+
 		document.body.style.top = '-' + offsetTop + 'px';
 		document.body.style.position = 'fixed';
 		document.body.style.width = '100vw';
 		modal = document.body.appendChild(modal);
+		onFormSend();
+		
 
 		/**
 		 * инициализируме слайдер, если открыли картинки проектов
 		 */
-		if(modal.id = 'imgs') {
-			$('.modal__content').slick({
+		if (modal.id == 'imgs') {
+			$('#imgs .modal__content').slick({
 				arrows: true,
 				dots: false,
-				slidesToShow:1,
-				slidesToScroll:1,
+				slidesToShow: 1,
+				slidesToScroll: 1,
 				infinite: true
 			})
 		}
@@ -104,7 +148,6 @@ var openModal = function (e) {
 		/**
 		 * закрываем открытую модалку
 		 */
-console.log(offsetX, offsetTop);
 		document.body.removeChild(modal);
 		document.body.style.position = 'relative';
 		document.body.style.width = 'initial';
@@ -121,15 +164,15 @@ var btnHidden = document.querySelector('.btn--hidden');
 var started = false;
 
 /**
-* открываем по три проекта в портфолио за раз
+ * открываем по три проекта в портфолио за раз
  */
-var showRecent = function(e) {
-	if(hiddenProjects) {
-		if(!started) {
+var showRecent = function (e) {
+	if (hiddenProjects) {
+		if (!started) {
 			projectsToShow = [].slice.call(hiddenProjects);
 		}
-		for(var i = 0; i < 3; i++) {
-			if(projectsToShow[0] ){
+		for (var i = 0; i < 3; i++) {
+			if (projectsToShow[0]) {
 				changeClass(projectsToShow[0], 'portfolio__item--hidden', 0);
 			} else {
 				changeClass(showMore, 'btn--hidden', 1);
@@ -144,9 +187,9 @@ var showRecent = function(e) {
 /**
  * прячем все открытые выше проекты
  */
-var hideRecent = function(e) {
-	if(hiddenProjects) {
-		for(i = 0; i < hiddenProjects.length; i++) {
+var hideRecent = function (e) {
+	if (hiddenProjects) {
+		for (i = 0; i < hiddenProjects.length; i++) {
 			changeClass(hiddenProjects[i], 'portfolio__item--hidden', 1);
 		}
 		changeClass(btnHidden, 'btn--hidden', 1);
@@ -162,7 +205,7 @@ var menu = document.querySelector('.main-menu');
 var menuSwitch = menu.querySelector('.main-menu__switch');
 var callbackBlock = document.querySelector('.callback');
 
-var switchMenu = function(e) {
+var switchMenu = function (e) {
 	changeClass(e.target, 'main-menu__switch--opened', T);
 	changeClass(menu, 'main-menu--opened', T);
 
@@ -171,12 +214,12 @@ var switchMenu = function(e) {
 /**
  * засовываем на маленьких экранах кнопку обратного зваонка в меню
  */
-var moveCallback = function() {
-	if(window.innerWidth < 601) {
+var moveCallback = function () {
+	if (window.innerWidth < 601) {
 		menu.appendChild(callbackBlock);
 	} else {
 		menu.parentElement.insertBefore(callbackBlock, null);
-		
+
 	}
 };
 
@@ -187,8 +230,7 @@ moveCallback();
 
 $(document).ready(function () {
 
-	var adoptSlider = [
-		{
+	var adoptSlider = [{
 			breakpoint: 1000,
 			settings: {
 				slidesToShow: 2,
@@ -203,8 +245,7 @@ $(document).ready(function () {
 			}
 		}
 	];
-	var adoptSlider4 = [
-		{
+	var adoptSlider4 = [{
 			breakpoint: 1000,
 			settings: {
 				slidesToShow: 3,
@@ -247,9 +288,9 @@ $(document).ready(function () {
 		autoplaySpeed: 4000,
 		responsive: adoptSlider,
 		pauseOnHover: true
-		
+
 	});
-	
+
 	$('.trust__wrap').slick({
 		arrows: true,
 		dots: false,
@@ -259,7 +300,7 @@ $(document).ready(function () {
 		autoplaySpeed: 3000,
 		responsive: adoptSlider4,
 		pauseOnHover: true
-		
+
 	});
 
 
@@ -273,12 +314,14 @@ $(document).ready(function () {
 		speed: 500
 	});
 
-	$('.compare__slider-item--control .compare__item').click(function(e) {
+	$('.compare__slider-item--control .compare__item').click(function (e) {
 		$('.compare__slider').slick('slickGoTo', e.currentTarget.dataset.number);
 	});
-	$('.compare__back').click(function(e) {
+	$('.compare__back').click(function (e) {
 		$('.compare__slider').slick('slickGoTo', 0);
 	});
+
+	
 });
 
 $('.scroll-btn--top').click(function (e) {
@@ -288,14 +331,14 @@ $('.scroll-btn--top').click(function (e) {
 	}, 2000);
 });
 
-$('.scroll-btn--down').click(function(e) {
+$('.scroll-btn--down').click(function (e) {
 	e.preventDefault();
 	$('html, body').animate({
 		scrollTop: $(e.target.getAttribute('href')).position().top
 	}, 2000);
 });
 
-$('.main-menu__link').click(function(e) {
+$('.main-menu__link').click(function (e) {
 	e.preventDefault();
 	$('html, body').animate({
 		scrollTop: $(e.target.getAttribute('href')).position().top
