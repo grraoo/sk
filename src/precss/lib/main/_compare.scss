@@ -73,6 +73,10 @@
   }
 
   &__slider-item {
+    @include sm-block() {
+      width: calc(100vw - 30px) !important;
+    };
+
     overflow: auto;
   }
 }

@@ -144,7 +144,7 @@ var openModal = function (e) {
 				infinite: true
 			})
 		}
-	} else if (btn.classList.contains('modal__close')) {
+	} else if (btn.classList.contains('modal__close') || btn.classList.contains('overlay--active')) {
 		/**
 		 * закрываем открытую модалку
 		 */
@@ -206,9 +206,8 @@ var menuSwitch = menu.querySelector('.main-menu__switch');
 var callbackBlock = document.querySelector('.callback');
 
 var switchMenu = function (e) {
-	changeClass(e.target, 'main-menu__switch--opened', T);
+	changeClass(menuSwitch, 'main-menu__switch--opened', T);
 	changeClass(menu, 'main-menu--opened', T);
-
 }
 
 /**
@@ -225,6 +224,13 @@ var moveCallback = function () {
 
 window.addEventListener('resize', moveCallback);
 menuSwitch.addEventListener('click', switchMenu);
+menu.addEventListener('click', function(e) {
+	if(e.target != menuSwitch){
+		if(window.innerWidth < 961)
+			switchMenu();
+		}
+	}
+);
 
 moveCallback();
 

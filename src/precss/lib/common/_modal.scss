@@ -4,6 +4,7 @@
   max-width: 500px;
 
   margin: auto;
+  padding: 15px;
 
   background: white;
 
@@ -48,16 +49,20 @@
     padding: 15px 40px;
 
     font-size: 18px;
+
+    &--video {
+      padding: 0;
+      padding-top: 30px;
+    }
   }
   &__info {
-    @include md-block() {
-      margin-right: 15px;
-      margin-left: 15px;
+    @include xs-block() {
+      margin-right: auto;
+      margin-left: auto;
     };
 
     overflow: auto;
 
-    min-width: 90%;
     max-width: 1000px;
     max-height: 90vh;
 

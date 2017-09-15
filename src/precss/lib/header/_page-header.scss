@@ -1,5 +1,30 @@
 .page-header {
-  padding-top: 100px;
-  height: 100vh;
   position: relative;
+
+  overflow: hidden;
+
+  height: 100vh;
+
+  padding-top: 100px;
+
+  background-image: url('../img/bg/bg-home.jpg');
+
+  &__video {
+    @include sm-block() {
+      display: none;
+    };
+
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    right: -50vw;
+    left: -50vw;
+    z-index: 0;
+
+    width: 200vw;
+    height: auto;
+
+    transform: translateY(-50%);
+  }
 }
