@@ -1,3 +1,182 @@
+
+/* modal */
+var T = 'toggle';
+var changeClass = function (item, myClass, flag) {
+	if(flag == 'toggle') {
+		item.classList.toggle(myClass);
+	} else if(flag) {
+		item.classList.add(myClass);
+	} else {
+		item.classList.remove(myClass);
+	}
+};
+
+/*
+вытаскиваем конент из шаблона
+*/
+var template = document.querySelector('#template').content || document.querySelector('#template');
+var modal;
+
+
+/* 
+открываем/закрыываем модалку
+*/
+var openModal = function (e) {
+	/**
+	 * проверяем, что кликнули по нужной кнопке
+	 */
+	var btn = e.target;
+	if (btn.classList.contains('js-modalOpen')) {
+		var title = btn.dataset.title;
+		modal = template.querySelector(btn.dataset.target).cloneNode(true);
+
+		if (btn.dataset.video) {
+			/**
+			 * видео отзыв
+			 * достаем нужную модалку по id
+			 * для iframe собираем src
+			 */
+			modal.querySelector('#videoFrame').src = 'https://www.youtube.com/embed/' + btn.dataset.video + '?ecver=2';
+
+			/**
+			 * выводим в DOM
+			 */
+		} else if (btn.dataset.imgs) {
+			/**
+			 * картинки проектов
+			 */
+			var images = btn.dataset.imgs.split(', ');
+			/**
+			 * генерируем слайдер
+			 */
+			var slides = [];
+			images.forEach(function (img, i) {
+				var slideImg = new Image();
+				slideImg.src = img;
+				slides[i] = slideImg;
+			});
+			var imgSlider = modal.querySelector('.modal__content');
+
+			slides.forEach(function (img) {
+				var imgWrap = document.createElement('div');
+				changeClass(imgWrap, 'modal__img-wrap', 1);
+				imgWrap.appendChild(img);
+				imgSlider.appendChild(imgWrap);
+			});
+
+			modal.querySelector('.section-header').innerText = title;
+
+		} else {
+			/**
+			 * модалка с формой
+			 */
+
+			e.preventDefault();
+			/**
+			 * тут, до вставки в DOM можно например добавлять нужные инпуты или атрибуты форме, для идентификации
+			 */
+			modal.querySelector('.section-header').innerText = title;
+		}
+		// document.body.style.position = 'fixed';
+		// document.body.style.width = '100vw';
+		modal = document.body.appendChild(modal);
+
+		/**
+		 * инициализируме слайдер, если открыли картинки проектов
+		 */
+		if(modal.id = 'imgs') {
+			$('.modal__content').slick({
+				arrows: true,
+				dots: false,
+				slidesToShow:1,
+				slidesToScroll:1,
+				infinite: true
+			})
+		}
+	} else if (btn.classList.contains('modal__close')) {
+		/**
+		 * закрываем открытую модалку
+		 */
+		console.log(modal);
+		console.log('close');
+		document.body.removeChild(modal);
+		// document.body.style.position = 'static';
+		// document.body.style.width = 'initial';
+	}
+};
+
+document.addEventListener('click', openModal, true);
+
+var showMore = document.querySelector('.js-show-more');
+var hiddenProjects = document.querySelectorAll('.portfolio__item--hidden');
+var btnHidden = document.querySelector('.btn--hidden');
+var started = false;
+
+/**
+* открываем по три проекта в портфолио за раз
+ */
+var showRecent = function(e) {
+	if(hiddenProjects) {
+		if(!started) {
+			projectsToShow = [].slice.call(hiddenProjects);
+		}
+		for(var i = 0; i < 3; i++) {
+			if(projectsToShow[0] ){
+				changeClass(projectsToShow[0], 'portfolio__item--hidden', 0);
+			} else {
+				changeClass(showMore, 'btn--hidden', 1);
+			}
+			projectsToShow.splice(0, 1);
+			console.log(projectsToShow.length);
+		}
+		changeClass(btnHidden, 'btn--hidden', 0);
+		started = true;
+	}
+}
+/**
+ * прячем все открытые выше проекты
+ */
+var hideRecent = function(e) {
+	if(hiddenProjects) {
+		for(i = 0; i < hiddenProjects.length; i++) {
+			changeClass(hiddenProjects[i], 'portfolio__item--hidden', 1);
+		}
+		changeClass(btnHidden, 'btn--hidden', 1);
+		started = false;
+		changeClass(showMore, 'btn--hidden', 0);
+	}
+}
+
+showMore.addEventListener('click', showRecent);
+btnHidden.addEventListener('click', hideRecent);
+
+var menu = document.querySelector('.main-menu');
+var menuSwitch = menu.querySelector('.main-menu__switch');
+var callbackBlock = document.querySelector('.callback');
+
+var switchMenu = function(e) {
+	changeClass(e.target, 'main-menu__switch--opened', T);
+	changeClass(menu, 'main-menu--opened', T);
+
+}
+
+/**
+ * засовываем на маленьких экранах кнопку обратного зваонка в меню
+ */
+var moveCallback = function() {
+	if(window.innerWidth < 601) {
+		menu.appendChild(callbackBlock);
+	} else {
+		menu.parentElement.insertBefore(callbackBlock, null);
+		
+	}
+};
+
+window.addEventListener('resize', moveCallback);
+menuSwitch.addEventListener('click', switchMenu);
+
+moveCallback();
+
 $(document).ready(function () {
 
 	var adoptSlider = [
@@ -46,7 +225,9 @@ $(document).ready(function () {
 		slidesToScroll: 2,
 		autoplay: true,
 		autoplaySpeed: 4000,
-		responsive: adoptSlider
+		responsive: adoptSlider,
+		pauseOnHover: true,
+		draggable: false
 	});
 
 	$('.thanks__wrap').slick({
@@ -56,7 +237,9 @@ $(document).ready(function () {
 		slidesToScroll: 2,
 		autoplay: true,
 		autoplaySpeed: 4000,
-		responsive: adoptSlider
+		responsive: adoptSlider,
+		pauseOnHover: true
+		
 	});
 	
 	$('.trust__wrap').slick({
@@ -66,7 +249,9 @@ $(document).ready(function () {
 		slidesToScroll: 4,
 		autoplay: true,
 		autoplaySpeed: 3000,
-		responsive: adoptSlider4
+		responsive: adoptSlider4,
+		pauseOnHover: true
+		
 	});
 
 
@@ -264,143 +449,3 @@ calcForm.addEventListener('reset', function (e) {
 		clearTimeout(timerId);
 	}, 100);
 });
-
-
-/* modal */
-var T = 'toggle';
-var changeClass = function (item, myClass, flag) {
-	if(flag == 'toggle') {
-		item.classList.toggle(myClass);
-	} else if(flag) {
-		item.classList.add(myClass);
-	} else {
-		item.classList.remove(myClass);
-	}
-};
-
-/*
-вытаскиваем конент из шаблона
-*/
-var template = document.querySelector('#template').content || document.querySelector('#template');
-var modal;
-
-
-/* 
-открываем/закрыываем модалку
-*/
-var openModal = function(e) {
-	var btn = e.target;
-	/**
-	 * проверяем, что кликнули по нужной кнопке
-	 */
-	if(btn.classList.contains('js-modalOpen')) {
-		if(btn.dataset.video){
-			/**
-			* видео отзыв
-			* достаем нужную модалку по id
-			* для iframe собираем src
-			*/
-			modal = template.querySelector(btn.dataset.target).cloneNode(true);
-			modal.querySelector('#videoFrame').src = 'https://www.youtube.com/embed/' + btn.dataset.video + '?ecver=2';
-
-			/**
-			* выводим в DOM
-			*/
-			modal = document.body.appendChild(modal);
-		}  else {
-			/**
-			 * модалка с формой
-			 */
-			
-			e.preventDefault();
-			modal = template.querySelector(btn.dataset.target).cloneNode(true);
-			/**
-			 * тут, до вставки в DOM можно например добавлять нужные инпуты или атрибуты форме, для идентификации
-			 */
-			modal = document.body.appendChild(modal);
-			var title = btn.dataset.title;
-			modal.querySelector('.section-header').innerText = title;
-		} 
-		document.body.style.position = 'fixed';
-		document.body.style.width = '100vw';
-	} else if (btn.classList.contains('modal__close')) {
-		/**
-		 * закрываем открытую модалку
-		 */
-		document.body.removeChild(modal);
-		document.body.style.position = 'static';
-		document.body.style.width = 'initial';
-	}
-};
-
-document.addEventListener('click', openModal);
-
-var showMore = document.querySelector('.js-show-more');
-var hiddenProjects = document.querySelectorAll('.portfolio__item--hidden');
-var btnHidden = document.querySelector('.btn--hidden');
-var started = false;
-
-/**
-* открываем по три проекта в портфолио за раз
- */
-var showRecent = function(e) {
-	if(hiddenProjects) {
-		if(!started) {
-			projectsToShow = [].slice.call(hiddenProjects);
-		}
-		for(var i = 0; i < 3; i++) {
-			if(projectsToShow[0] ){
-				changeClass(projectsToShow[0], 'portfolio__item--hidden', 0);
-			} else {
-				changeClass(showMore, 'btn--hidden', 1);
-			}
-			projectsToShow.splice(0, 1);
-			console.log(projectsToShow.length);
-		}
-		changeClass(btnHidden, 'btn--hidden', 0);
-		started = true;
-	}
-}
-/**
- * прячем все открытые выше проекты
- */
-var hideRecent = function(e) {
-	if(hiddenProjects) {
-		for(i = 0; i < hiddenProjects.length; i++) {
-			changeClass(hiddenProjects[i], 'portfolio__item--hidden', 1);
-		}
-		changeClass(btnHidden, 'btn--hidden', 1);
-		started = false;
-		changeClass(showMore, 'btn--hidden', 0);
-	}
-}
-
-showMore.addEventListener('click', showRecent);
-btnHidden.addEventListener('click', hideRecent);
-
-var menu = document.querySelector('.main-menu');
-var menuSwitch = menu.querySelector('.main-menu__switch');
-var callbackBlock = document.querySelector('.callback');
-
-var switchMenu = function(e) {
-	changeClass(e.target, 'main-menu__switch--opened', T);
-	changeClass(menu, 'main-menu--opened', T);
-
-}
-
-/**
- * засовываем на маленьких экранах кнопку обратного зваонка в меню
- */
-var moveCallback = function() {
-	if(window.innerWidth < 601) {
-		menu.appendChild(callbackBlock);
-	} else {
-		menu.parentElement.insertBefore(callbackBlock, null);
-		
-	}
-};
-
-window.addEventListener('resize', moveCallback);
-menuSwitch.addEventListener('click', switchMenu);
-
-moveCallback();

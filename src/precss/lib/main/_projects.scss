@@ -26,6 +26,7 @@
     background: #ffffff;
 
     text-align: center;
+
     img {
       margin: 0 auto;
       margin-bottom: 30px;
@@ -74,8 +75,10 @@
     &--house {
       background-image: url('../img/icons/house.svg');
     }
-    &--windows {
-      background-image: url('../img/icons/windows.svg');
+    &--foundation {
+      background-image: url('../img/icons/foundation.svg');
+      background-position: center 10px;
+      background-size: 30px;
     }
     &--roof {
       background-image: url('../img/icons/roof.svg');
