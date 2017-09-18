@@ -1,5 +1,6 @@
 .page-header {
   position: relative;
+  z-index: 2;
 
   overflow: hidden;
 
@@ -8,7 +9,7 @@
   padding-top: 100px;
 
   background-image: url('../img/bg/bg-home.jpg');
-
+  background-size: cover;
   &__video {
     @include sm-block() {
       display: none;
