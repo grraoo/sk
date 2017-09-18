@@ -19,13 +19,15 @@
 
     position: absolute;
     top: 50%;
-    right: -50vw;
-    left: -50vw;
+    right: -25vw;
+    left: -25vw;
     z-index: 0;
 
-    width: 200vw;
+    width: 150vw;
     height: auto;
 
     transform: translateY(-50%);
+
+    filter: brightness(1.2) blur(1px);
   }
 }
