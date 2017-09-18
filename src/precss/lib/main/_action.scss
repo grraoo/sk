@@ -80,7 +80,8 @@
       color: $c-gray;
     }
     &::before {
-      content: '';
+      // content: '';
+      display: none;
 
       background-color: transparent;
     }

@@ -1,5 +1,8 @@
 .calculator {
   @include animatedBg();
+  &__text-input {
+    width: calc(75% - 10px);
+  }
   &__outer {
     @include md-block() {
       flex-wrap: wrap;
@@ -92,7 +95,7 @@
       font-size: 14px;
     };
 
-    width: 75%;
+    width: calc(75% - 10px);
 
     padding: 10px;
 
@@ -117,7 +120,7 @@
     font-size: 16px;
   }
   &-list__item {
-@include xs-block() {
+    @include xs-block() {
       flex-direction: column;
     };
 

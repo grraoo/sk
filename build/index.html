@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Строительство домов из клеёного бруса — компания Строй Комфорт</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=1">
   <script src="js/lib/jquery-1.11.0.min.js"></script>
   <script src="js/lib/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/lib/slick.min.js"></script>
@@ -896,7 +896,7 @@
       <a href="" class="btn btn--white btn--pointer action__btn js-modalOpen" data-target="#modal" data-title="Акция: Заголовок акции">Заказать дом</a>
     </section>
     <section id="calculator" class="calculator">
-      <form class="container calculator__form" method="get" action="#">
+      <form class="container calculator__form feedback__form" method="get" action="#">
         <h2 class="section-header">РАССЧИТАЙТЕ СТОИМОСТЬ СВОЕГО ДОМА</h2>
         <button class="btn btn--green calculator__btn-top js-modalOpen" data-title="Ценовая политика" data-target="#info">Ценовая политика</button>
         <div class="calculator__outer">
@@ -912,7 +912,7 @@
             </div>
             <div class="calculator__wrap">
               <label for="square" class="calculator__label">Общая площадь (м<sup>2</sup>)</label>
-              <input type="number" min="10" step="10" class="text-input" id="square" name="square" placeholder="(м.)" value="180">
+              <input type="number" min="10" step="10" class="text-input calculator__text-input" id="square" name="square" placeholder="(м.)" value="180">
             </div>
 
             <div class="calculator__wrap">
@@ -955,6 +955,15 @@
                 <option value="1" class="calculator__option">профиль 3 камеры белые</option>
               </select>
             </div>
+            <div class="calculator__wrap">
+              <label for="name" class="calculator__label">Ваше имя</label>
+              <input type="text" class="text-input calculator__text-input" id="name" name="sender">
+            </div>
+            <div class="calculator__wrap">
+              <label for="phone" class="calculator__label">E-mail:</label>
+              <input type="email" class="text-input calculator__text-input" id="phone" name="email" required>
+            </div>
+
 
           </div>
           <div class="calculator__descr">
@@ -1003,6 +1012,8 @@
           </div>
 
         </div>
+        <input type="hidden" value="" name="sum" id="calcSumInput">
+        <input type="hidden" value="calc" name="id">
       </form>
     </section>
     <div class="log"></div>
@@ -1108,7 +1119,8 @@
                   <label class="feedback__label feedback__label--area" for="message" accesskey="U">Сообщение</label>
                 </p>
               </div>
-              <input type="submit" class="btn btn--green feedback__btn" id="submit" value="Отправить сообщение" placeholder="Сообщение">
+              <button type="submit" class="btn btn--green feedback__btn" id="submit">Отправить сообщение</button>
+              <input type="hidden" value="bigFeedback" name="id">
             </fieldset>
           </form>
         </div>
@@ -1154,6 +1166,7 @@
           <button class="btn feedback__btn" type="submit">
             Отправить заявку
           </button>
+          <input type="hidden" value="feedback" name="id">
         </form>
       </div>
     </div>
@@ -1220,6 +1233,16 @@
         <h2 class="section-header"></h2>
         <div class="modal__content modal__content--imgs">
 
+        </div>
+      </div>
+    </div>
+    <div class="overlay overlay--active" id="thanks">
+
+      <div class="modal modal__info">
+        <div class="modal__close"></div>
+        <h2 class="section-header">Сообщение отправлено</h2>
+        <div class="modal__content">
+          <p>Мы с вами свяжемся в ближайшее время</p>
         </div>
       </div>
     </div>

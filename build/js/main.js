@@ -1,7 +1,13 @@
+/*
+вытаскиваем конент из шаблона
+*/
+var template = document.querySelector('#template').content || document.querySelector('#template');
+var modal;
+var offsetTop;
+var offsetX;
+
 var onFormSend =  function() {
-	console.log('onformsend');
 	$(".feedback__form").submit(function () { // пeрeхвaтывaeм всe при сoбытии oтпрaвки
-		console.log('submit');
 		var form = $(this); // зaпишeм фoрму, чтoбы пoтoм нe былo прoблeм с this
 		var butt = form.find('.feedback__btn');
 		// var resultMsg = form.parent().find('.result') 
@@ -17,15 +23,23 @@ var onFormSend =  function() {
 					butt.attr('disabled', 'disabled'); // нaпримeр, oтключим кнoпку, чтoбы нe жaли пo 100 рaз
 				},
 				success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
-					console.log('success');
+					form[0].reset();
 					if (data['error']) { // eсли oбрaбoтчик вeрнул oшибку
 						alert(data['error']); // пoкaжeм eё тeкст
 					} else { // eсли всe прoшлo oк
 						butt.prop('disabled', false);
-						console.log(modal);
-						document.body.removeChild(modal);
-		
+						if(modal) {
+							console.log(modal);
+							document.body.removeChild(modal);
+						}
 					}
+					modal = template.querySelector('#thanks').cloneNode(true);
+					document.body.appendChild(modal);
+					offsetTop = window.pageYOffset;
+					offsetX = window.pageXOffset;
+					document.body.style.top = '-' + offsetTop + 'px';
+					document.body.style.position = 'fixed';
+					document.body.style.width = '100vw';
 				},
 				error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
 					alert(xhr.status); // пoкaжeм oтвeт сeрвeрa
@@ -40,6 +54,7 @@ var onFormSend =  function() {
 	});
 };
 
+onFormSend();
 
 /* modal */
 var T = 'toggle';
@@ -53,15 +68,9 @@ var changeClass = function (item, myClass, flag) {
 	}
 };
 
-/*
-вытаскиваем конент из шаблона
-*/
-var template = document.querySelector('#template').content || document.querySelector('#template');
-var modal;
-
 
 /* 
-открываем/закрыываем модалку
+открываем/закрываем модалку
 */
 var offsetTop;
 var offsetX;
@@ -149,6 +158,7 @@ var openModal = function (e) {
 		 * закрываем открытую модалку
 		 */
 		document.body.removeChild(modal);
+		modal = null;
 		document.body.style.position = 'relative';
 		document.body.style.width = 'initial';
 		document.body.style.top = 'auto';
@@ -225,9 +235,10 @@ var moveCallback = function () {
 window.addEventListener('resize', moveCallback);
 menuSwitch.addEventListener('click', switchMenu);
 menu.addEventListener('click', function(e) {
-	if(e.target != menuSwitch){
-		if(window.innerWidth < 961)
-			switchMenu();
+		if(e.target != menuSwitch) {
+			if(window.innerWidth < 961) {
+				switchMenu();
+			}
 		}
 	}
 );
@@ -495,6 +506,7 @@ var calculatePrice = function () {
 		calcForm.square.parentNode.dataset.error = calcForm.square.validationMessage;
 	}
 	calcForm.querySelector('#calcSum').innerHTML = spaces(totalSum.toString()) + ' &#8381;';
+	calcForm.querySelector('#calcSumInput').value = spaces(totalSum.toString()) + ' руб.';
 };
 
 calculatePrice();
