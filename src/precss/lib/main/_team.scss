@@ -1,0 +1,34 @@
+.team {
+  &__wrap {
+    @include row-flex();
+  }
+
+  &__member {
+    @include col(); @include size(3);
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  &__img {
+    max-width: 100%;
+
+    margin: 0 auto;
+  }
+
+  &__name {
+    margin-bottom: .5em;
+  }
+
+  &__job {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: $c-blue;
+    font-size: 16px;
+    font-weight: bold;
+
+    text-align: center;
+  }
+}
