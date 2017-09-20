@@ -12,6 +12,7 @@
     "gulp-group-css-media-queries": "^1.2.0",
     "gulp-imagemin": "^3.2.0",
     "gulp-sass": "^3.1.0",
+    "gulp-typograf": "^3.1.0",
     "smart-grid": "^1.0.5",
     "stylelint": "^7.10.1"
   },
@@ -23,5 +24,5 @@
   },
   "author": "grraoo",
   "license": "ISC",
-  "description": "mobile version gold38.ru"
+  "description": "landing-page Строй-Комфорт"
 }

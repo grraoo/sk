@@ -6,6 +6,7 @@ const imagemin = require('gulp-imagemin');
 var gcmq = require('gulp-group-css-media-queries');
 var cleanCSS = require('gulp-clean-css');
 var deletefile = require('gulp-delete-file');
+const typograf = require('gulp-typograf');
 
 var config = {
 	src: 'src/',
@@ -69,7 +70,8 @@ gulp.task('build', function() {
 
 gulp.task('copyHtml', function() {
 
-  return gulp.src(config.src + config.html.src)
+	return gulp.src(config.src + config.html.src)
+		.pipe(typograf({ locale: ['ru'] }))
   	.pipe(gulp.dest(config.dest))
 		.pipe(browserSync.reload({
 			stream: true
