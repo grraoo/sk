@@ -10,9 +10,9 @@ var onFormSend =  function() {
 	$(".feedback__form").submit(function () { // пeрeхвaтывaeм всe при сoбытии oтпрaвки
 		var form = $(this); // зaпишeм фoрму, чтoбы пoтoм нe былo прoблeм с this
 		var butt = form.find('.feedback__btn');
-		// var resultMsg = form.parent().find('.result') 
+		// var resultMsg = form.parent().find('.result')
 
-		
+
 			var data = form.serialize(); // пoдгoтaвливaeм дaнныe
 			$.ajax({ // инициaлизируeм ajax зaпрoс
 				type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
@@ -49,7 +49,7 @@ var onFormSend =  function() {
 						butt.prop('disabled', false); // в любoм случae включим кнoпку oбрaтнo
 				}
 			});
-		
+
 		return false; // вырубaeм стaндaртную oтпрaвку фoрмы
 	});
 };
@@ -69,7 +69,7 @@ var changeClass = function (item, myClass, flag) {
 };
 
 
-/* 
+/*
 открываем/закрываем модалку
 */
 var offsetTop;
@@ -139,7 +139,7 @@ var openModal = function (e) {
 		document.body.style.width = '100vw';
 		modal = document.body.appendChild(modal);
 		onFormSend();
-		
+
 
 		/**
 		 * инициализируме слайдер, если открыли картинки проектов
@@ -308,11 +308,12 @@ $(document).ready(function () {
 
 	});
 
+
 	$('.trust__wrap').slick({
 		arrows: true,
 		dots: false,
-		slidesToShow: 4,
-		slidesToScroll: 4,
+		slidesToShow: 5,
+		slidesToScroll: 5,
 		autoplay: true,
 		autoplaySpeed: 3000,
 		responsive: adoptSlider4,
@@ -338,7 +339,30 @@ $(document).ready(function () {
 		$('.compare__slider').slick('slickGoTo', 0);
 	});
 
-	
+	$('#head-slider').slick({
+		arrows: false,
+		dots: false,
+		draggable: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		speed: 500,
+		// pauseOnHover: true,
+		autoplay: true,
+		autoplaySpeed: 5000
+	})
+
+	// $('.team__wrap').slick({
+	// 	arrows: true,
+	// 	// dots: false,
+	// 	draggable: true,
+	// 	slidesToShow: 4,
+	// 	slidesToScroll: 4,
+	// 	speed: 500,
+	// 	// pauseOnHover: true,
+	// 	autoplay: true,
+	// 	autoplaySpeed: 4000
+	// })
+
 });
 
 $('.scroll-btn--top').click(function (e) {
@@ -399,7 +423,7 @@ function init() {
 
 
 
-	// Get the HTML DOM element that will contain your map 
+	// Get the HTML DOM element that will contain your map
 	// We are using a div with id="map" seen below in the <body>
 	var mapElement = document.getElementById('map');
 
