@@ -1,5 +1,9 @@
 @import 'lib/helpers/project', 'lib/helpers/mixins', 'lib/helpers/smart-grid', 'lib/helpers/helpers';
 
+
+@import 'lib/slick/slick';
+@import 'lib/slick/slick-theme';
+
 @import 'lib/header/page-header';
 @import 'lib/header/header-top';
 @import 'lib/header/logo';
@@ -24,6 +28,7 @@
 @import 'lib/main/stats';
 @import 'lib/main/projects';
 @import 'lib/main/action';
+@import 'lib/main/action-new';
 @import 'lib/main/advantages';
 @import 'lib/main/portfolio';
 @import 'lib/main/work-scheme';
@@ -37,6 +42,3 @@
 @import 'lib/footer/map';
 @import 'lib/footer/social';
 @import 'lib/footer/page-footer';
-
-@import 'lib/slick/slick';
-@import 'lib/slick/slick-theme';
