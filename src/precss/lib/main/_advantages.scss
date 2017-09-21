@@ -23,6 +23,9 @@
 @include sm-block() {
       @include size(6);
     };
+    .subheader {
+      display: none;
+    }
   };
 
 
