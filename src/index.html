@@ -15,11 +15,8 @@
 
 <body>
 	<header class="page-header" id="page-top">
-		<video class="page-header__video" id="video" width="100%" height="100%" autoplay="autoplay" loop="loop" preload="auto">
-			<source media="(min-width:800px)" src="video/videoback1.webm" type="video/webm"></source>
-			<source media="(min-width:800px)" src="video/videoback1.mp4" type="video/mp4"></source>
-		</video>
-		<div class="header-top">
+
+		<div class="header-top header-top--fixed">
 
 			<div class="logo" title="Архитектурно-строительная компания &laquo;Строй Комфорт&raquo;">
 				<img class="logo__img" src="img/main-logo.png" alt="Логотип Строй-Комфорт">
@@ -44,6 +41,10 @@
 		</div>
 		<section class="head-slider" id="head-slider">
 			<div class="head-slider__slide" style="/*background-image: url('img/bg/bg-home.jpg')*/">
+				<video class="head-slider__video" id="video" width="100%" height="100%" loop muted>
+					<source media="(min-width:800px)" src="video/videoback1.webm" type="video/webm"></source>
+					<source media="(min-width:800px)" src="video/videoback1.mp4" type="video/mp4"></source>
+				</video>
 				<div class="head-slider__wrap">
 					<h2 class="head-slider__header">Строим экологичные дома
 						<span class="head-slider__large">ЗА 27 ТЫСЯЧ РУБЛЕЙ</span> из клеёного бруса</h2>
@@ -51,17 +52,23 @@
 				</div>
 			</div>
 			<div class="head-slider__slide" style="/*background-image: url('img/bg/bg-home.jpg')*/">
+				<video class="head-slider__video" width="100%" height="100%" loop muted>
+					<source media="(min-width:800px)" src="video/test-videoback-2.mp4" type="video/mp4"></source>
+				</video>
 				<div class="head-slider__wrap">
 					<h2 class="head-slider__header">Lorem ipsum
 						<span class="head-slider__large">dolor sit amet</span> consectetur adipisicing elit.</h2>
-					<a href="#" class="btn btn--white head-slider__btn">преимущества&nbsp;материала</a>
+					<a href="#" class="btn btn--white head-slider__btn">i want to know more</a>
 				</div>
 			</div>
 			<div class="head-slider__slide" style="/*background-image: url('img/bg/bg-home.jpg')*/">
+				<video class="head-slider__video" width="100%" height="100%" loop muted>
+					<source media="(min-width:800px)" src="video/test-videoback-3.mp4" type="video/mp4"></source>
+				</video>
 				<div class="head-slider__wrap">
 					<h2 class="head-slider__header">Lorem ipsum
 						<span class="head-slider__large">dolor sit amet,</span> Lorem ipsum dolor..</h2>
-					<a href="#" class="btn btn--white head-slider__btn">преимущества&nbsp;материала</a>
+					<a href="#" class="btn btn--white head-slider__btn">press to learn more</a>
 				</div>
 			</div>
 			<!-- <div class="head-slider__slide" style="/*background-image: url('img/bg/bg-home.jpg')*/">
@@ -93,21 +100,18 @@
 						<div class="compare__items compare__slider-item compare__slider-item--control">
 							<div data-number="1" class="compare__item">
 								<img src="img/kirpich.jpg" alt="Кирпич" width="300" height="200">
-								<h4 class="subheader">Кирпич</h4>
-								<div class="text compare__item__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo voluptate quam doloribus hic amet nam sequi
-									ut? Reiciendis, voluptas beatae ex reprehenderit placeat sapiente quos.</div>
+								<h4 class="subheader">Кирпич керамический</h4>
+								<div class="text compare__item__descr">Кирпич ценится за свои эксплутационные свойства: термоустойчивость, высокая звукоизоляция, долговечность и натуральность.</div>
 							</div>
 							<div data-number="2" class="compare__item">
 								<img src="img/peskoblok.jpg" alt="Пескоблок" width="300" height="200">
-								<h4 class="subheader">Пескоблок</h4>
-								<div class="text compare__item__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis unde velit, eveniet optio aspernatur cupiditate
-									ut, doloribus adipisci deserunt magni tempora excepturi dolor.</div>
+								<h4 class="subheader">Обычный брус</h4>
+								<div class="text compare__item__descr">Древесина, как строительный материал, легкодоступен, прост в укладке, отличается способностью пропускать воздух, а значит в деревянном доме будет легко дышаться.  </div>
 							</div>
 							<div data-number="3" class="compare__item">
 								<img src="img/penoblok.jpg" alt="Пеноблок" width="300" height="200">
-								<h4 class="subheader">Пеноблок</h4>
-								<div class="text compare__item__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi repudiandae perspiciatis ipsum, magnam
-									amet alias consequatur sit maiores.</div>
+								<h4 class="subheader">Газобетон D500</h4>
+								<div class="text compare__item__descr">Универсальный материал для возведения наружных стен. Газобетон прост в отделке и ремонте, имеет высокую степень теплоизоляции и стойкость к высоким температурам.</div>
 							</div>
 						</div>
 						<article class="compare__table-wrap compare__slider-item">
@@ -117,8 +121,8 @@
 									<tr class="compare__table-htr">
 										<td valign="top" class="compare__table-htd compare__table-htd--name">
 											<div class="compare__table-htd-wrap">
-												<h4 class="subheader">Кирпич</h4>
-												<img src="img/kirpich.jpg" alt="Кирпич">
+												<h4 class="subheader">Кирпич керамический</h4>
+												<img src="img/kirpich.jpg" alt="Кирпич керамический">
 											</div>
 										</td>
 										<td valign="center" class="compare__table-htd compare__table-htd--vs">VS</td>
@@ -132,8 +136,8 @@
 								</thead>
 								<tbody class="compare__table-body">
 									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--plus">
-											хорошее
+										<td class="compare__table-td compare__table-td--minus">
+											требуется утепление
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Энергосбережение
@@ -143,47 +147,47 @@
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--minus">
-											90
+										<td class="compare__table-td compare__table-td--plus">
+											высокая
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Прочность материала
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											70
+											высокая
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--plus">
-											90
+											повышенная
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Шумоизоляция
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											70
+											повышенная
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--minus">
-											+/-123
+											0,17 мг/(м*ч*Па)
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Паропроницаемость
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											+789
+											0,06 мг/(м*ч*Па)
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--minus">
-											необходима
+										<td class="compare__table-td compare__table-td--plus">
+											нет
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Внешняя отделка
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											+нет
+											нет
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
@@ -198,36 +202,36 @@
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--minus">
+										<td class="compare__table-td compare__table-td--plus">
 											нет
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Усадка после постройки
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											0,5%
+											менее 1,5%
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--minus">
-											$100500
+											высокие
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Затраты на фундамент
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											0,5
+											невысокие
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--minus">
-											30лет
+											2,5-5,5 месяцев
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Быстрота возведения сооружений
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											и три года
+											2-3 недели
 										</td>
 									</tr>
 								</tbody>
@@ -240,8 +244,8 @@
 									<tr class="compare__table-htr">
 										<td valign="top" class="compare__table-htd compare__table-htd--name">
 											<div class="compare__table-htd-wrap">
-												<h4 class="subheader">Пескоблок</h4>
-												<img src="img/peskoblok.jpg" alt="Пеноблок">
+												<h4 class="subheader">Обычный брус</h4>
+												<img src="img/peskoblok.jpg" alt="Обычный брус">
 											</div>
 										</td>
 										<td valign="center" class="compare__table-htd compare__table-htd--vs">VS</td>
@@ -255,8 +259,8 @@
 								</thead>
 								<tbody class="compare__table-body">
 									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--plus">
-											хорошее
+										<td class="compare__table-td compare__table-td--minus">
+											требуется утепление
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Энергосбережение
@@ -267,35 +271,35 @@
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--minus">
-											90
+											средняя
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Прочность материала
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											70
+											высокая
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--plus">
-											90
+										<td class="compare__table-td compare__table-td--minus">
+											низкая
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Шумоизоляция
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											70
+											повышенная
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--minus">
-											+/-123
+											0,06-0,32 мг/(м*ч*Па)
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Паропроницаемость
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											+789
+											0,06-0,32 мг/(м*ч*Па)
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
@@ -306,7 +310,7 @@
 											Внешняя отделка
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											+нет
+											нет
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
@@ -317,40 +321,40 @@
 											Внутренняя отделка
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											+нет
+											нет
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--minus">
-											нет
+											до 6%
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Усадка после постройки
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											0,5%
+											менее 1,5%
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--minus">
-											$100500
+										<td class="compare__table-td compare__table-td--plus">
+											небольшие
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Затраты на фундамент
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											0,5
+											небольшие
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--minus">
-											30лет
+											менее 1 месяца, отделка через год
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Быстрота возведения сооружений
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											и три года
+											2-3 недели
 										</td>
 									</tr>
 								</tbody>
@@ -363,8 +367,8 @@
 									<tr class="compare__table-htr">
 										<td valign="top" class="compare__table-htd compare__table-htd--name">
 											<div class="compare__table-htd-wrap">
-												<h4 class="subheader">Пеноблок</h4>
-												<img src="img/penoblok.jpg" alt="Пеноблок">
+												<h4 class="subheader">Газобетон D500</h4>
+												<img src="img/penoblok.jpg" alt="Газобетон D500">
 											</div>
 										</td>
 										<td valign="center" class="compare__table-htd compare__table-htd--vs">VS</td>
@@ -390,111 +394,108 @@
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--minus">
-											90
+											низкая
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Прочность материала
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											70
+											высокая
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--plus">
-											90
+											высокая
 										</td>
 										<td class="compare__table-td compare__table-td--name">
 											Шумоизоляция
 										</td>
 										<td class="compare__table-td compare__table-td--plus">
-											70
+											высокая
 										</td>
 									</tr>
 									<tr class="compare__table-tr">
 										<td class="compare__table-td compare__table-td--minus">
-											+/-123
-										</td>
-										<td class="compare__table-td compare__table-td--name">
-											Паропроницаемость
-										</td>
-										<td class="compare__table-td compare__table-td--plus">
-											+789
-										</td>
-									</tr>
-									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--minus">
-											необходима
-										</td>
-										<td class="compare__table-td compare__table-td--name">
-											Внешняя отделка
-										</td>
-										<td class="compare__table-td compare__table-td--plus">
-											+нет
-										</td>
-									</tr>
-									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--minus">
-											необходима
-										</td>
-										<td class="compare__table-td compare__table-td--name">
-											Внутренняя отделка
-										</td>
-										<td class="compare__table-td compare__table-td--plus">
-											+нет
-										</td>
-									</tr>
-									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--minus">
-											нет
-										</td>
-										<td class="compare__table-td compare__table-td--name">
-											Усадка после постройки
-										</td>
-										<td class="compare__table-td compare__table-td--plus">
-											0,5%
-										</td>
-									</tr>
-									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--minus">
-											$100500
-										</td>
-										<td class="compare__table-td compare__table-td--name">
-											Затраты на фундамент
-										</td>
-										<td class="compare__table-td compare__table-td--plus">
-											0,5
-										</td>
-									</tr>
-									<tr class="compare__table-tr">
-										<td class="compare__table-td compare__table-td--minus">
-											30лет
-										</td>
-										<td class="compare__table-td compare__table-td--name">
-											Быстрота возведения сооружений
-										</td>
-										<td class="compare__table-td compare__table-td--plus">
-											и три года
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</article>
+											0,20 мг/(м*ч*Па)
 
+										</td>
+										<td class="compare__table-td compare__table-td--name">
+											Паропроницаемость
+										</td>
+										<td class="compare__table-td compare__table-td--plus">
+											0,06 мг/(м*ч*Па)
+										</td>
+									</tr>
+									<tr class="compare__table-tr">
+										<td class="compare__table-td compare__table-td--minus">
+											необходима
+										</td>
+										<td class="compare__table-td compare__table-td--name">
+											Внешняя отделка
+										</td>
+										<td class="compare__table-td compare__table-td--plus">
+											нет
+										</td>
+									</tr>
+									<tr class="compare__table-tr">
+										<td class="compare__table-td compare__table-td--minus">
+											необходима
+										</td>
+										<td class="compare__table-td compare__table-td--name">
+											Внутренняя отделка
+										</td>
+										<td class="compare__table-td compare__table-td--plus">
+											нет
+										</td>
+									</tr>
+									<tr class="compare__table-tr">
+										<td class="compare__table-td compare__table-td--minus">
+											возможна с появлением трещин
+										</td>
+										<td class="compare__table-td compare__table-td--name">
+											Усадка после постройки
+										</td>
+										<td class="compare__table-td compare__table-td--plus">
+											менее 1,5%
+										</td>
+									</tr>
+									<tr class="compare__table-tr">
+										<td class="compare__table-td compare__table-td--minus">
+											высокие
+										</td>
+										<td class="compare__table-td compare__table-td--name">
+											Затраты на фундамент
+										</td>
+										<td class="compare__table-td compare__table-td--plus">
+											невысокая
+										</td>
+									</tr>
+									<tr class="compare__table-tr">
+										<td class="compare__table-td compare__table-td--minus">
+											более 1,5-2 месяца
+										</td>
+										<td class="compare__table-td compare__table-td--name">
+											Быстрота возведения сооружений
+										</td>
+										<td class="compare__table-td compare__table-td--plus">
+											2-3 недели
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</article>
 					</div>
 				</div>
-
-
 			</div>
 		</section>
 		<section class="stats">
 			<div class="container stats__container">
 				<h2 class="section-header">ХАРАКТЕРИСТИКИ КЛЕЁНОГО БРУСА</h2>
-				<p class="text text--black">В зависимости от назначения планируемого объекта, клееный брус изготавливают разного сечения. От ширины бруса зависит
-					толщина стен будущего дома, дачного строения или бани, и правильный выбор сечения поможет предусмотреть достаточный
-					уровень звукоизоляции и теплосбережения. Так, обычно, дома из клееного бруса с сечением 20-25 см дополнительно
-					не утепляют – имея эффективную систему отопления, в таком доме будет комфортно проживать в любое время года и без
-					усиления теплосберегающих свойств.</p>
-				<p class="text text--black">Длина клееного бруса зависит от требований проекта, для которого он будет использован, и может достигать 12 метров.</p>
+				<p class='text text--black text--fw-normal'>Клееный брус - высококачественный строительный материал, получаемый благодаря глубокой и комплексной переработке сырья. Он отвечает всем требованиям экологичности, паропроницаем и «дышит» так же, как и цельная древесина.  При этом лишён недостатков: не даёт усадку, не трескается, не деформируется, не требует дополнительного утепления, дополнительной внешней и внутренней отделки, а также прост в монтаже.</p>
+
+				 <p class='text text--black text--fw-normal'>Данный материал выполняют из ангарской сосны в условиях пониженной влажности, что наделяет его способностью меньше усыхать и давать усадку по сравнению с простым и профилированным брусом. Ламели – отдельные части древесины склеивают между собой под прессом в соответствии с разработанными расчетами. Мы используем в работе клееный брус из ангарской сосны – уникального по своей текстуре и красоте материала, который имеет золотисто-теплый оттенок и отличается большой плотностью, мелкослойностью и повышенной прочностью. Причем к получению клееного бруса допускается только 120-тилетняя сосна.  Со временем сосновая древесина не меняет своей текстуры, не окрашивается в какие-либо цвета, а приобретает только ей свойственный красновато-розовый оттенок.</p>
+				<p class="text text--black text--fw-normal">В зависимости от назначения планируемого объекта, клееный брус изготавливают разного сечения. От ширины бруса зависит толщина стен будущего дома, дачного строения или бани, и правильный выбор сечения поможет предусмотреть достаточный уровень звукоизоляции и теплосбережения. Так, обычно, дома из клееного бруса с сечением 20-25 см дополнительно не утепляют – имея эффективную систему отопления, в таком доме будет комфортно проживать в любое время года и без усиления теплосберегающих свойств.</p>
+				<p class="text text--black text--fw-normal">Длина клееного бруса зависит от требований проекта, для которого он будет использован, и может достигать 12 метров.</p>
 				<div class="stats__table-wrap">
 
 					<table class="stats__table">
@@ -960,24 +961,31 @@
 						</div>
 					</article>
 
-					<!-- <article class="team__member">
-						<img src="img/team/4-design.JPG" alt="" class="team__img">
-						<h4 class="team__name subheader">Валентина Михайлова 2</h4>
+					<article class="team__member">
+						<img src="img/team/5-master.JPG" alt="" class="team__img">
+						<h4 class="team__name subheader">Сергей Михайлов</h4>
+						<p class="team__job">мастер строительно-монтажных работ</p>
+						<div class="team__descr text">
+							<p>Закончил НИ ИрГТУ  по специальности «Промышленное и гражданское строительство». Трудится в   компании с 2017 года. Занимается организацией строительного процесса на объектах нашей компании.</p>
+						</div>
+					</article>
+					<article class="team__member">
+						<img src="img/team/6-heattech.JPG" alt="" class="team__img">
+						<h4 class="team__name subheader">Тимур Мамедов</h4>
+						<p class="team__job">инженер-теплотехник</p>
+						<div class="team__descr text">
+							<p>В компании трудится с 2013 года. Осуществляет монтаж водоснабжения, отопления и канализации.</p>
+						</div>
+					</article>
+					<article class="team__member">
+						<img src="img/team/7-energytech.JPG" alt="" class="team__img">
+						<h4 class="team__name subheader">Дмитрий Лысов</h4>
 						<p class="team__job">архитектор-дизайнер</p>
 						<div class="team__descr text">
 							<p>По образованию Дизайнер архитектурной среды, опыт работы более 5 лет. Воплощает идеи  клиентов в реальный проект.
 							</p>
 						</div>
 					</article>
-					<article class="team__member">
-						<img src="img/team/4-design.JPG" alt="" class="team__img">
-						<h4 class="team__name subheader">Валентина Михайлова 3</h4>
-						<p class="team__job">архитектор-дизайнер</p>
-						<div class="team__descr text">
-							<p>По образованию Дизайнер архитектурной среды, опыт работы более 5 лет. Воплощает идеи  клиентов в реальный проект.
-							</p>
-						</div>
-					</article> -->
 				</div>
 			</div>
 
