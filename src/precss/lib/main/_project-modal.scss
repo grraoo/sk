@@ -1,0 +1,110 @@
+.project {
+	.text--black {
+		padding: 0;
+	}
+	&__wrap {
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	&__photos {
+		display: inline-flex;
+		width: 40%;
+		flex-direction: column;
+	}
+	&__description {
+		display: inline-flex;
+		flex-direction: column;
+		width: 60%;
+		padding: 0 55px;
+		.text:first-of-type {
+			margin-top: 0;
+		}
+	}
+	&__main-slider {
+		display: block;
+		position: relative;
+		width: 100%;
+		padding: 0 3px;
+		margin-bottom: 8px;
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+	&__thumbs {
+		&-slider {
+			display: flex;
+			flex-direction: row;
+			position: relative;
+
+			$arrow-border: 2px solid #383838;
+			&::after, &::before {
+
+				content: '';
+				position: absolute;
+				display: block;
+				top: 39%;
+				width: 15px;
+				height: 15px;
+				border-top: $arrow-border;
+				border-right: $arrow-border;
+			}
+			&::after {
+				right: -15px;
+				transform: rotate(45deg);
+			}
+			&::before {
+				left: -15px;
+				transform: rotate(-135deg);
+			}
+		}
+		&-slide {
+			display: block;
+			position: relative;
+			float: left;
+			width: 33.3333%;
+			padding: 0 3px;
+			img {
+				border: 2px solid transparent;
+				width: 100%;
+				display: block;
+			}
+			&--active img {
+				border-color: $c-green;
+			}
+		}
+	}
+	&__info {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+	&__term {
+		display: inline-flex;
+		flex-direction: column;
+		text-align: center;
+		flex: 1;
+	}
+	&__icon {
+		display: inline-block;
+		position: relative;
+		max-height: 65px;
+		margin-bottom: 10px;
+		height: auto;
+		width: auto;
+	}
+	&__caption {
+		text-align: center;
+	}
+	&__buttons {
+		display: block;
+		width: 100%;
+		text-align: center;
+		position: relative;
+	}
+}

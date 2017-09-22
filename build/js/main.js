@@ -369,8 +369,6 @@ $(document).ready(function () {
 
 	function playSliderVideo(){
 		var currentSlide = headSlider.find('.slick-active')
-		console.log('Я запускаю вот это видео')
-		console.log(currentSlide.find('video')[0])
 		currentSlide.find('video')[0].play()
 	}
 
@@ -438,7 +436,6 @@ window.onscroll = function () {
 	navObject = document.querySelector('.header-top'),
 	navActiveClass = 'header-top--dark',
 	offset_top = 200;
-	console.log(scrolled)
 	if (scrolled > offset_top) {
 		navObject.classList.add(navActiveClass)
 	} else {
