@@ -9,4 +9,9 @@
     font-weight: 500;
     // @include
   }
+  &--fw {
+	  &-normal {
+		  font-weight: 400;
+	  }
+  }
 }
