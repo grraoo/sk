@@ -25,4 +25,12 @@
   padding: 15px 40px;
 
   justify-content: space-between;
+  &--fixed {
+	position: fixed;
+	z-index: 20;
+	transition: background-color .33s ease-in-out;
+  }
+  &--dark {
+	background-color: transparentize(#000, .5);
+  }
 }
