@@ -46,7 +46,7 @@ var onFormSend =  function() {
 					alert(thrownError); // и тeкст oшибки
 				},
 				complete: function(data) { // сoбытиe пoслe любoгo исхoдa
-						butt.prop('disabled', false); // в любoм случae включим кнoпку oбрaтнo
+					butt.prop('disabled', false); // в любoм случae включим кнoпку oбрaтнo
 				}
 			});
 
@@ -245,6 +245,9 @@ menu.addEventListener('click', function(e) {
 
 moveCallback();
 
+/**
+ * Тут все слайдеры
+ */
 $(document).ready(function () {
 
 	var adoptSlider = [{
@@ -284,6 +287,29 @@ $(document).ready(function () {
 			}
 		}
 	];
+	var teamResponsive = [{
+			breakpoint: 1000,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+			}
+		},
+		{
+			breakpoint: 780,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+		},
+		{
+			breakpoint: 500,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1
+			}
+		}
+	];
+
 	$('.projects__wrap').slick({
 		arrows: true,
 		dots: false,
@@ -339,7 +365,21 @@ $(document).ready(function () {
 		$('.compare__slider').slick('slickGoTo', 0);
 	});
 
-	$('#head-slider').slick({
+	var headSlider = $('#head-slider')
+
+	function playSliderVideo(){
+		var currentSlide = headSlider.find('.slick-active')
+		console.log('Я запускаю вот это видео')
+		console.log(currentSlide.find('video')[0])
+		currentSlide.find('video')[0].play()
+	}
+
+	// headSlider;
+
+	headSlider.on({
+		init: playSliderVideo,
+		afterChange: playSliderVideo
+	}).slick({
 		arrows: false,
 		dots: false,
 		draggable: true,
@@ -348,20 +388,23 @@ $(document).ready(function () {
 		speed: 500,
 		// pauseOnHover: true,
 		autoplay: true,
-		autoplaySpeed: 5000
+		autoplaySpeed: 7000
 	})
 
-	// $('.team__wrap').slick({
-	// 	arrows: true,
-	// 	// dots: false,
-	// 	draggable: true,
-	// 	slidesToShow: 4,
-	// 	slidesToScroll: 4,
-	// 	speed: 500,
-	// 	// pauseOnHover: true,
-	// 	autoplay: true,
-	// 	autoplaySpeed: 4000
-	// })
+
+
+	$('.team__wrap').slick({
+		arrows: true,
+		// dots: false,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		speed: 500,
+		pauseOnHover: true,
+		autoplay: true,
+		draggable: false,
+		autoplaySpeed: 4000,
+		responsive: teamResponsive
+	})
 
 });
 
@@ -385,6 +428,23 @@ $('.main-menu__link').click(function (e) {
 		scrollTop: $(e.target.getAttribute('href')).position().top
 	}, 2000);
 });
+
+/**
+ * https://gist.github.com/topsite-studio/188d4ff4d6c34e1358139078991a86e9
+ * При прокрутке страницы делаем навбар тёмным
+ */
+window.onscroll = function () {
+	var scrolled = window.pageYOffset || document.documentElement.scrollTop,
+	navObject = document.querySelector('.header-top'),
+	navActiveClass = 'header-top--dark',
+	offset_top = 200;
+	console.log(scrolled)
+	if (scrolled > offset_top) {
+		navObject.classList.add(navActiveClass)
+	} else {
+		navObject.classList.remove(navActiveClass)
+	}
+}
 
 
 
