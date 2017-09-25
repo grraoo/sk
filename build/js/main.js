@@ -143,6 +143,9 @@ var openModal = function (e) {
 		/**
 		 * инициализируме слайдер, если открыли картинки проектов
 		 */
+		if(modal.id == 'reviewModal') {
+			reviewImg.src = btn.dataset.img;
+		}
 		if (modal.id == 'imgs') {
 			$('#imgs .modal__content').slick({
 				arrows: true,

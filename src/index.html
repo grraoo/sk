@@ -1151,12 +1151,16 @@
 							Отзыв Иван Иваныча
 						</div>
 					</aricle>
-					<aricle class="thanks__item">
-						<div class="thanks__inner" style="background-image: url(img/testimonial__test.png)">
-
-						</div>
+					<aricle class="thanks__item" data-target="#reviewModal">
+						<div class="thanks__inner js-modalOpen" data-target="#reviewModal" style="background-image: url(img/reviews/review-1.jpg)" data-title="Отзыв Марины" data-img="img/reviews/review-1.jpg"></div>
 						<div class="thanks__name">
-							Отзыв Андрея Петровича
+							Отзыв Марины
+						</div>
+					</aricle>
+					<aricle class="thanks__item" data-target="#reviewModal">
+						<div class="thanks__inner js-modalOpen" data-target="#reviewModal" style="background-image: url(img/reviews/review-2.jpg)" data-title="Отзыв Ильи" data-img="img/reviews/review-2.jpg"></div>
+						<div class="thanks__name">
+							Отзыв Ильи
 						</div>
 					</aricle>
 					<aricle class="thanks__item">
@@ -1394,6 +1398,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="overlay overlay--active" id="thanks">
 
 			<div class="modal modal__info">
@@ -1401,6 +1406,17 @@
 				<h2 class="section-header">Сообщение отправлено</h2>
 				<div class="modal__content">
 					<p>Мы с вами свяжемся в ближайшее время</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="overlay overlay--active" id="reviewModal">
+
+			<div class="modal modal__info">
+				<div class="modal__close"></div>
+				<h2 class="section-header">Отзыв</h2>
+				<div class="modal__content">
+					<img id="reviewImg" src="#" alt="">
 				</div>
 			</div>
 		</div>
@@ -1470,6 +1486,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</template>
 
 
