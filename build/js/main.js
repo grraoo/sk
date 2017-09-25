@@ -408,7 +408,7 @@ $(document).ready(function () {
 		pauseOnHover: true,
 		autoplay: true,
 		draggable: false,
-		autoplaySpeed: 4000,
+		autoplaySpeed: 8000,
 		responsive: teamResponsive
 	})
 
