@@ -7,10 +7,6 @@
   padding: 15px;
 
   background: white;
-  &--project {
-	max-width: 1200px;
-    width: 100%;
-  }
 
   &__close {
     position: absolute;
@@ -73,8 +69,10 @@
     padding-bottom: 30px;
 
     &--video {
+      width: 100%;
+
+      padding: 0;
       padding-top: 40px;
-      padding-bottom: 0;
     }
   }
 
