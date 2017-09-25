@@ -62,6 +62,12 @@
     display: flex;
 
     justify-content: center;
+
+    &--modal {
+      margin-top: 30px;
+
+      flex-wrap: wrap;
+    }
   }
 
   &__icon {
@@ -72,6 +78,10 @@
     background-position: top;
     background-size: 40px;
 
+    text-align: center;
+    &--modal {
+      flex-basis: calc(100% / 6 - 20px);
+    }
     &--house {
       background-image: url('../img/icons/house.svg');
     }

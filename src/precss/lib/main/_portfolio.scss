@@ -12,6 +12,8 @@
   &__item {
     @include col();
 
+    position: relative;
+
     max-width: 350px;
 
 // @include size(4);@include sm-block() {
@@ -27,8 +29,8 @@
 
     text-align: center;
 
+    cursor: pointer;
     transition-duration: .3s;
-
     &--hidden {
       display: none;
 
@@ -38,6 +40,9 @@
 
       margin: 0;
       padding: 0;
+    }
+    * {
+      pointer-events: none;
     }
   }
 
