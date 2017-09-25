@@ -1,0 +1,30 @@
+.consult {
+  background: lightgrey;
+
+  &__propose {
+    position: relative;
+
+    padding-top: 50%;
+    padding-right: 60px;
+    padding-left: 60px;
+
+    background-image: url(../img/contacts-frame-blue.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+    &-wrap {
+      position: absolute;
+      top: 60px;
+      right: 55%;
+      left: 60px;
+    }
+  }
+
+  &__form-wrap {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    left: 55%;
+  }
+}

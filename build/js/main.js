@@ -366,7 +366,8 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		draggable: false,
 		swipe: false,
-		speed: 500
+		speed: 500,
+		adaptiveHeight: true
 	});
 
 	$('.compare__slider-item--control .compare__item').click(function (e) {
