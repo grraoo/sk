@@ -149,7 +149,9 @@ var openModal = function (e) {
 				dots: false,
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				infinite: true
+				infinite: true,
+				autoplay: true,
+				autoplaySpeed: 2000
 			})
 		}
 	} else if (btn.classList.contains('modal__close') || btn.classList.contains('overlay--active')) {
