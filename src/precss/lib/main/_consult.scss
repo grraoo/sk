@@ -1,17 +1,21 @@
 .consult {
-  background: lightgrey;
+  padding-top: 0;
+
 
   &__propose {
     position: relative;
-
-    padding-top: 50%;
-    padding-right: 60px;
-    padding-left: 60px;
 
     background-image: url(../img/contacts-frame-blue.png);
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
+    &::before {
+      content: '';
+
+      display: block;
+
+      padding-top: 31.8%;
+    }
 
     &-wrap {
       position: absolute;
@@ -21,10 +25,20 @@
     }
   }
 
+  &__text {
+    text-align: left;
+  }
+
   &__form-wrap {
     position: absolute;
-    top: 0;
-    right: 60px;
-    left: 55%;
+    top: 50%;
+    right: 50px;
+
+    width: 500px;
+
+    transform: translateY(-50%);
+    .modal {
+      border: 20px solid $c-darkgreen;
+    }
   }
 }
