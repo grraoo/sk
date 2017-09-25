@@ -8,6 +8,8 @@
   background-attachment: fixed;
   background-position: bottom;
 
+  text-align: justify;
+
   &::before {
     @include angles-top();
   }
