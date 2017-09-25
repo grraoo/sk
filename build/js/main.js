@@ -140,7 +140,6 @@ var openModal = function (e) {
 		modal = document.body.appendChild(modal);
 		onFormSend();
 
-
 		/**
 		 * инициализируме слайдер, если открыли картинки проектов
 		 */
@@ -305,6 +304,13 @@ $(document).ready(function () {
 			breakpoint: 500,
 			settings: {
 				slidesToShow: 2,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 400,
+			settings: {
+				slidesToShow: 1,
 				slidesToScroll: 1
 			}
 		}
