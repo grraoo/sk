@@ -67,12 +67,31 @@
   &__includes {
     display: flex;
 
-    justify-content: center;
+    position: relative;
 
+    margin-top: 1em;
+    padding-top: 1em;
+
+    justify-content: center;
+    &::before {
+      content: 'В стоимость включено:';
+
+      display: block;
+
+      position: absolute;
+      top: -1em;
+      right: 0;
+      left: 0;
+
+      text-align: center;
+    }
     &--modal {
       margin-top: 30px;
 
       flex-wrap: wrap;
+      &::before {
+        display: none;
+      }
     }
   }
 
