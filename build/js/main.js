@@ -386,7 +386,7 @@ $(document).ready(function () {
 		init: playSliderVideo,
 		afterChange: playSliderVideo
 	}).slick({
-		arrows: false,
+		arrows: true,
 		dots: false,
 		draggable: true,
 		slidesToShow: 1,
