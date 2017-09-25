@@ -1,4 +1,10 @@
 .projects {
+  .scroll-btn--left {
+    left: 20px;
+  }
+  .scroll-btn--right {
+    right: 20px;
+  }
   &__wrap {
     display: flex;
 

@@ -27,4 +27,12 @@
 
     background: $c-darkgreen;
   }
+  &--inner {
+    font-style: normal;
+
+    text-align: left;
+    &::after {
+      display: none;
+    }
+  }
 }
