@@ -143,6 +143,9 @@ var openModal = function (e) {
 		/**
 		 * инициализируме слайдер, если открыли картинки проектов
 		 */
+
+		//  project-info__main-slider
+
 		if(modal.id == 'reviewModal') {
 			reviewImg.src = btn.dataset.img;
 		}
@@ -154,8 +157,35 @@ var openModal = function (e) {
 				slidesToScroll: 1,
 				infinite: true,
 				autoplay: true,
-				autoplaySpeed: 2000
+				pauseOnHover: true,
+				autoplaySpeed: 4000
 			})
+		}
+		if (modal.id == 'project-modal') {
+			$('.project-info__main-slider').slick({
+				arrows: true,
+				dots: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				infinite: true,
+				// asNavFor: '.project-info__thumb-slider'
+				// autoplay: true,
+				// pauseOnHover: true,
+				// autoplaySpeed: 4000,
+			})
+			// $('.project-info__thumbs-slider').slick({
+			// 	arrows: false,
+			// 	dots: false,
+			// 	slidesToShow: 4,
+			// 	slidesToScroll: 1,
+			// 	draggable: false,
+			// 	infinite: true,
+			// 	// asNavFor: '.project-info__main-slider'
+			// 	// autoplay: true,
+			// 	// pauseOnHover: true,
+			// 	// autoplaySpeed: 4000,
+			// })
 		}
 	} else if (btn.classList.contains('modal__close') || btn.classList.contains('overlay--active')) {
 		/**
