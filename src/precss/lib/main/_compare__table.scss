@@ -2,6 +2,9 @@
   @include sm-block() {
     display: block;
   };
+  @include md-block() {
+	margin-top: 30px;
+  };
 
   width: 100%;
 
