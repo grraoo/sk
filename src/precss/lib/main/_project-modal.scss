@@ -54,19 +54,21 @@
   &__thumbs {
     &-slider {
       $arrow-border: 2px solid #383838;
-      display: flex;
-      flex-direction: row;
+    //   display: flex;
+    //   flex-direction: row;
       position: relative;
+	  margin: 0;
     }
     &-slide {
-		height: 100px;
+		// height: 100px;
       display: block;
       position: relative;
 	  overflow: hidden;
 
-    //   width: 20%;
-
-      padding: 0 3px;
+//      padding: 0 3px;
+		&.slick-current {
+			outline: 2px solid $c-green;
+		}
       img {
         display: block;
 
@@ -114,6 +116,9 @@
 	margin: 0 0 15px;
   }
   &__icon {
+	  width: 75px;
+	  display: inline-block;
+	  position: relative;
     // display: inline-block;
 	//
     // position: relative;
