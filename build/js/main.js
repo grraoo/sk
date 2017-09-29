@@ -162,35 +162,44 @@ var openModal = function (e) {
 			})
 		}
 		if (modal.id == 'project-modal') {
-			$('.project-info__main-slider').slick({
+
+			$('.project-info__main-slider').on('init', function(){
+				$('.project-info__thumbs-slider').slick({
+					arrows: false,
+					dots: false,
+					slidesToShow: 4,
+					slidesToScroll: 4,
+					draggable: false,
+					infinite: true,
+					focusOnSelect: true,
+					asNavFor: '.project-info__main-slider'
+					// autoplay: true,
+					// pauseOnHover: true,
+					// autoplaySpeed: 4000,
+				})
+			}).slick({
 				arrows: true,
 				dots: false,
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				fade: true,
 				infinite: true,
-				// asNavFor: '.project-info__thumb-slider'
+				asNavFor: '.project-info__thumbs-slider'
 				// autoplay: true,
 				// pauseOnHover: true,
 				// autoplaySpeed: 4000,
 			})
-			// $('.project-info__thumbs-slider').slick({
-			// 	arrows: false,
-			// 	dots: false,
-			// 	slidesToShow: 4,
-			// 	slidesToScroll: 1,
-			// 	draggable: false,
-			// 	infinite: true,
-			// 	// asNavFor: '.project-info__main-slider'
-			// 	// autoplay: true,
-			// 	// pauseOnHover: true,
-			// 	// autoplaySpeed: 4000,
-			// })
+
+
 		}
 	} else if (btn.classList.contains('modal__close') || btn.classList.contains('overlay--active')) {
 		/**
 		 * закрываем открытую модалку
 		 */
+		if (modal.id == 'project-modal') {
+			$('.project-info__main-slider').slick('destroy');
+			$('.project-info__thumbs-slider').slick('destroy');
+		}
 		document.body.removeChild(modal);
 		modal = null;
 		document.body.style.position = 'relative';
