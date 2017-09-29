@@ -157,8 +157,8 @@ var openModal = function (e) {
 				slidesToScroll: 1,
 				infinite: true,
 				autoplay: true,
-				pauseOnHover: true,
-				autoplaySpeed: 4000
+				pauseOnHover: false,
+				autoplaySpeed: 1000
 			})
 		}
 		if (modal.id == 'project-modal') {
