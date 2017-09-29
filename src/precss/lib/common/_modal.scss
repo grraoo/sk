@@ -45,8 +45,12 @@
       transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
+  &--form {
+    width: 100%;
+    max-width: 600px;
+  }
   &__content {
-@include xs(padding, 15px 0);
+    @include xs(padding, 15px 0);
 
     padding: 15px 40px;
 

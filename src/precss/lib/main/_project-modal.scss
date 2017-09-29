@@ -15,15 +15,21 @@
     align-items: flex-start;
   }
   &__photos {
-	display: block;
-	position: relative;
-	float: left;
+    display: block;
+
+    position: relative;
+
+    float: left;
+
     width: 45%;
   }
   &__description {
-	display: block;
-	position: relative;
-	float: left;
+    display: block;
+
+    position: relative;
+
+    float: left;
+
     width: 55%;
 
     padding: 0 55px;
@@ -32,43 +38,51 @@
     }
   }
   &__main {
-	&-slider {
-	  display: block;
-	  height: 500px;
-	  position: relative;
-	  margin-bottom: 8px;
-	  margin: 0;
-	//   padding: 0 3px;
-	}
-	&-slide {
-		position: relative;
-		display: block;
-	  width: 100%;
-	  img {
-  		display: block;
-  		width: 100%;
-  	  }
-	}
+    &-slider {
+      display: block;
 
+      position: relative;
+
+      margin: 0;
+      margin-bottom: 8px;
+      //   padding: 0 3px;
+    }
+    &-slide {
+      display: block;
+
+      position: relative;
+
+      width: 100%;
+      img {
+        display: block;
+
+        width: 100%;
+      }
+    }
   }
   &__thumbs {
     &-slider {
       $arrow-border: 2px solid #383838;
-    //   display: flex;
-    //   flex-direction: row;
+
+//   display: flex;
+      //   flex-direction: row;
+
       position: relative;
-	  margin: 0;
+
+      margin: 0;
     }
     &-slide {
-		// height: 100px;
+      // height: 100px;
       display: block;
-      position: relative;
-	  overflow: hidden;
 
-//      padding: 0 3px;
-		&.slick-current {
-			outline: 2px solid $c-green;
-		}
+      position: relative;
+
+      overflow: hidden;
+
+      //      padding: 0 3px;
+      &.slick-current {
+        outline: 2px solid $c-green;
+      }
       img {
         display: block;
 
@@ -101,37 +115,46 @@
   //   flex: 1;
   // }
   &__list {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	list-style: none;
-	padding: 0;
-	margin: 0;
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   &__item {
-	display: inline-flex;
-	flex-direction: row;
-	align-items: center;
-	margin: 0 0 15px;
+    display: inline-flex;
+
+    flex-direction: row;
+
+    margin: 0 0 15px;
+
+    align-items: center;
   }
   &__icon {
-	  width: 75px;
-	  display: inline-block;
-	  position: relative;
+    display: inline-block;
+
+    position: relative;
+
+    width: 75px;
     // display: inline-block;
-	//
+    //
     // position: relative;
-	//
+    //
     // width: auto;
     // height: auto;
     // max-height: 65px;
-	//
+    //
     // margin-bottom: 10px;
   }
   &__caption {
     // text-align: center;
-	padding: 0 15px;
+    padding: 0 15px;
   }
   &__buttons {
     display: block;

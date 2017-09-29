@@ -29,7 +29,6 @@ var onFormSend =  function() {
 					} else { // eсли всe прoшлo oк
 						butt.prop('disabled', false);
 						if(modal) {
-							console.log(modal);
 							document.body.removeChild(modal);
 						}
 					}
@@ -55,6 +54,34 @@ var onFormSend =  function() {
 };
 
 onFormSend();
+
+/**
+ * для запуска слайдов с картинками в модалке портфолио
+ */
+var initSlickOnPortfolio = function() {
+	$('.project-info__main-slider').on('init', function(){
+		$('.project-info__thumbs-slider').slick({
+			arrows: false,
+			dots: false,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			centerMode: true,
+			draggable: false,
+			infinite: true,
+			focusOnSelect: true,
+			asNavFor: '.project-info__main-slider'
+		})
+	}).slick({
+		arrows: false,
+		dots: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		infinite: true,
+		asNavFor: '.project-info__thumbs-slider'
+	})
+};
+
 
 /* modal */
 var T = 'toggle';
@@ -93,25 +120,20 @@ var openModal = function (e) {
 			 */
 			modal.querySelector('#videoFrame').src = 'https://www.youtube.com/embed/' + btn.dataset.video + '?ecver=2';
 
-			/**
-			 * выводим в DOM
-			 */
 		} else if (btn.dataset.imgs) {
 			/**
 			 * картинки проектов
 			 */
 			var images = btn.dataset.imgs.split(', ');
 			/**
-			 * генерируем слайдер
+			 * генерируем контент для слайдера
 			 */
 
 			var imgSlider = modal.querySelector('.modal__content');
 			
-			var count = 0;
-			imgsLoaded = false;
 			var fragment = document.createDocumentFragment();
-			
-
+			var count = 0;
+			var imgsLoaded = false;
 			images.forEach(function (img, i) {
 				var slideImg = new Image();
 				slideImg.src = img;
@@ -127,14 +149,12 @@ var openModal = function (e) {
 				}
 			});
 
-
 			modal.querySelector('.section-header').innerText = title;
 
 		} else {
 			/**
 			 * модалка с формой
 			 */
-
 			e.preventDefault();
 			/**
 			 * тут, до вставки в DOM можно например добавлять нужные инпуты или атрибуты форме, для идентификации
@@ -146,6 +166,7 @@ var openModal = function (e) {
 		document.body.style.position = 'fixed';
 		document.body.style.width = '100vw';
 		modal = document.body.appendChild(modal);
+
 		onFormSend();
 
 		/**
@@ -154,62 +175,37 @@ var openModal = function (e) {
 
 		//  project-info__main-slider
 
-		if(modal.id == 'reviewModal') {
-			reviewImg.src = btn.dataset.img;
-		}
-		if (modal.id == 'imgs') {
-			var preloadTimer = setInterval(function() {
+		switch(modal.id) {
+			case 'reviewModal':
+				reviewImg.src = btn.dataset.img;
+				break;
+			case 'imgs':
+				var preloadTimer = setInterval(function() {
 					if(imgsLoaded) {
-					var preloader = document.querySelector('#floatingBarsG');	
-					imgSlider.removeChild(preloader);
-					imgSlider.appendChild(fragment);
-					if(count > 1) {
-						$('#imgs .modal__content').slick({
-							slidesToShow: 1,
-							slidesToScroll: 1,
-							arrows: true,
-							dots: false,
-							infinite: true,
-							initialSlide: 1
-						});
+						var preloader = document.querySelector('#floatingBarsG');	
+						imgSlider.removeChild(preloader);
+						imgSlider.appendChild(fragment);
+						if(count > 1) {
+							$('#imgs .modal__content').slick({
+								slidesToShow: 1,
+								slidesToScroll: 1,
+								arrows: true,
+								dots: false,
+								infinite: true,
+								initialSlide: 1
+							});
+						}
+						clearInterval(preloadTimer);
 					}
-					
-					clearInterval(preloadTimer);
-				}
-			}, 200)
+				}, 200)
+				break;
+			case 'project-modal':
+				initSlickOnPortfolio();
+				break;
+			default: break;
 		}
-	
-		if (modal.id == 'project-modal') {
-
-			$('.project-info__main-slider').on('init', function(){
-				$('.project-info__thumbs-slider').slick({
-					arrows: false,
-					dots: false,
-					slidesToShow: 4,
-					slidesToScroll: 4,
-					draggable: false,
-					infinite: true,
-					focusOnSelect: true,
-					asNavFor: '.project-info__main-slider'
-					// autoplay: true,
-					// pauseOnHover: true,
-					// autoplaySpeed: 4000,
-				})
-			}).slick({
-				arrows: true,
-				dots: false,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				fade: true,
-				infinite: true,
-				asNavFor: '.project-info__thumbs-slider'
-				// autoplay: true,
-				// pauseOnHover: true,
-				// autoplaySpeed: 4000,
-			})
 
 
-		}
 	} else if (btn.classList.contains('modal__close') || btn.classList.contains('overlay--active')) {
 		/**
 		 * закрываем открытую модалку
@@ -220,10 +216,12 @@ var openModal = function (e) {
 		}
 		document.body.removeChild(modal);
 		modal = null;
+		
 		document.body.style.position = 'relative';
 		document.body.style.width = 'initial';
 		document.body.style.top = 'auto';
-		window.scrollTo(offsetX, offsetTop)
+		window.scrollTo(offsetX, offsetTop);
+		
 	}
 };
 
@@ -249,7 +247,6 @@ var showRecent = function (e) {
 				changeClass(showMore, 'btn--hidden', 1);
 			}
 			projectsToShow.splice(0, 1);
-			console.log(projectsToShow.length);
 		}
 		changeClass(btnHidden, 'btn--hidden', 0);
 		started = true;
