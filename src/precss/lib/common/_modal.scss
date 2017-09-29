@@ -46,13 +46,26 @@
     }
   }
   &__content {
+@include xs(padding, 15px 0);
+
     padding: 15px 40px;
 
     font-size: 18px;
-
     &--video {
       padding: 0;
       padding-top: 30px;
+    }
+    &--imgs {
+      .scroll-btn--right {
+        right: 0;
+      }
+      .scroll-btn--left {
+        left: 0;
+      }
+
+      &.slick-slider {
+        margin: 0;
+      }
     }
   }
   &__info {
@@ -82,6 +95,15 @@
     margin-bottom: 15px;
   }
   &__img-wrap {
+    @include md(width, 600px);
+
+@include sm(width, 500px);
+
+@include xs(width, 400px);
+
+@include xxs(width, 300px);
+
+    width: 790px;
     height: 63vh;
 
     background-repeat: no-repeat;

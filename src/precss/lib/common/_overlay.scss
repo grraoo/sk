@@ -8,13 +8,12 @@
   left: 0;
   z-index: 10;
 
+  overflow-y: scroll;
+
   opacity: 1;
 
   background: rgba(0, 0, 0, .5);
 
   transition-duration: .3s;
   pointer-events: all;
-
-  overflow-y: scroll;
-  padding: 50px 0;
 }
