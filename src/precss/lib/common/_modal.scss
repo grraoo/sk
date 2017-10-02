@@ -84,7 +84,9 @@
     max-height: 90vh;
 
     padding-bottom: 30px;
-
+    &--imgs {
+      text-align: center;
+    }
     &--video {
       width: 100%;
 
@@ -108,7 +110,7 @@
 @include xxs(width, 300px);
 
     width: 790px;
-    height: 63vh;
+    height: 60vh;
 
     background-repeat: no-repeat;
     background-position: center;

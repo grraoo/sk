@@ -687,8 +687,9 @@ $(document).on( 'click', '.js-scroll', function( e ) {
 	$('html, body').animate({
 		scrollTop: obj.position().top
 	}, 2000);
-	setTimeout(function () {
-			openModal(null, obj[0]);
-	}, 2200)
-
+	if(e.target.dataset.project){
+		setTimeout(function () {
+				openModal(null, obj[0]);
+		}, 2200)
+	}
 });
