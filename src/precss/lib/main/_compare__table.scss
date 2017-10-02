@@ -2,13 +2,15 @@
   @include sm-block() {
     display: block;
   };
-  @include md-block() {
-	margin-top: 30px;
+
+@include md-block() {
+    margin-top: 30px;
   };
 
   width: 100%;
 
   border-collapse: collapse;
+
   &-head {
     @include sm-block() {
       display: block;
@@ -111,6 +113,17 @@
       padding: 5px;
 
       text-align: right;
+
+      &:first-child {
+@include sm(padding-right, 0);
+
+        padding-right: 40px;
+      }
+      &:last-child {
+@include sm(padding-left, 0);
+
+        padding-left: 40px;
+      }
     };
 
     position: relative;
@@ -129,6 +142,8 @@
         order: -1;
         flex: 0 0 40%;
       };
+
+      font-weight: bold;
     }
     &::after {
       @include sm-block() {

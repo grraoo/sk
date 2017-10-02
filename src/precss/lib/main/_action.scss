@@ -8,11 +8,12 @@
   position: relative;
 
 //  padding-right: 5%;
-//  padding-left: 5%;
+  //  padding-left: 5%;
 
   background-image: url('../img/bg/action.jpg');
 
   align-items: center;
+
   &::before {
     content: '';
 
@@ -28,24 +29,31 @@
   &::after {
     @include angles();
   }
-	&__container {
-		@include wrapper();
-	}
-	
-	&__header-block {
-		display: inline-flex;
-		flex-basis: 75%
-	}
-	&__btn-block {
-		display: inline-flex;
-		flex-basis: 25%;
-		flex-direction: column;
-	}
-	&__container {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
+  &__container {
+    @include wrapper(); @include sm(flex-direction, column);
+  }
+
+  &__header-block {
+    display: inline-flex;
+
+    flex-basis: 75%;
+  }
+  &__btn-block {
+@include sm(margin-top, 30px);
+
+    display: inline-flex;
+
+    flex-direction: column;
+
+    flex-basis: 25%;
+  }
+  &__container {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+  }
   &__header {
     position: relative;
     z-index: 1;
@@ -67,12 +75,12 @@
     z-index: 1;
 
     margin-top: 30px;
-	  
   }
-	&--columned &__btn {
-		margin-top: 0;
-		align-self: center;
-	}
+  &--columned &__btn {
+    margin-top: 0;
+
+    align-self: center;
+  }
   &__contacts {
     position: relative;
     z-index: 1;
