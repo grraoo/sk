@@ -19,9 +19,11 @@
 
     &-wrap {
       position: absolute;
-      top: 60px;
+      top: 50%;
       right: 55%;
       left: 60px;
+
+      transform: translateY(-50%);
     }
   }
 

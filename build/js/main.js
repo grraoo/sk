@@ -73,14 +73,13 @@ var initSlickOnPortfolio = function() {
 			dots: false,
 			slidesToShow: 5,
 			slidesToScroll: 1,
-			centerMode: true,
-			draggable: false,
+			draggable: true,
 			infinite: true,
 			focusOnSelect: true,
 			asNavFor: '.project-info__main-slider'
 		})
 	}).slick({
-		arrows: false,
+		arrows: true,
 		dots: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -210,6 +209,10 @@ var openModal = function (e, obj) {
 				}, 200)
 				break;
 			case 'project-modal':
+			var projectInfo = btn.querySelector('.portfolio__info').content.querySelector('.project-info');
+			var modalContent = modal.querySelector('.modal__content');
+			console.log(projectInfo);
+				modalContent.appendChild(projectInfo.cloneNode(true));
 				initSlickOnPortfolio();
 				break;
 			default: break;

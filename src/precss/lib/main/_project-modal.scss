@@ -3,6 +3,10 @@
     padding: 0;
   }
   &__wrap {
+    @include lg-block() {
+      flex-direction: column;
+    };
+
     display: flex;
 
     overflow: auto;
@@ -15,6 +19,8 @@
     align-items: flex-start;
   }
   &__photos {
+    @include lg(width, 100%);
+
     display: block;
 
     position: relative;
@@ -22,17 +28,36 @@
     float: left;
 
     width: 45%;
+
+    .scroll-btn--left {
+      @include sm(display, none !important);
+
+      left: 0;
+    }
+    .scroll-btn--right {
+      @include sm(display, none !important);
+
+      right: 0;
+    }
   }
   &__description {
+    @include lg-block() {
+      width: 100%;
+
+      margin-top: 30px;
+      margin-left: 0;
+    };
+
     display: block;
 
     position: relative;
 
     float: left;
 
-    width: 55%;
+    width: calc(55% - 15px);
 
-    padding: 0 55px;
+    margin-left: 15px;
+
     .text:first-of-type {
       margin-top: 0;
     }
@@ -95,25 +120,7 @@
       }
     }
   }
-  // &__info {
-  //   display: flex;
-  //
-  //   flex-direction: row;
-  //
-  //   width: 100%;
-  //
-  //   justify-content: space-around;
-  //   align-items: flex-start;
-  // }
-  // &__term {
-  //   display: inline-flex;
-  //
-  //   flex-direction: column;
-  //
-  //   text-align: center;
-  //
-  //   flex: 1;
-  // }
+
   &__list {
     display: flex;
 
@@ -133,8 +140,20 @@
     flex-direction: row;
 
     margin: 0 0 15px;
+    padding-left: 2em;
+
+    background-image: url(../img/icons/house.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto 1.4em;
 
     align-items: center;
+    &--house {
+      background-image: url(../img/icons/house.svg);
+    }
+    &--foundation {
+      background-image: url(../img/icons/foundation.svg);
+    }
   }
   &__icon {
     display: inline-block;
@@ -142,19 +161,9 @@
     position: relative;
 
     width: 75px;
-    // display: inline-block;
-    //
-    // position: relative;
-    //
-    // width: auto;
-    // height: auto;
-    // max-height: 65px;
-    //
-    // margin-bottom: 10px;
   }
   &__caption {
-    // text-align: center;
-    padding: 0 15px;
+    // padding: 0 15px;
   }
   &__buttons {
     display: block;
@@ -164,5 +173,9 @@
     width: 100%;
 
     text-align: center;
+  }
+
+  &__thumbs-slider {
+    @include xxs(display, none);
   }
 }
