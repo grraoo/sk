@@ -307,12 +307,13 @@ var moveCallback = function () {
 		menu.appendChild(callbackBlock);
 	} else {
 		menu.parentElement.insertBefore(callbackBlock, null);
-
 	}
 };
 
 window.addEventListener('resize', moveCallback);
+
 menuSwitch.addEventListener('click', switchMenu);
+
 menu.addEventListener('click', function(e) {
 		if(e.target != menuSwitch) {
 			if(window.innerWidth < 961) {
@@ -388,7 +389,7 @@ $(document).ready(function () {
 			}
 		},
 		{
-			breakpoint: 400,
+			breakpoint: 460,
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1
@@ -498,18 +499,16 @@ $(document).ready(function () {
  * При прокрутке страницы делаем навбар тёмным
  */
 window.onscroll = function () {
-	var scrolled = window.pageYOffset || document.documentElement.scrollTop,
-	navObject = document.querySelector('.header-top'),
-	navActiveClass = 'header-top--dark',
-	offset_top = 200;
+	var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+	var navObject = document.querySelector('.header-top');
+	var navActiveClass = 'header-top--dark';
+	var offset_top = 200;
 	if (scrolled > offset_top) {
-		navObject.classList.add(navActiveClass)
+		changeClass(navObject, navActiveClass, 1);
 	} else {
-		navObject.classList.remove(navActiveClass)
+		changeClass(navObject, navActiveClass, 0);
 	}
 }
-
-
 
 // Google Maps JS & Settings Coordinates
 // When the window has finished loading create our google map below
