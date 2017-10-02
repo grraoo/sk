@@ -6,6 +6,14 @@ var modal;
 var offsetTop;
 var offsetX;
 
+
+// $('.js-scroll').click(function (e) {
+// 	e.preventDefault();
+// 	$('html, body').animate({
+// 		scrollTop: $(e.target.getAttribute('href')).position().top
+// 	}, 2000);
+// });
+
 var onFormSend =  function() {
 	$(".feedback__form").submit(function () { // пeрeхвaтывaeм всe при сoбытии oтпрaвки
 		var form = $(this); // зaпишeм фoрму, чтoбы пoтoм нe былo прoблeм с this
@@ -101,11 +109,11 @@ var changeClass = function (item, myClass, flag) {
 */
 var offsetTop;
 var offsetX;
-var openModal = function (e) {
+var openModal = function (e, obj) {
 	/**
 	 * проверяем, что кликнули по нужной кнопке
 	 */
-	var btn = e.target;
+	var btn = obj || e.target;
 	if (btn.classList.contains('js-modalOpen')) {
 		offsetTop = window.pageYOffset;
 		offsetX = window.pageXOffset;
@@ -155,7 +163,9 @@ var openModal = function (e) {
 			/**
 			 * модалка с формой
 			 */
-			e.preventDefault();
+			if(e) {
+				e.preventDefault();
+			}
 			/**
 			 * тут, до вставки в DOM можно например добавлять нужные инпуты или атрибуты форме, для идентификации
 			 */
@@ -206,7 +216,7 @@ var openModal = function (e) {
 		}
 
 
-	} else if (btn.classList.contains('modal__close') || btn.classList.contains('overlay--active')) {
+	} else if (btn.classList.contains('js-modalClose') || btn.classList.contains('overlay--active')) {
 		/**
 		 * закрываем открытую модалку
 		 */
@@ -237,16 +247,27 @@ var started = false;
  */
 var showRecent = function (e) {
 	if (hiddenProjects) {
+		var numberToShow = 6;
+
+		if(window.innerWidth < 777) {
+			numberToShow = 3;
+		} else if(window.innerWidth < 1157) {
+			numberToShow = 4;
+		}
+
 		if (!started) {
 			projectsToShow = [].slice.call(hiddenProjects);
 		}
-		for (var i = 0; i < 3; i++) {
-			if (projectsToShow[0]) {
+
+		numberToOpen = Math.min(numberToShow, projectsToShow.length);
+		for (var i = 0; i < numberToOpen; i++) {
+			if (projectsToShow.length) {
 				changeClass(projectsToShow[0], 'portfolio__item--hidden', 0);
-			} else {
+				projectsToShow.splice(0, 1);
+			} 
+			if (!projectsToShow.length) {
 				changeClass(showMore, 'btn--hidden', 1);
 			}
-			projectsToShow.splice(0, 1);
 		}
 		changeClass(btnHidden, 'btn--hidden', 0);
 		started = true;
@@ -472,27 +493,6 @@ $(document).ready(function () {
 
 });
 
-$('.scroll-btn--top').click(function (e) {
-	e.preventDefault();
-	$('html, body').animate({
-		scrollTop: $('body').position().top
-	}, 2000);
-});
-
-$('.scroll-btn--down').click(function (e) {
-	e.preventDefault();
-	$('html, body').animate({
-		scrollTop: $(e.target.getAttribute('href')).position().top
-	}, 2000);
-});
-
-$('.main-menu__link').click(function (e) {
-	e.preventDefault();
-	$('html, body').animate({
-		scrollTop: $(e.target.getAttribute('href')).position().top
-	}, 2000);
-});
-
 /**
  * https://gist.github.com/topsite-studio/188d4ff4d6c34e1358139078991a86e9
  * При прокрутке страницы делаем навбар тёмным
@@ -664,4 +664,31 @@ calcForm.addEventListener('reset', function (e) {
 		calculatePrice();
 		clearTimeout(timerId);
 	}, 100);
+});
+
+
+$('.scroll-btn--top').click(function (e) {
+	e.preventDefault();
+	$('html, body').animate({
+		scrollTop: $('body').position().top
+	}, 2000);
+});
+
+$('.scroll-btn--down').click(function (e) {
+	e.preventDefault();
+	$('html, body').animate({
+		scrollTop: $(e.target.getAttribute('href')).position().top
+	}, 2000);
+});
+
+$(document).on( 'click', '.js-scroll', function( e ) {
+	e.preventDefault();
+	var obj = $(e.target.getAttribute('href'));
+	$('html, body').animate({
+		scrollTop: obj.position().top
+	}, 2000);
+	setTimeout(function () {
+			openModal(null, obj[0]);
+	}, 2200)
+
 });
