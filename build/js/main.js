@@ -113,6 +113,25 @@ var openModal = function (e, obj) {
 	 * проверяем, что кликнули по нужной кнопке
 	 */
 	var btn = obj || e.target;
+
+	 if (btn.classList.contains('js-modalClose') || btn.classList.contains('overlay--active')) {
+		/**
+		 * закрываем открытую модалку
+		 */
+		if (modal.id == 'project-modal') {
+			$('.project-info__main-slider').slick('destroy');
+			$('.project-info__thumbs-slider').slick('destroy');
+		}
+		document.body.removeChild(modal);
+		modal = null;
+		
+		document.body.style.position = 'relative';
+		document.body.style.width = 'initial';
+		document.body.style.top = 'auto';
+		window.scrollTo(offsetX, offsetTop);
+		
+	} 
+	
 	if (btn.classList.contains('js-modalOpen')) {
 		offsetTop = window.pageYOffset;
 		offsetX = window.pageXOffset;
@@ -158,7 +177,17 @@ var openModal = function (e, obj) {
 
 			modal.querySelector('.section-header').innerText = title;
 
-		} else {
+		} else if(btn.dataset.house) {
+			var houseName = document.createElement('input');
+			houseName.setAttribute('type', 'hidden');
+			houseName.name = 'house-address';
+			houseName.value = btn.dataset.house;
+			modal.querySelector('.section-header').innerText = title;
+			modal.querySelector('.feedback__form').appendChild(houseName);
+
+		}
+		
+		else {
 			/**
 			 * модалка с формой
 			 */
@@ -211,7 +240,6 @@ var openModal = function (e, obj) {
 			case 'project-modal':
 			var projectInfo = btn.querySelector('.portfolio__info').content.querySelector('.project-info');
 			var modalContent = modal.querySelector('.modal__content');
-			console.log(projectInfo);
 				modalContent.appendChild(projectInfo.cloneNode(true));
 				initSlickOnPortfolio();
 				break;
@@ -219,22 +247,6 @@ var openModal = function (e, obj) {
 		}
 
 
-	} else if (btn.classList.contains('js-modalClose') || btn.classList.contains('overlay--active')) {
-		/**
-		 * закрываем открытую модалку
-		 */
-		if (modal.id == 'project-modal') {
-			$('.project-info__main-slider').slick('destroy');
-			$('.project-info__thumbs-slider').slick('destroy');
-		}
-		document.body.removeChild(modal);
-		modal = null;
-		
-		document.body.style.position = 'relative';
-		document.body.style.width = 'initial';
-		document.body.style.top = 'auto';
-		window.scrollTo(offsetX, offsetTop);
-		
 	}
 };
 

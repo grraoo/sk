@@ -851,7 +851,7 @@
                                 </div>
                                 <div class="project-info__buttons">
                                     <p>
-                                        <a href="#" class="btn btn--green">Хочу такой дом!</a>
+                                        <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="«Идиллия Эстейт», на 19-ом км Байкальского тракта">Хочу такой дом!</button>
                                     </p>
                                 </div>
                             </article>
@@ -927,7 +927,10 @@
                                 </div>
                                 <div class="project-info__buttons">
                                     <p>
-                                        <a href="#" class="btn btn--green">Хочу такой дом!</a>
+                                            <button
+											class="btn btn--green js-modalOpen js-modalClose" data-target="#modal"
+											data-title="Заказать дом"
+											data-house="«Идиллия Эстейт», на 19-ом км Байкальского тракта">Хочу такой дом!</button>
                                     </p>
                                 </div>
                             </article>
@@ -1375,12 +1378,19 @@
             <div class="container">
                 <h2 class="section-header">Отзывы наших клиентов</h2>
                 <div class="thanks__wrap">
-                    <aricle class="thanks__item">
-                        <div class="thanks__inner thanks__inner--video js-modalOpen" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)"
-						  data-target="#videoModal" data-video="zWBRry4cO9g">
-                        </div>
+
+                    <aricle class="thanks__item" data-target="#reviewModal">
+                        <div class="thanks__inner js-modalOpen" data-target="#reviewModal" style="background-image: url(img/reviews/review-1.jpg)"
+						  data-title="Отзыв Марины" data-img="img/reviews/review-1.jpg"></div>
                         <div class="thanks__name">
-                            Отзыв Иван Иваныча
+                            Отзыв Марины
+                        </div>
+                    </aricle>
+                    <aricle class="thanks__item" data-target="#reviewModal">
+                        <div class="thanks__inner js-modalOpen" data-target="#reviewModal" style="background-image: url(img/reviews/review-2.jpg)"
+						  data-title="Отзыв Ильи" data-img="img/reviews/review-2.jpg"></div>
+                        <div class="thanks__name">
+                            Отзыв Ильи
                         </div>
                     </aricle>
                     <aricle class="thanks__item" data-target="#reviewModal">
@@ -1397,30 +1407,21 @@
                             Отзыв Ильи
                         </div>
                     </aricle>
-                    <aricle class="thanks__item">
-                        <div class="thanks__inner thanks__inner--video js-modalOpen" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)"
-						  data-target="#videoModal" data-video="zWBRry4cO9g">
-                        </div>
+                    <aricle class="thanks__item" data-target="#reviewModal">
+                        <div class="thanks__inner js-modalOpen" data-target="#reviewModal" style="background-image: url(img/reviews/review-1.jpg)"
+						  data-title="Отзыв Марины" data-img="img/reviews/review-1.jpg"></div>
                         <div class="thanks__name">
-                            Отзыв Кузьмы Семёныча
+                            Отзыв Марины
                         </div>
                     </aricle>
-                    <aricle class="thanks__item">
-                        <div class="thanks__inner thanks__inner--video js-modalOpen" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)"
-						  data-target="#videoModal" data-video="zWBRry4cO9g">
-                        </div>
+                    <aricle class="thanks__item" data-target="#reviewModal">
+                        <div class="thanks__inner js-modalOpen" data-target="#reviewModal" style="background-image: url(img/reviews/review-2.jpg)"
+						  data-title="Отзыв Ильи" data-img="img/reviews/review-2.jpg"></div>
                         <div class="thanks__name">
-                            Отзыв Анны Никогдаевны
+                            Отзыв Ильи
                         </div>
                     </aricle>
-                    <aricle class="thanks__item">
-                        <div class="thanks__inner thanks__inner--video js-modalOpen" style="background-image: url(http://img.youtube.com/vi/zWBRry4cO9g/hqdefault.jpg)"
-						  data-target="#videoModal" data-video="zWBRry4cO9g">
-                        </div>
-                        <div class="thanks__name">
-                            Отзыв соседа с дрелью
-                        </div>
-                    </aricle>
+
                 </div>
             </div>
         </section>
@@ -1680,7 +1681,7 @@
                                     maiores incidunt non tempore distinctio, magni suscipit! Eum est iure, explicabo consectetur vero soluta sed dignissimos
                                     dolores cupiditate earum!</p>
                             </div>
-                            <a href="#1" data-project="1" class="modal-review__btn js-modalClose btn btn--green js-scroll">Посмотреть готовый проект</a>
+                            <a href="#project-1" data-project="1" class="modal-review__btn js-modalClose btn btn--green js-scroll">Посмотреть готовый проект</a>
                         </div>
                     </div>
                 </div>
@@ -1690,129 +1691,8 @@
         <div class="overlay overlay--active" id="project-modal">
             <div class="modal modal--project">
                 <div class="modal__close js-modalClose"></div>
-                <h2 class="section-header">Проект дома 101</h2>
+                <h2 class="section-header"></h2>
                 <div class="modal__content">
-                    <!-- <article class="project-info">
-						<div class="project-info__wrap">
-
-							<section class="project-info__photos">
-								<div class="project-info__main-slider">
-
-
-									<div class="project-info__main-slide">
-										<img src="//placehold.it/721x500?text=1" alt="">
-									</div>
-									<div class="project-info__main-slide">
-										<img src="//placehold.it/721x500?text=2" alt="">
-									</div>
-									<div class="project-info__main-slide">
-										<img src="//placehold.it/721x500?text=3" alt="">
-									</div>
-									<div class="project-info__main-slide">
-										<img src="//placehold.it/721x500?text=4" alt="">
-									</div>
-									<div class="project-info__main-slide">
-										<img src="//placehold.it/721x500?text=5" alt="">
-									</div>
-									<div class="project-info__main-slide">
-										<img src="//placehold.it/721x500?text=6" alt="">
-									</div>
-									<div class="project-info__main-slide">
-										<img src="//placehold.it/721x500?text=7" alt="">
-									</div>
-									<div class="project-info__main-slide">
-										<img src="//placehold.it/721x500?text=8" alt="">
-									</div>
-									<div class="project-info__main-slide">
-										<img src="//placehold.it/721x500?text=9" alt="">
-									</div>
-									<div class="project-info__main-slide">
-										<img src="//placehold.it/721x500?text=10" alt="">
-									</div>
-								</div>
-								<div class="project-info__thumbs-slider">
-
-									<div class="project-info__thumbs-slide">
-										<img src="//placehold.it/144x100?text=1" alt="">
-									</div>
-									<div class="project-info__thumbs-slide">
-										<img src="//placehold.it/144x100?text=2" alt="">
-									</div>
-									<div class="project-info__thumbs-slide">
-										<img src="//placehold.it/144x100?text=3" alt="">
-									</div>
-									<div class="project-info__thumbs-slide">
-										<img src="//placehold.it/144x100?text=4" alt="">
-									</div>
-									<div class="project-info__thumbs-slide">
-										<img src="//placehold.it/144x100?text=5" alt="">
-									</div>
-									<div class="project-info__thumbs-slide">
-										<img src="//placehold.it/144x100?text=6" alt="">
-									</div>
-									<div class="project-info__thumbs-slide">
-										<img src="//placehold.it/144x100?text=7" alt="">
-									</div>
-									<div class="project-info__thumbs-slide">
-										<img src="//placehold.it/144x100?text=8" alt="">
-									</div>
-									<div class="project-info__thumbs-slide">
-										<img src="//placehold.it/144x100?text=9" alt="">
-									</div>
-									<div class="project-info__thumbs-slide">
-										<img src="//placehold.it/144x100?text=10" alt="">
-									</div>
-								</div>
-
-							</section>
-							<section class="project-info__description">
-
-								<h3 class="subheader">Выполнены следующие работы:</h3>
-								<ul class="project-info__list">
-									<li class="project-info__item project-info__item--house">
-
-										<span class="project-info__caption"> Баня под ключ: Внешние коммуникации;</span>
-									</li>
-									<li class="project-info__item project-info__item--foundation">
-
-										<span class="project-info__caption">Монтаж винтового фундамента;</span>
-									</li>
-									<li class="project-info__item">
-
-										<span class="project-info__caption">Сборка комплекта клееного бруса;</span>
-									</li>
-									<li class="project-info__item">
-
-										<span class="project-info__caption">Монтаж кровли с водостоками и карнизами;</span>
-									</li>
-									<li class="project-info__item">
-
-										<span class="project-info__caption">Внутренние коммуникации (теплый водяной пол, элетромонтаж, вентиляция, водоснабжение и канализирование);</span>
-									</li>
-									<li class="project-info__item">
-
-										<span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, ламинат, вагонка, покраска стен, натяжные потолки, перегородки);</span>
-									</li>
-									<li class="project-info__item">
-
-										<span class="project-info__caption">Фасадные отделочные работы (покраска), терраса;</span>
-									</li>
-									<li class="project-info__item">
-
-										<span class="project-info__caption">Отделка мойки с бассейном и парилки (липой).</span>
-									</li>
-
-								</ul>
-							</section>
-
-
-						</div>
-						<div class="project-info__buttons">
-							<p>
-								<a href="#" class="btn btn--green">Хочу такой дом!</a>
-							</p>
-						</div>
-					</article> -->
                 </div>
             </div>
         </div>
