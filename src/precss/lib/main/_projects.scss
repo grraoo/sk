@@ -14,7 +14,7 @@
   &__item {
     @include col();
 
-	@include size(4);
+@include size(4);
 
     display: flex !important;
 
@@ -36,12 +36,13 @@
     img {
       margin: 0 auto;
       margin-bottom: 30px;
-	  cursor: pointer;
+
+      cursor: pointer;
     }
   }
 
   &__name {
-    margin-top: auto;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -122,6 +123,8 @@
   }
 
   &__btn {
+    margin-top: auto;
+
     align-self: center;
   }
 }
