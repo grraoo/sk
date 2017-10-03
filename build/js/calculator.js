@@ -20,7 +20,7 @@ var calcConfig = {
 		[2500, 1800] //2 этажа
 	]
 }
-
+var items = Object.keys(calcConfig);
 var calcForm = document.querySelector('.calculator__form');
 var calcList = document.querySelector('.calculator-list');
 var buildSelect = calcForm.querySelector('#build');
@@ -39,43 +39,49 @@ var calculatePrice = function () {
 	var totalSum = 0;
 	var curValue = 0;
 	var index = 0;
+	var houseSquare = calcForm.querySelector('#square');
+	var curitem = null;
+	floorNum = calcForm.querySelector('#floors').value;
+	if (houseSquare.value > 0) {
+		houseSquare.classList.remove('text-input--error');
+		houseSquare.parentNode.dataset.error = '';
+		items.forEach( function(item) {
+			
+			curitem = document.getElementById(item);
 
-	floorNum = calcForm.floors.value;
-	if (calcForm.square.value > 0) {
-		calcForm.square.classList.remove('text-input--error');
-		calcForm.square.parentNode.dataset.error = '';
-		for (item in calcConfig) {
-			index = calcForm[item].value;
+			index = curitem.value;
 
 			currentContent = calcList.querySelector('.calculator-list__item--' + item + ' .list-content');
 
 			if (currentContent) {
-				currentContent.innerText = calcForm[item][index].innerText;
+				currentContent.innerText = curitem[index].innerText;
 			}
 
 			currentPrice = calcList.querySelector('.calculator-list__item--' + item + ' .price span');
 
-			curValue = parseInt(calcForm.square.value * calcConfig[item][floorNum][index], 10);
+			curValue = parseInt(houseSquare.value * calcConfig[item][floorNum][index], 10);
 
 			currentPrice.innerHTML = spaces(curValue.toString()) + ' &#8381;';
 			totalSum += curValue;
 
-		}
+		})
+		var curitem = null;
 	} else {
-		calcForm.square.classList.add('text-input--error');
-		calcForm.square.focus();
-		calcForm.square.parentNode.dataset.error = calcForm.square.validationMessage;
+		houseSquare.classList.add('text-input--error');
+		houseSquare.focus();
+		houseSquare.parentNode.dataset.error = houseSquare.validationMessage;
 	}
 	calcForm.querySelector('#calcSum').innerHTML = spaces(totalSum.toString()) + ' &#8381;';
 	calcForm.querySelector('#calcSumInput').value = spaces(totalSum.toString()) + ' руб.';
 };
 
-calculatePrice();
+calcForm.addEventListener('change', calculatePrice);
 
-calcForm.addEventListener('input', calculatePrice);
 calcForm.addEventListener('reset', function (e) {
 	var timerId = setTimeout(function () {
 		calculatePrice();
 		clearTimeout(timerId);
 	}, 100);
 });
+
+calculatePrice();

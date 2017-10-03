@@ -130,7 +130,7 @@ var openModal = function (e, obj) {
 				}, 200)
 				break;
 			case 'project-modal':
-			var projectInfo = btn.querySelector('.portfolio__info').content.querySelector('.project-info');
+			var projectInfo = btn.querySelector('.portfolio__info').content.querySelector('.project-info') || btn.querySelector('.project-info');
 			var modalContent = modal.querySelector('.modal__content');
 				modalContent.appendChild(projectInfo.cloneNode(true));
 				initSlickOnPortfolio();
