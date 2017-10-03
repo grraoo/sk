@@ -36,4 +36,18 @@
       background-size: 100%;
     }
   }
+
+  &__link {
+    display: block;
+
+    padding: 10px 0;
+
+    font-size: 14px;
+
+    text-align: left;
+    text-decoration: none;
+    &:hover {
+      color: $c-blue;
+    }
+  }
 }
