@@ -146,7 +146,7 @@ document.addEventListener('click', openModal, true);
 
 var showMore = document.querySelector('.js-show-more');
 var hiddenProjects = document.querySelectorAll('.portfolio__item--hidden');
-var btnHidden = document.querySelector('.btn--hidden');
+
 var started = false;
 
 /**
@@ -176,26 +176,12 @@ var showRecent = function (e) {
 				changeClass(showMore, 'btn--hidden', 1);
 			}
 		}
-		changeClass(btnHidden, 'btn--hidden', 0);
 		started = true;
-	}
-}
-/**
- * прячем все открытые выше проекты
- */
-var hideRecent = function (e) {
-	if (hiddenProjects) {
-		for (i = 0; i < hiddenProjects.length; i++) {
-			changeClass(hiddenProjects[i], 'portfolio__item--hidden', 1);
-		}
-		changeClass(btnHidden, 'btn--hidden', 1);
-		started = false;
-		changeClass(showMore, 'btn--hidden', 0);
 	}
 }
 
 showMore.addEventListener('click', showRecent);
-btnHidden.addEventListener('click', hideRecent);
+
 
 var menu = document.querySelector('.main-menu');
 var menuSwitch = menu.querySelector('.main-menu__switch');
