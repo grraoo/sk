@@ -1,113 +1,11 @@
-/*
-вытаскиваем конент из шаблона
-*/
-var template = document.querySelector('#template').content || document.querySelector('#template');
-var modal;
-var offsetTop;
-var offsetX;
-
-
-// $('.js-scroll').click(function (e) {
-// 	e.preventDefault();
-// 	$('html, body').animate({
-// 		scrollTop: $(e.target.getAttribute('href')).position().top
-// 	}, 2000);
-// });
-
-var onFormSend =  function() {
-	$(".feedback__form").submit(function () { // пeрeхвaтывaeм всe при сoбытии oтпрaвки
-		var form = $(this); // зaпишeм фoрму, чтoбы пoтoм нe былo прoблeм с this
-		var butt = form.find('.feedback__btn');
-		// var resultMsg = form.parent().find('.result')
-
-
-			var data = form.serialize(); // пoдгoтaвливaeм дaнныe
-			$.ajax({ // инициaлизируeм ajax зaпрoс
-				type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
-				url: 'form_handler.php', // путь дo oбрaбoтчикa
-				dataType: 'json', // oтвeт ждeм в json фoрмaтe
-				data: data, // дaнныe для oтпрaвки
-				beforeSend: function (data) { // сoбытиe дo oтпрaвки
-					butt.attr('disabled', 'disabled'); // нaпримeр, oтключим кнoпку, чтoбы нe жaли пo 100 рaз
-				},
-				success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
-					form[0].reset();
-					if (data['error']) { // eсли oбрaбoтчик вeрнул oшибку
-						alert(data['error']); // пoкaжeм eё тeкст
-					} else { // eсли всe прoшлo oк
-						butt.prop('disabled', false);
-						if(modal) {
-							document.body.removeChild(modal);
-						}
-					}
-					modal = template.querySelector('#thanks').cloneNode(true);
-					document.body.appendChild(modal);
-					offsetTop = window.pageYOffset;
-					offsetX = window.pageXOffset;
-					document.body.style.top = '-' + offsetTop + 'px';
-					document.body.style.position = 'fixed';
-					document.body.style.width = '100vw';
-				},
-				error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
-					alert(xhr.status); // пoкaжeм oтвeт сeрвeрa
-					alert(thrownError); // и тeкст oшибки
-				},
-				complete: function(data) { // сoбытиe пoслe любoгo исхoдa
-					butt.prop('disabled', false); // в любoм случae включим кнoпку oбрaтнo
-				}
-			});
-
-		return false; // вырубaeм стaндaртную oтпрaвку фoрмы
-	});
-};
-
 onFormSend();
 
-/**
- * для запуска слайдов с картинками в модалке портфолио
- */
-var initSlickOnPortfolio = function() {
-	$('.project-info__main-slider').on('init', function(){
-		$('.project-info__thumbs-slider').slick({
-			arrows: false,
-			dots: false,
-			slidesToShow: 5,
-			slidesToScroll: 1,
-			draggable: true,
-			infinite: true,
-			focusOnSelect: true,
-			asNavFor: '.project-info__main-slider'
-		})
-	}).slick({
-		arrows: true,
-		dots: false,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		fade: true,
-		infinite: true,
-		asNavFor: '.project-info__thumbs-slider'
-	})
-};
-
-
 /* modal */
-var T = 'toggle';
-var changeClass = function (item, myClass, flag) {
-	if (flag == 'toggle') {
-		item.classList.toggle(myClass);
-	} else if (flag) {
-		item.classList.add(myClass);
-	} else {
-		item.classList.remove(myClass);
-	}
-};
-
 
 /*
 открываем/закрываем модалку
 */
-var offsetTop;
-var offsetX;
+
 var openModal = function (e, obj) {
 	/**
 	 * проверяем, что кликнули по нужной кнопке
@@ -125,11 +23,7 @@ var openModal = function (e, obj) {
 		document.body.removeChild(modal);
 		modal = null;
 		
-		document.body.style.position = 'relative';
-		document.body.style.width = 'initial';
-		document.body.style.top = 'auto';
-		window.scrollTo(offsetX, offsetTop);
-		
+		unfixBody(offsetX, offsetTop);
 	} 
 	
 	if (btn.classList.contains('js-modalOpen')) {
@@ -200,9 +94,7 @@ var openModal = function (e, obj) {
 			modal.querySelector('.section-header').innerText = title;
 		}
 
-		document.body.style.top = '-' + offsetTop + 'px';
-		document.body.style.position = 'fixed';
-		document.body.style.width = '100vw';
+		fixBody();
 		modal = document.body.appendChild(modal);
 
 		onFormSend();
@@ -245,8 +137,6 @@ var openModal = function (e, obj) {
 				break;
 			default: break;
 		}
-
-
 	}
 };
 
@@ -258,7 +148,7 @@ var btnHidden = document.querySelector('.btn--hidden');
 var started = false;
 
 /**
- * открываем по три проекта в портфолио за раз
+ * открываем дополнительные проекты в портфолио
  */
 var showRecent = function (e) {
 	if (hiddenProjects) {
@@ -509,178 +399,10 @@ $(document).ready(function () {
 
 });
 
+
 /**
- * https://gist.github.com/topsite-studio/188d4ff4d6c34e1358139078991a86e9
- * При прокрутке страницы делаем навбар тёмным
+ * скроллим плавно
  */
-window.onscroll = function () {
-	var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-	var navObject = document.querySelector('.header-top');
-	var navActiveClass = 'header-top--dark';
-	var offset_top = 200;
-	if (scrolled > offset_top) {
-		changeClass(navObject, navActiveClass, 1);
-	} else {
-		changeClass(navObject, navActiveClass, 0);
-	}
-}
-
-// Google Maps JS & Settings Coordinates
-// When the window has finished loading create our google map below
-// https://developers.google.com/maps/documentation/
-
-google.maps.event.addDomListener(window, 'load', init);
-
-function init() {
-	// Basic options for a simple Google Map
-
-
-	//----------------- ADD YOUR SETTINGS HERE -----------------//
-
-
-	// Add your coordinates. How to know coordinates: https://support.google.com/maps/answer/18539?hl=en
-	var myLatlng = new google.maps.LatLng(52.268155, 104.342619);
-
-	// Add your company name and some text about company
-	var maptooltipbold = 'Строй Комфорт';
-	var maptooltip = 'Архитектурно-строительная компания';
-
-
-	//---------------------------------------------------------//
-
-
-	var mapOptions = {
-
-		// How zoomed in you want the map to start at (always required)
-		zoom: 18,
-
-		// The latitude and longitude to center the map (always required)
-		center: myLatlng
-	};
-
-
-
-	// Get the HTML DOM element that will contain your map
-	// We are using a div with id="map" seen below in the <body>
-	var mapElement = document.getElementById('map');
-
-	// Create the Google Map using out element and options defined above
-	var map = new google.maps.Map(mapElement, mapOptions);
-
-	// Image of toogle
-	var image = 'img/contacts-map-marker.png';
-
-	// Div's of toogle
-	var content = document.createElement('div');
-	content.innerHTML = "<div class=" + "map-tooltip" + "><h4><strong>" + maptooltipbold + "</strong></h4><hr>" + "<h5>" + maptooltip + "</h5></div>";
-
-	// Initialize tooltips
-	var infowindow = new google.maps.InfoWindow({
-		content: content
-	});
-
-	var marker = new google.maps.Marker({
-		position: myLatlng,
-		map: map,
-		draggable: false,
-		icon: image
-		// ,
-		// animation: google.maps.Animation.BOUNCE
-
-	});
-
-
-	google.maps.event.addListener(marker, 'click', function () {
-		infowindow.open(map, marker);
-	});
-
-}
-
-// Calculator
-
-var calcConfig = {
-	foundation: [
-		[2100, 4500, 6500], //1 этаж
-		[1600, 3500, 5500] //2 этажа
-	],
-	timber: [
-		[21000, 19000, 16000], //1 этаж
-		[17000, 15000, 13000] //2 этажа
-	],
-	build: [
-		[6000, 5000, 4000], //1 этаж
-		[5500, 3500, 2500] //2 этажа
-	],
-	roof: [
-		[5500, 6500], //1 этаж
-		[4500, 6000] //2 этажа
-	],
-	windows: [
-		[2800, 2200], //1 этаж
-		[2500, 1800] //2 этажа
-	]
-}
-
-var calcForm = document.querySelector('.calculator__form');
-var calcList = document.querySelector('.calculator-list');
-var buildSelect = calcForm.querySelector('#build');
-var timberSelect = calcForm.querySelector('#timber');
-var floorNum = 0;
-
-var spaces = function (str) {
-	return str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-};
-
-timberSelect.addEventListener('change', function () {
-	buildSelect.value = this.value;
-});
-
-var calculatePrice = function () {
-	var totalSum = 0;
-	var curValue = 0;
-	var index = 0;
-
-	floorNum = calcForm.floors.value;
-	if (calcForm.square.value > 0) {
-		calcForm.square.classList.remove('text-input--error');
-		calcForm.square.parentNode.dataset.error = '';
-		for (item in calcConfig) {
-			index = calcForm[item].value;
-
-			currentContent = calcList.querySelector('.calculator-list__item--' + item + ' .list-content');
-
-			if (currentContent) {
-				currentContent.innerText = calcForm[item][index].innerText;
-			}
-
-			currentPrice = calcList.querySelector('.calculator-list__item--' + item + ' .price span');
-
-			curValue = parseInt(calcForm.square.value * calcConfig[item][floorNum][index], 10);
-
-			currentPrice.innerHTML = spaces(curValue.toString()) + ' &#8381;';
-			totalSum += curValue;
-
-		}
-	} else {
-		calcForm.square.classList.add('text-input--error');
-		calcForm.square.focus();
-		calcForm.square.parentNode.dataset.error = calcForm.square.validationMessage;
-	}
-	calcForm.querySelector('#calcSum').innerHTML = spaces(totalSum.toString()) + ' &#8381;';
-	calcForm.querySelector('#calcSumInput').value = spaces(totalSum.toString()) + ' руб.';
-};
-
-calculatePrice();
-
-calcForm.addEventListener('input', calculatePrice);
-calcForm.addEventListener('reset', function (e) {
-	var timerId = setTimeout(function () {
-		calculatePrice();
-		clearTimeout(timerId);
-	}, 100);
-});
-
-
 $('.scroll-btn--top').click(function (e) {
 	e.preventDefault();
 	$('html, body').animate({
