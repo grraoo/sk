@@ -17,6 +17,9 @@
     height: auto;
 
     margin-right: 1em;
+    .header-top--dark & {
+      filter: brightness(0);
+    }
   }
 
   &__name {
@@ -27,6 +30,9 @@
     margin: 0;
 
     color: $c-white;
+    .header-top--dark & {
+      color: black;
+    }
     span {
       display: block;
     }

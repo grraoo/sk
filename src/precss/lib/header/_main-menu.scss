@@ -79,11 +79,17 @@
         background-color: white;
 
         transition-duration: .3s;
+        .header-top--dark & {
+          background-color: black;
+        }
       }
       &::before {
         top: 7px;
 
         box-shadow: 0 9px 0 white;
+        .header-top--dark & {
+          box-shadow: 0 9px 0 black;
+        }
       }
       &::after {
         bottom: 7px;
@@ -92,9 +98,12 @@
         &::before {
           top: 50%;
 
-          box-shadow: 0 0 0 white;
+          box-shadow: 0 0 0 transparent;
 
           transform: translateY(-50%) rotate(45deg);
+          .header-top--dark & {
+            box-shadow: 0 9px 0 transparent;
+          }
         }
         &::after {
           bottom: 50%;
@@ -122,6 +131,10 @@
     text-transform: uppercase;
 
     letter-spacing: .5px;
+
+    .header-top--dark & {
+      color: black;
+    }
 
     &:hover {
       text-decoration: underline;

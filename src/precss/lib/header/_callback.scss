@@ -3,7 +3,7 @@
     min-width: 200px;
   }
 
-@include xs-block() {
+  @include xs-block() {
     margin-top: 15px;
     margin-right: 0;
   }
@@ -26,6 +26,11 @@
 
   align-items: center;
   justify-content: center;
+  &__btn {
+    .header-top--dark & {
+      color: black;
+    }
+  }
 
   &__phone {
     @include sm-block() {
@@ -48,5 +53,9 @@
     font-weight: bold;
 
     text-decoration: none;
+
+    .header-top--dark & {
+      color: black;
+    }
   }
 }

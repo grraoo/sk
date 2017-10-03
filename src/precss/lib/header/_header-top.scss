@@ -6,7 +6,6 @@
   };
 
 @include md-block() {
-    align-items: center;
     justify-content: space-around;
   };
 
@@ -24,13 +23,17 @@
 
   padding: 15px 40px;
 
+  align-items: center;
   justify-content: space-between;
+
   &--fixed {
-	position: fixed;
-	z-index: 20;
-	transition: background-color .33s ease-in-out;
+    position: fixed;
+    z-index: 20;
+
+    transition: background-color .33s ease-in-out;
   }
   &--dark {
-	background-color: transparentize(#000, .5);
+    background-color: white;
+    box-shadow: 0 0 5px grey;
   }
 }
