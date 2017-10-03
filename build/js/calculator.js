@@ -19,7 +19,8 @@ var calcConfig = {
 		[2800, 2200], //1 этаж
 		[2500, 1800] //2 этажа
 	]
-}
+};
+
 var items = Object.keys(calcConfig);
 var calcForm = document.querySelector('.calculator__form');
 var calcList = document.querySelector('.calculator-list');
@@ -40,14 +41,13 @@ var calculatePrice = function () {
 	var curValue = 0;
 	var index = 0;
 	var houseSquare = calcForm.querySelector('#square');
-	var curitem = null;
 	floorNum = calcForm.querySelector('#floors').value;
 	if (houseSquare.value > 0) {
 		houseSquare.classList.remove('text-input--error');
 		houseSquare.parentNode.dataset.error = '';
 		items.forEach( function(item) {
 			
-			curitem = document.getElementById(item);
+			var curitem = document.getElementById(item);
 
 			index = curitem.value;
 
@@ -65,7 +65,6 @@ var calculatePrice = function () {
 			totalSum += curValue;
 
 		})
-		var curitem = null;
 	} else {
 		houseSquare.classList.add('text-input--error');
 		houseSquare.focus();
