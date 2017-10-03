@@ -1,0 +1,39 @@
+.agree {
+  &__label {
+    display: block;
+
+    position: relative;
+
+    padding-left: 30px;
+
+    text-align: left;
+
+    cursor: pointer;
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: .1em;
+      left: 0;
+
+      width: 1.2em;
+      height: 1.2em;
+
+      border: 2px solid $c-blue;
+
+      background-image: url(../img/icons/checked.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 0;
+
+      transition-duration: .2s;
+    }
+  }
+  input:checked + &__label {
+    &::before {
+      border-color: $c-darkgreen;
+
+      background-size: 100%;
+    }
+  }
+}

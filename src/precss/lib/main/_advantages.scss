@@ -23,6 +23,7 @@
 @include sm-block() {
       @include size(6);
     };
+
     .subheader {
       display: none;
     }
@@ -59,6 +60,18 @@
     }
     &--flat {
       background-image: url('../img/icons/plans.svg');
+    }
+    &--gift {
+      background-image: url('../img/icons/giftbox.svg');
+    }
+    &--human {
+      background-image: url('../img/icons/human-resources.svg');
+    }
+    &--analitycs {
+      background-image: url('../img/icons/analytics.svg');
+    }
+    &--profi {
+      background-image: url('../img/icons/engineer.svg');
     }
   }
 }
