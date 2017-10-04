@@ -314,29 +314,18 @@ $(document).ready(function () {
 
 	});
 
-
-	// $('.trust__wrap').slick({
-	// 	arrows: true,
-	// 	dots: false,
-	// 	slidesToShow: 5,
-	// 	slidesToScroll: 5,
-	// 	autoplay: true,
-	// 	autoplaySpeed: 3000,
-	// 	responsive: adoptSlider4,
-	// 	pauseOnHover: true
-
-	// });
-
-
 	$('.compare__slider').slick({
-		arrows: false,
+		arrows: true,
 		dots: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		draggable: false,
-		swipe: false,
+		infinite: true,
+		draggable: true,
+		swipe: true,
 		speed: 500,
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		autoplay: true,
+		autoplaySpeed: 8000
 	});
 
 	$('.compare__slider-item--control .compare__item').click(function (e) {
