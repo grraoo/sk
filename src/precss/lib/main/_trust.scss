@@ -2,36 +2,27 @@
   &__wrap {
     display: flex;
 
+    flex-wrap: wrap;
     align-items: center;
-    .slick-arrow {
-      top: 125%;
-    }
-
-    .scroll-btn--right {
-      right: auto;
-      left: 51%;
-    }
-    .scroll-btn--left {
-      right: 51%;
-      left: auto;
-    }
+    justify-content: center;
   }
 
   &__item {
-    margin: 0 35px;
+    display: flex;
 
-    opacity: .7;
+    height: 100px;
 
-    filter: grayscale(1);
+    margin: 15px 20px;
+
     align-self: center !important;
-    &:hover {
-      opacity: 1;
-
-      filter: none;
-    }
   }
 
   &__img {
-    margin: 0 auto;
+    width: auto;
+    max-width: 200px;
+    height: auto;
+    max-height: 100%;
+
+    margin: auto;
   }
 }

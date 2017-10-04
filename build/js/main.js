@@ -315,17 +315,17 @@ $(document).ready(function () {
 	});
 
 
-	$('.trust__wrap').slick({
-		arrows: true,
-		dots: false,
-		slidesToShow: 5,
-		slidesToScroll: 5,
-		autoplay: true,
-		autoplaySpeed: 3000,
-		responsive: adoptSlider4,
-		pauseOnHover: true
+	// $('.trust__wrap').slick({
+	// 	arrows: true,
+	// 	dots: false,
+	// 	slidesToShow: 5,
+	// 	slidesToScroll: 5,
+	// 	autoplay: true,
+	// 	autoplaySpeed: 3000,
+	// 	responsive: adoptSlider4,
+	// 	pauseOnHover: true
 
-	});
+	// });
 
 
 	$('.compare__slider').slick({
