@@ -1,5 +1,6 @@
 .calculator {
   @include animatedBg();
+
   &__text-input {
     width: calc(75% - 10px);
   }
