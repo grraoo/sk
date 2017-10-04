@@ -28,7 +28,78 @@ function init() {
 		zoom: 18,
 
 		// The latitude and longitude to center the map (always required)
-		center: myLatlng
+		center: myLatlng,
+		styles: [
+			
+			
+			{elementType: 'labels.text.fill', stylers: [{color: '#000000'}]},
+		
+			{
+				featureType: 'poi',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#000000'}]
+			},
+			{
+				featureType: 'poi.park',
+				elementType: 'geometry',
+				stylers: [{color: '#7fc241'}]
+			},
+			{
+				featureType: 'poi.park',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#000000'}]
+			},
+			{
+				featureType: 'road',
+				elementType: 'geometry',
+				stylers: [{color: '#599a42'}]
+			},
+			{
+				featureType: 'road',
+				elementType: 'geometry.stroke',
+				stylers: [{color: '#000000'}]
+			},
+			{
+				featureType: 'road',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#000000'}]
+			},
+			{
+				featureType: 'road.highway',
+				elementType: 'geometry',
+				stylers: [{color: '#746855'}]
+			},
+			{
+				featureType: 'road.highway',
+				elementType: 'geometry.stroke',
+				stylers: [{color: '#000000'}]
+			},
+			{
+				featureType: 'road.highway',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#000000'}]
+			},
+			{
+				featureType: 'transit',
+				elementType: 'geometry',
+				stylers: [{color: '#7fc241'}]
+			},
+			{
+				featureType: 'transit.station',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#000000'}]
+			},
+			{
+				featureType: 'water',
+				elementType: 'geometry',
+				stylers: [{color: '#3d61ad'}]
+			},
+			{
+				featureType: 'water',
+				elementType: 'labels.text.fill',
+				stylers: [{color: '#000000'}]
+			}
+		]
 	};
 
 
