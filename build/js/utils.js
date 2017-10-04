@@ -58,7 +58,7 @@ var onFormSend =  function() {
 var initSlickOnPortfolio = function() {
 	$('.project-info__main-slider').on('init', function(){
 		$('.project-info__thumbs-slider').slick({
-			arrows: false,
+			arrows: true,
 			dots: false,
 			slidesToShow: 5,
 			slidesToScroll: 1,
@@ -68,7 +68,7 @@ var initSlickOnPortfolio = function() {
 			asNavFor: '.project-info__main-slider'
 		})
 	}).slick({
-		arrows: true,
+		arrows: false,
 		dots: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,

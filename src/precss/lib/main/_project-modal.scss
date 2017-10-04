@@ -32,11 +32,13 @@
     .scroll-btn--left {
       @include sm(display, none !important);
 
+      top: 50%;
       left: 0;
     }
     .scroll-btn--right {
       @include sm(display, none !important);
 
+      top: 50%;
       right: 0;
     }
   }
