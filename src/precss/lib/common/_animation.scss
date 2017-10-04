@@ -8,25 +8,28 @@
 }
 
 @keyframes arrowblink {
-  0% {
-    right: -20px;
+  0%,
+  25%,
+  75%,
+  100% {
+    right: -50px;
 
     opacity: 0;
   }
-  100% {
-    right: -40px;
+  50% {
+    right: -50px;
 
     opacity: 1;
   }
 }
 @keyframes opacityBlink {
   0% {
-    opacity: .3;
+    opacity: .5;
 
     transform: scale(.95);
   }
   100% {
-    opacity: .8;
+    opacity: 1;
 
     transform: scale(1.1);
   }

@@ -50,7 +50,7 @@
       @include sm-block() {
         content: counter(scheme);
 
-        top: 0;
+        top: 10px;
         right: 0;
         left: 0;
         z-index: -1;
@@ -71,9 +71,7 @@
 
         counter-increment: scheme;
 
-        animation-name: opacityBlink;
-        animation-duration: 1.5s;
-        animation-direction: alternate;
+        animation: none;
       };
 
       content: '';
@@ -91,10 +89,8 @@
       background-size: contain;
 
       transform: translateY(-50%);
-      animation: arrowblink 1.5s linear infinite;
+      animation: arrowblink 16s steps(1, end) infinite;
     }
-
-
 
     &--step-1 {
       background-image: url('../img/icons/phone-call.svg');
@@ -102,19 +98,19 @@
     &--step-2 {
       background-image: url('../img/icons/chat.svg');
       &::after {
-        animation-delay: .3s;
+        animation-delay: 4s;
       }
     }
     &--step-3 {
       background-image: url('../img/icons/work-list.svg');
       &::after {
-        animation-delay: .6s;
+        animation-delay: 8s;
       }
     }
     &--step-4 {
       background-image: url('../img/icons/truck.svg');
       &::after {
-        animation-delay: .9s;
+        animation-delay: 12s;
       }
     }
     &--step-5 {
