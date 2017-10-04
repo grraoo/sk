@@ -1402,8 +1402,8 @@
 			</div>
 
 		</section>
-<section class="contacts" id="contacts">
-	
+		<section class="contacts" id="contacts">
+
 			<section class="action action--contacts">
 				<h2 class="section-header">Наши контакты</h2>
 				<div class="action__contacts">
@@ -1422,45 +1422,10 @@
 				<h2 class="visually-hidden">Карта</h2>
 				<img src="img/bg/map.jpg" alt="">
 			</section>
-			
-</section>
-		<section class="feedback">
-			<div class="container">
-				<h4 class="subheader">Остались вопросы?</h4>
-				<form method="post" action="" name="contactform" id="contactform" class="feedback__form">
-					<fieldset class="feedback__set">
-						<div class="feedback__fields">
-							<section class="feedback__inputs">
-								<p class="feedback__item">
-									<input class="feedback__input text-input" name="name" type="text" id="name" size="30" value="" placeholder="Ваше имя">
-									<label class="feedback__label feedback__label--name" for="name" accesskey="U">Ваше имя</label>
-								</p>
-								<p class="feedback__item">
-									<input class="feedback__input text-input" name="email" type="email" id="email" size="30" value="" placeholder="Ваш E-mail">
-									<label class="feedback__label feedback__label--email" for="email" accesskey="U">Ваш E-mail</label>
-								</p>
-								<p class="feedback__item">
-									<input class="feedback__input text-input" name="phone" type="text" id="phone" size="30" value="" placeholder="Ваш телефон">
-									<label class="feedback__label feedback__label--phone" for="phone" accesskey="U">Ваш телефон</label>
-								</p>
-							</section>
-							<p class="feedback__item feedback__inputs">
-								<textarea class="feedback__input text-input" cols="30" rows="10" name="message" type="text" id="message" size="30" value=""
-								  placeholder="Сообщение"></textarea>
-								<label class="feedback__label feedback__label--area" for="message" accesskey="U">Сообщение</label>
-							</p>
-						</div>
-						<div class="agree">
-							<input type="checkbox" class="visually-hidden" id="agree">
-							<label for="agree" class="agree__label text">Даю согласие на обработку персональных данных<sup>*</sup></label>
-							<a href="stuff/icons/003-gift.svg" download class="agree__link text"><sup>*</sup>Положение об обработке персональных данных</a>
-							<button type="submit" class="btn btn--green feedback__btn" id="submit">Отправить сообщение</button>
-						</div>
-						<input type="hidden" value="bigFeedback" name="id">
-					</fieldset>
-				</form>
-			</div>
+			<button class="btn btn--green js-modalOpen contacts__btn" data-target="#questions" data-title="Отправить сообщение">Остались вопросы?</button>
+
 		</section>
+
 
 
 	</main>
@@ -1503,6 +1468,51 @@
 					</button>
 					<input type="hidden" value="feedback" name="id">
 				</form>
+			</div>
+		</div>
+		<div class="overlay overlay--active" id="questions">
+			<div class="modal modal--quest modal--form">
+				<div class="modal__close js-modalClose"></div>
+				<h2 class="section-header">Остались вопросы?</h2>
+				<section class="feedback">
+					<div class="container">
+						<form method="post" action="" name="contactform" id="contactform" class="feedback__form">
+							<fieldset class="feedback__set">
+								<div class="feedback__fields">
+									<section class="feedback__inputs">
+										<p class="feedback__item">
+											<input class="feedback__input text-input" name="name" type="text" id="name" size="30" value="" placeholder="Ваше имя">
+											<label class="feedback__label feedback__label--name" for="name" accesskey="U">Ваше имя</label>
+										</p>
+										<p class="feedback__item">
+											<input class="feedback__input text-input" name="email" type="email" id="email" size="30" value="" placeholder="Ваш E-mail">
+											<label class="feedback__label feedback__label--email" for="email" accesskey="U">Ваш E-mail</label>
+										</p>
+										<p class="feedback__item">
+											<input class="feedback__input text-input" name="phone" type="text" id="phone" size="30" value="" placeholder="Ваш телефон">
+											<label class="feedback__label feedback__label--phone" for="phone" accesskey="U">Ваш телефон</label>
+										</p>
+									</section>
+									<p class="feedback__item feedback__inputs">
+										<textarea class="feedback__input text-input" cols="30" rows="10" name="message" type="text" id="message" size="30" value=""
+										  placeholder="Сообщение"></textarea>
+										<label class="feedback__label feedback__label--area" for="message" accesskey="U">Сообщение</label>
+									</p>
+								</div>
+								<div class="agree">
+									<input type="checkbox" class="visually-hidden" id="agree">
+									<label for="agree" class="agree__label text">Даю согласие на обработку персональных данных<sup>*</sup></label>
+									<a href="stuff/icons/003-gift.svg" download class="agree__link text"><sup>*</sup>Положение об обработке персональных данных</a>
+									<button type="submit" class="btn btn--green feedback__btn" id="submit">Отправить сообщение</button>
+								</div>
+								<input type="hidden" value="bigFeedback" name="id">
+							</fieldset>
+							<input type="hidden" value="questions" name="id">
+						</form>
+					</div>
+				</section>
+
+
 			</div>
 		</div>
 
@@ -1573,18 +1583,7 @@
 
 		</div>
 
-		<div class="overlay overlay--active" id="videoModal">
 
-			<div class="modal modal__info modal__info--video">
-				<div class="modal__close js-modalClose"></div>
-				<div class="modal__content modal__content--video">
-					<div style="position:relative;height:0;padding-bottom:56.25%">
-						<iframe id="videoFrame" src="#" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0"
-						  allowfullscreen></iframe>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<div class="overlay overlay--active" id="imgs">
 
@@ -1664,6 +1663,7 @@
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ5zYZm8MbG4CPOH4uIy6Uhpc7jGFQzRU"
 	  asycn></script>
 	<script src="js/map.js"></script>
+
 </body>
 
 </html>

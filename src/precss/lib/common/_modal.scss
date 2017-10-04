@@ -8,6 +8,7 @@
   padding-top: 50px;
 
   background: white;
+  &:not(.modal--quest) .section-header,
   &:not(.modal--form) .section-header {
     position: absolute;
     top: 10px;
@@ -159,5 +160,9 @@
   }
   .scroll-btn {
     top: calc(100% + 20px);
+  }
+
+  &--quest {
+    max-width: 1200px;
   }
 }

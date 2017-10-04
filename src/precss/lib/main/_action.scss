@@ -27,9 +27,6 @@
   &::after {
     @include angles();
   }
-  &__container {
-    @include wrapper(); @include sm(flex-direction, column);
-  }
 
   &__header-block {
     display: inline-flex;
@@ -46,6 +43,8 @@
     flex-basis: 25%;
   }
   &__container {
+    @include wrapper(); @include sm(flex-direction, column);
+
     display: flex;
 
     flex-direction: row;
@@ -80,6 +79,8 @@
     align-self: center;
   }
   &__contacts {
+    @include xs(font-size, 16px);
+
     position: relative;
     z-index: 1;
 
@@ -88,6 +89,7 @@
     font-size: 20px;
 
     text-align: center;
+
     a,
     p {
       color: $c-gray;
@@ -121,7 +123,7 @@
     position: absolute;
     top: 50%;
     left: calc(50% - 585px);
-    z-index: 5;
+    z-index: 1;
 
     padding: 15px;
 
