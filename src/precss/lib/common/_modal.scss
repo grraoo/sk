@@ -9,11 +9,16 @@
   background: white;
   .section-header {
     position: absolute;
-    right: 70px;
-    bottom: 50px;
+    top: 10px;
+    right: 0;
+    left: 0;
+    z-index: 1;
 
     margin-top: 0;
     margin-bottom: 0;
+    padding: 5px;
+
+    background-color: rgba(white, .7);
 
     font-size: 16px;
     line-height: 1.2;
@@ -75,6 +80,8 @@
     }
     &--imgs {
       height: calc(100% - 50px);
+
+      padding: 0;
       .scroll-btn--right {
         right: 0;
       }
@@ -98,7 +105,7 @@
     max-width: 1000px;
     max-height: 90vh;
 
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     &--imgs {
       max-width: 100%;
       height: 100%;
@@ -121,7 +128,6 @@
   }
   &__img-wrap {
     @include md(width, 600px);
-
 @include sm(width, 500px);
 
 @include xs(width, 400px);
@@ -131,12 +137,13 @@
     width: 790px;
     height: 100%;
 
+    margin: 0 10px;
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
     text-align: center;
-
     // img {
     //   width: auto;
     //   max-width: 100%;
