@@ -57,7 +57,6 @@
   &__slider {
     display: flex;
 
-    overflow: hidden;
     &-item {
       &:focus {
         outline: 0;
@@ -78,5 +77,8 @@
     };
 
     overflow: auto;
+  }
+  .scroll-btn {
+    @include xxs(top, calc(100% + 20px));
   }
 }
