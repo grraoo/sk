@@ -1159,11 +1159,7 @@
 										<label class="feedback__label feedback__label--phone" for="phone-2" accesskey="U">Ваш телефон</label>
 									</p>
 								</section>
-								<div class="agree">
-									<input type="checkbox" class="visually-hidden" id="agree">
-									<label for="agree" class="agree__label text">Даю согласие на обработку персональных данных<sup>*</sup></label>
-									<a href="stuff/icons/003-gift.svg" download class="agree__link text"><sup>*</sup>Положение об обработке персональных данных</a>
-								</div>
+								
 								<button class="btn feedback__btn" type="submit">
 										Отправить заявку
 									</button>
@@ -1507,7 +1503,12 @@
 										<label class="feedback__label feedback__label--area" for="message" accesskey="U">Сообщение</label>
 									</p>
 								</div>
-								<button type="submit" class="btn btn--green feedback__btn" id="submit">Отправить сообщение</button>
+								<div class="agree">
+									<input type="checkbox" class="visually-hidden" id="agree">
+									<label for="agree" class="agree__label text">Даю согласие на обработку персональных данных<sup>*</sup></label>
+									<a href="stuff/icons/003-gift.svg" download class="agree__link text"><sup>*</sup>Положение об обработке персональных данных</a>
+									<button type="submit" class="btn btn--green feedback__btn" id="submit">Отправить сообщение</button>
+								</div>
 								<input type="hidden" value="bigFeedback" name="id">
 							</fieldset>
 						</form>
@@ -1545,7 +1546,12 @@
 							<label class="feedback__label feedback__label--phone" for="userphone" accesskey="U">Ваш телефон</label>
 						</p>
 					</section>
-					<button class="btn feedback__btn" type="submit">
+					<div class="agree">
+						<input type="checkbox" class="visually-hidden" id="agree-modal">
+						<label for="agree-modal" class="agree__label text">Даю согласие на обработку персональных данных<sup>*</sup></label>
+						<a href="stuff/icons/003-gift.svg" download class="agree__link text"><sup>*</sup>Положение об обработке персональных данных</a>
+					</div>
+					<button class="btn feedback__btn btn--green" type="submit">
 						Отправить заявку
 					</button>
 					<input type="hidden" value="feedback" name="id">
