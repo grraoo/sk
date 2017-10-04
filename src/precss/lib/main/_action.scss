@@ -99,12 +99,42 @@
       padding-left: 0;
     };
 
-    background-color: #f0f0f0;
-    background-image: url(../img/timber-aside.png), url(../img/timber-aside-2.png);
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: left center, right 15%;
-    background-size: 25%;
+@include lg(left, 15px);
+
+@include lg(max-width, calc(50% - 15px));
+
+@include sm-block() {
+      position: static;
+      top: 0;
+
+      width: 100%;
+      max-width: none;
+
+      transform: none;
+      &::after {
+        @include angles-top;
+
+        display: block;
+      }
+    };
+
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 585px);
+    z-index: 5;
+
+    padding: 15px;
+
+    background-color: rgba(#f0f0f0, .8);
+    background-image: none;
+
+    transform: translateY(-50%);
+
+    // background-repeat: no-repeat;
+    // background-attachment: scroll;
+    // background-position: left center, right 15%;
+    // background-size: 25%;
+
     .action__header {
       color: $c-gray;
     }
@@ -115,7 +145,7 @@
       background-color: transparent;
     }
     &::after {
-      @include angles-top();
+      display: none;
     }
   }
   &__info {

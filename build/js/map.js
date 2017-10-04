@@ -12,7 +12,8 @@ function init() {
 
 
 	// Add your coordinates. How to know coordinates: https://support.google.com/maps/answer/18539?hl=en
-	var myLatlng = new google.maps.LatLng(52.268155, 104.342619);
+	var myLatlng = new google.maps.LatLng(52.267505, 104.342942);
+	
 
 	// Add your company name and some text about company
 	var maptooltipbold = 'Строй Комфорт';
@@ -25,7 +26,7 @@ function init() {
 	var mapOptions = {
 
 		// How zoomed in you want the map to start at (always required)
-		zoom: 18,
+		zoom: 15,
 
 		// The latitude and longitude to center the map (always required)
 		center: myLatlng,

@@ -1,0 +1,10 @@
+.contacts {
+@include sm-block() {
+  };
+
+  position: relative;
+
+  padding-bottom: 0;
+
+  background-color: #f0f0f0;
+}
