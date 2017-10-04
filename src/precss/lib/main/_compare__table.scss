@@ -75,6 +75,9 @@
       @include sm-block() {
         width: 50% !important;
 
+        background-position: left;
+        background-size: 50px;
+
         font-size: 0 !important;
 
         order: -1;
@@ -117,9 +120,9 @@
 
   &-td {
     @include sm-block() {
-      padding: 5px;
+      padding: 5px 8px;
 
-      text-align: right;
+      text-align: center;
     };
 
     position: relative;
@@ -183,11 +186,23 @@
       }
     }
 
-    &--plus::after {
-      background-image: url(../img/icons/checked.svg);
+    &--plus {
+      @include sm-block() {
+        // background-color: rgba($c-darkgreen, .7);
+        color: $c-darkgreen;
+      }
+      &::after {
+        background-image: url(../img/icons/checked.svg);
+      }
     }
-    &--minus::after {
-      background-image: url(../img/icons/unchecked.svg);
+    &--minus {
+      @include sm-block() {
+        // background-color: rgba($c-blue, .7);
+        color: $c-blue;
+      }
+      &::after {
+        background-image: url(../img/icons/unchecked.svg);
+      }
     }
   }
 }
