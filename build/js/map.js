@@ -12,7 +12,8 @@ function init() {
 
 
 	// Add your coordinates. How to know coordinates: https://support.google.com/maps/answer/18539?hl=en
-	var myLatlng = new google.maps.LatLng(52.267505, 104.342942);
+	var myLatlng = new google.maps.LatLng(52.274169, 104.339510);
+	var markerLatLng = new google.maps.LatLng(52.268286, 104.342564)
 	
 
 	// Add your company name and some text about company
@@ -26,7 +27,7 @@ function init() {
 	var mapOptions = {
 
 		// How zoomed in you want the map to start at (always required)
-		zoom: 15,
+		zoom: 14,
 
 		// The latitude and longitude to center the map (always required)
 		center: myLatlng,
@@ -125,7 +126,7 @@ function init() {
 	});
 
 	var marker = new google.maps.Marker({
-		position: myLatlng,
+		position: markerLatLng,
 		map: map,
 		draggable: false,
 		icon: image
