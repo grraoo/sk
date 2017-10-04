@@ -7,12 +7,10 @@
 
   position: relative;
 
-//  padding-right: 5%;
-  //  padding-left: 5%;
-
   background-image: url('../img/bg/action.jpg');
 
   align-items: center;
+
 
   &::before {
     content: '';
@@ -39,7 +37,7 @@
     flex-basis: 75%;
   }
   &__btn-block {
-@include sm(margin-top, 30px);
+    @include sm(margin-top, 30px);
 
     display: inline-flex;
 

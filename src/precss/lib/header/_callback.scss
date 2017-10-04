@@ -3,7 +3,7 @@
     min-width: 200px;
   }
 
-  @include xs-block() {
+@include xs-block() {
     margin-top: 15px;
     margin-right: 0;
   }
@@ -26,17 +26,24 @@
 
   align-items: center;
   justify-content: center;
+
   &__btn {
     .header-top--dark & {
       color: black;
     }
   }
+  &__code {
+    display: inline-block;
 
+    font-size: .8em;
+    line-height: 1.75;
+
+    vertical-align: top;
+  }
   &__phone {
     @include sm-block() {
       font-size: 0;
-    }
-
+    } 
 // @include md-block() {
     //       margin-right: 20px;
     //     }
@@ -53,6 +60,10 @@
     font-weight: bold;
 
     text-decoration: none;
+ transition-duration: .3s;
+    &:hover {
+      color: $c-darkgreen;
+    }
 
     .header-top--dark & {
       color: black;
