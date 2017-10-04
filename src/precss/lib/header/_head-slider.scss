@@ -15,7 +15,6 @@
   background-size: cover;
   background-size: 20px;
 
-  text-shadow: 0 0 3px black, 0 0 6px black, 0 0 10px black;
 
   .scroll-btn--right {
     right: 0;
@@ -99,7 +98,6 @@
     @include sm-block() {
       font-size: 35px;
     };
-
 @include xxs-block() {
       font-size: 27px;
     };
@@ -113,6 +111,7 @@
     font-size: 50px;
 
     text-align: center;
+    text-shadow: 0 0 3px black, 0 0 6px black, 0 0 10px black;
   }
 
   &__large {
