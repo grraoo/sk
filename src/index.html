@@ -1233,14 +1233,14 @@
 						</div>
 						<div class="feedback calculator__wrap">
 								<p class="feedback__item feedback__item--wide">
-										<input class="feedback__input text-input" name="name" type="text" id="name" size="30" value="" placeholder="Ваше имя">
-										<label class="feedback__label feedback__label--name" for="name" accesskey="U">Ваше имя</label>
+										<input class="feedback__input text-input" name="name" type="text" id="username" size="30" value="" placeholder="Ваше имя">
+										<label class="feedback__label feedback__label--name" for="username" accesskey="U">Ваше имя</label>
 								</p>
 						</div>
 						<div class="feedback calculator__wrap">
 								<p class="feedback__item feedback__item--wide">
-										<input class="feedback__input text-input" name="email" type="email" id="email" size="30" value="" placeholder="Ваш E-mail">
-										<label class="feedback__label feedback__label--email" for="email" accesskey="U">Ваш E-mail</label>
+										<input class="feedback__input text-input" name="email" type="email" id="usermail" size="30" value="" placeholder="Ваш E-mail">
+										<label class="feedback__label feedback__label--email" for="usermail" accesskey="U">Ваш E-mail</label>
 								</p>
 						</div>
 						<div class="calculator__btns">
@@ -1402,35 +1402,27 @@
 			</div>
 
 		</section>
-		<section id="contacts" class="action action--contacts">
-			<div class="container">
-				<section class="action-new">
-					<div class="action-new__wrap">
-						<section class="action-new__contacts">
-							<address class="action-new__address">
-								<h3 class="section-header section-header--inner">Вы можете связаться с нами прямо сейчас</h3>
-								<div class="action-new__address-col">
-									<p class="action__info action__info--phone">
-										<a href="tel:+73952676600">+7 3952 67-66-00</a>
-									</p>
-									<p class="action__info action__info--email">
-										<a href="mailto:inbox@stroi-comfort.com">inbox@stroi-comfort.com</a>
-									</p>
-								</div>
-								<div class="action-new__address-col">
-									<p class="action__info action__info--address">
-										<a>г. Иркутск, ул. Пискунова, 160, оф. 504</a>
-									</p>
-								</div>
-							</address>
-						</section>
-						<section class="action-new__map-container">
-							<div class="action-new__map-wrap">
-								<div class="action-new__map-item" id="map"></div>
-							</div>
-						</section>
-					</div>
-				</section>
+		
+			
+				<section id="contacts" class="action action--contacts">
+						<h2 class="section-header">Наши контакты</h2>
+						<div class="action__contacts">
+							<p class="action__info action__info--phone">
+								<a href="tel:+73952676600">+7 3952 67-66-00</a>
+							</p>
+							<p class="action__info action__info--address">
+								<a href="#map">г. Иркутск, ул. Пискунова, 160, оф. 504</a>
+							</p>
+							<p class="action__info action__info--email">
+								<a href="mailto:inbox@stroi-comfort.com">inbox@stroi-comfort.com</a>
+							</p>
+						</div>
+
+					</section>
+				<section id="map" class="map">
+						<h2 class="visually-hidden">Карта</h2>
+						<img src="img/bg/map.jpg" alt="">
+					</section>
 				<section class="feedback">
 					<div class="container">
 						<h4 class="subheader">Остались вопросы?</h4>
@@ -1468,8 +1460,8 @@
 						</form>
 					</div>
 				</section>
-			</div>
-		</section>
+			
+		
 	</main>
 	<footer class="page-footer">
 		<section class="page-footer__bottom">
