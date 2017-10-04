@@ -1,16 +1,40 @@
 .team {
+  @include xxs-block() {
+    .slick-arrow {
+      top: auto;
+      bottom: -50px;
+    }
+
+    .scroll-btn--right {
+      right: auto;
+      left: 51%;
+    }
+    .scroll-btn--left {
+      right: 51%;
+      left: auto;
+    }
+  };
+
   background-color: #f0f0f0;
   &__wrap {
     @include row-flex();
-  }
 
+@include xxs-block() {
+      margin-right: -15px;
+      margin-left: -15px;
+    };
+
+    margin-right: 50px;
+    margin-left: 50px;
+  }
   &__member {
     @include col(); @include size(3);
 
     display: flex;
 
     flex-direction: column;
-	user-select: auto;
+
+    user-select: auto;
   }
 
   &__img {
@@ -32,19 +56,5 @@
     font-weight: bold;
 
     text-align: center;
-  }
-
-  .slick-arrow {
-    top: auto;
-    bottom: -70px;
-  }
-
-  .scroll-btn--right {
-    right: auto;
-    left: 51%;
-  }
-  .scroll-btn--left {
-    right: 51%;
-    left: auto;
   }
 }
