@@ -15,13 +15,14 @@
   background-size: cover;
   background-size: 20px;
 
+  text-shadow: 0 0 3px black, 0 0 6px black, 0 0 10px black;
+
   .scroll-btn--right {
     right: 0;
   }
   .scroll-btn--left {
     left: 0;
   }
-
   &__slide {
     position: relative;
 
