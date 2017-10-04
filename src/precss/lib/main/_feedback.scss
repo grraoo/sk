@@ -65,6 +65,13 @@
 
       margin-bottom: 15px;
     }
+    &--wide {
+      width: 100%;
+      input {
+        font-size: 16px;
+        line-height: 1;
+      }
+    }
   }
   &__input {
     @include xxs-block() {

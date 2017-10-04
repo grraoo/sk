@@ -29,6 +29,7 @@
       width: 100%;
 
       margin-left: 0;
+      padding: 15px;
     };
 
     display: flex;
@@ -109,13 +110,12 @@
   .calculator__select:focus {
     border-color: $c-darkgreen;
   }
-  .calculator__option {
-    line-height: 1.4;
-  }
+
   &-list__wrap {
     @include xxs-block() {
       font-size: 14px;
-    }  margin-top: auto;
+    };
+
     margin-bottom: 0;
 
     font-size: 16px;
@@ -161,19 +161,24 @@
     flex-grow: 1;
   }
   &__sum {
+    margin-bottom: 15px;
+
     color: $c-blue;
     font-size: 35px;
-    line-height: 2;
+    line-height: 1;
     font-weight: 600;
   }
   &__btns {
-    display: block;
+    display: flex;
   }
   &__btn {
     margin-top: 15px;
+    margin-left: auto;
   }
   &-list {
     margin-top: .5em;
+    margin-left: 0;
+    padding-left: 0;
 
     text-align: left;
   }
