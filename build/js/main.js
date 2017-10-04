@@ -16,10 +16,7 @@ var openModal = function (e, obj) {
 		/**
 		 * закрываем открытую модалку
 		 */
-		if (modal.id == 'project-modal') {
-			$('.project-info__main-slider').slick('destroy');
-			$('.project-info__thumbs-slider').slick('destroy');
-		}
+
 		document.body.removeChild(modal);
 		modal = null;
 
