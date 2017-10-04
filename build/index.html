@@ -662,7 +662,8 @@
                     <div class="advantages__item">
                         <h3 class="subheader">За 6 лет успешной работы</h3>
                         <div class="text advantages__descr advantages__descr--process">
-                            <p> нами реализовано <b>более 60 индивидуальных проектов</b> различной сложности. Нам нравится создавать, предвосхищать, радовать. Именно поэтому — наш «конёк» — <b>строительство — от разработки проекта — до сдачи дома в эксплуатацию</b>.</p>
+                            <p> нами реализовано <b>более 60 индивидуальных проектов</b> различной сложности. Нам нравится создавать, предвосхищать,
+                                радовать. Именно поэтому — наш «конёк» — <b>строительство — от разработки проекта — до сдачи дома в эксплуатацию</b>.</p>
                         </div>
                     </div>
 
@@ -1183,21 +1184,13 @@
                                 <option value="1" class="calculator__option">профиль 3 камеры белые</option>
                             </select>
                         </div>
-                        <div class="calculator__wrap">
-                            <label for="customer-name" class="calculator__label">Ваше имя</label>
-                            <input type="text" class="text-input calculator__text-input" id="customer-name" name="sender">
-                        </div>
-                        <div class="calculator__wrap">
-                            <label for="customer-phone" class="calculator__label">E-mail:</label>
-                            <input type="email" class="text-input calculator__text-input" id="customer-phone" name="email" required>
+                        <div class="calculator__btns">
+                            <button type="reset" class="btn btn--green calculator__btn">Сбросить</button>
                         </div>
 
                     </div>
                     <div class="calculator__descr">
-                        <div id="calcSum" class="calculator__sum">
-                            <sup>*</sup>
-                        </div>
-                        <div class="calculator-list__wrap text"><sup>*</sup>Ориентировочная стоимость строительства:
+                        <div class="calculator-list__wrap text">Ориентировочная стоимость строительства:
                             <ul class="calculator-list">
                                 <li class="calculator-list__item calculator-list__item--foundation">
                                     <span class="calculator-list__name">
@@ -1232,9 +1225,24 @@
                                 </li>
                             </ul>
                         </div>
+                        <div id="calcSum" class="calculator__sum">
+                            <sup>*</sup>
+                        </div>
+                        <div class="feedback calculator__wrap">
+                                <p class="feedback__item feedback__item--wide">
+                                        <input class="feedback__input text-input" name="name" type="text" id="name" size="30" value="" placeholder="Ваше имя">
+                                        <label class="feedback__label feedback__label--name" for="name" accesskey="U">Ваше имя</label>
+                                </p>
+                        </div>
+                        <div class="feedback calculator__wrap">
+                                <p class="feedback__item feedback__item--wide">
+                                        <input class="feedback__input text-input" name="email" type="email" id="email" size="30" value="" placeholder="Ваш E-mail">
+                                        <label class="feedback__label feedback__label--email" for="email" accesskey="U">Ваш E-mail</label>
+                                </p>
+                        </div>
                         <div class="calculator__btns">
                             <button type="submit" class="btn btn--green calculator__btn">Заказать такой дом</button>
-                            <button type="reset" class="btn btn--green calculator__btn">Сбросить</button>
+
                         </div>
                     </div>
 
