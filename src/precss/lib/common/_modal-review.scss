@@ -26,4 +26,13 @@
       text-indent: 1em;
     }
   }
+
+  &__foto {
+    float: right;
+
+    margin: 15px;
+    margin-right: 0;
+
+    border-radius: 50%;
+  }
 }
