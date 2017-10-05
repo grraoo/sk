@@ -114,6 +114,8 @@
   }
 
   &__icon {
+@include xxs(font-size, 13px);
+
     margin: 0 10px 30px;
     padding-top: 50px;
 
