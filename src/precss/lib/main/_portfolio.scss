@@ -38,15 +38,21 @@
     * {
       pointer-events: none;
     }
+
+    &:hover img {
+      filter: sepia(.4);
+    }
   }
 
   &__img {
-    @include xxs-block() {
+@include xxs-block() {
       width: 100%;
       height: auto;
     }  border: 3px solid #cbcdca;
 
     background-color: lightgrey;
+
+    transition-duration: .2s;
   }
 
   &__square {

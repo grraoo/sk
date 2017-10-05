@@ -50,6 +50,10 @@
       border: 3px solid #cbcdca;
 
       cursor: pointer;
+      transition-duration: .2s;
+      &:hover {
+        filter: sepia(.4);
+      }
     }
   }
 
@@ -114,7 +118,7 @@
   }
 
   &__icon {
-@include xxs(font-size, 13px);
+    @include xxs(font-size, 13px);
 
     margin: 0 10px 30px;
     padding-top: 50px;
