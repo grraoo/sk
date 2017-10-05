@@ -52,7 +52,10 @@
       cursor: pointer;
       transition-duration: .2s;
       &:hover {
-        filter: sepia(.4);
+        border-color: $c-green;
+
+        box-shadow: 0 0 5px $c-green;
+        // filter: sepia(.4);
       }
     }
   }

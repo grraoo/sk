@@ -85,15 +85,16 @@ calcForm.addEventListener('reset', function (e) {
 });
 
 calculatePrice();
-var goodKeys = ["ArrowRight", "ArrowLeft", "Backspace", "Delete", "Tab"];
-var onlyNumbers = function (e) {
+var allowedKeys = ["ArrowRight", "ArrowLeft", "Backspace", "Delete", "Tab"];
+
+var allowOnlyNumbers = function (e) {
 
 	if (parseInt(e.key, 10) != e.key || this.value.length > 3) {
-		if (goodKeys.indexOf(e.key) < 0) {
+		if (allowedKeys.indexOf(e.key) < 0) {
 			e.preventDefault();
 		}
 	}
 
 };
 
-houseSquare.addEventListener('keydown', onlyNumbers)
+houseSquare.addEventListener('keydown', allowOnlyNumbers)
