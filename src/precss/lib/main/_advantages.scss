@@ -1,5 +1,7 @@
 .advantages {
-  // background-color: #f0f0f0;
+  &--stats {
+    background-color: #f0f0f0;
+  }
   &__wrap {
     @include row-flex();
 
@@ -51,6 +53,14 @@
 
         flex-grow: 1;
       }
+    }
+
+    &--stats {
+      @include size(6);
+
+      border: 0;
+
+      background-color: white;
     }
   };
 
