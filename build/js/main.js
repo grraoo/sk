@@ -225,13 +225,14 @@ $(document).ready(function () {
 			}
 		},
 		{
-			breakpoint: 780,
+			breakpoint: 777,
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1
 			}
 		}
 	];
+
 	var adoptSlider4 = [{
 			breakpoint: 1000,
 			settings: {
