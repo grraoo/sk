@@ -3,14 +3,11 @@
 
 
   &__form {
-    @include md-block() {
-      padding: 15px 0;
-    };
+    @include xs(padding, 15px);
 
     padding: 30px 50px;
 
     text-align: center;
-
     &--consult {
       padding: 30px 15px;
     }
@@ -21,19 +18,15 @@
     margin-bottom: 30px;
   }
   &__inputs {
-    @include col();
-
-@include size(6);
-
-@include xs-block() {
-      @include size(12);
-    };
+    @include col(); @include size(6); @include xs(width, 100%);
 
     display: flex;
 
     flex-direction: column;
 
     justify-content: space-between;
+    ;
+
 
     &--callback {
       flex-direction: row;

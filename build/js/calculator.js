@@ -36,17 +36,18 @@ timberSelect.addEventListener('change', function () {
 	buildSelect.value = this.value;
 });
 
+var houseSquare = calcForm.querySelector('#square');
+
 var calculatePrice = function () {
 	var totalSum = 0;
 	var curValue = 0;
 	var index = 0;
-	var houseSquare = calcForm.querySelector('#square');
 	floorNum = calcForm.querySelector('#floors').value;
 	if (houseSquare.value > 0) {
 		houseSquare.classList.remove('text-input--error');
 		houseSquare.parentNode.dataset.error = '';
-		items.forEach( function(item) {
-			
+		items.forEach(function (item) {
+
 			var curitem = document.getElementById(item);
 
 			index = curitem.value;
@@ -84,3 +85,16 @@ calcForm.addEventListener('reset', function (e) {
 });
 
 calculatePrice();
+var allowedKeys = ["ArrowRight", "ArrowLeft", "Backspace", "Delete", "Tab"];
+
+var allowOnlyNumbers = function (e) {
+
+	if (parseInt(e.key, 10) != e.key || this.value.length > 3) {
+		if (allowedKeys.indexOf(e.key) < 0) {
+			e.preventDefault();
+		}
+	}
+
+};
+
+houseSquare.addEventListener('keydown', allowOnlyNumbers)

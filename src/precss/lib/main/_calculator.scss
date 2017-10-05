@@ -109,6 +109,8 @@
   .calculator__input[type='text']:focus,
   .calculator__select:focus {
     border-color: $c-darkgreen;
+
+    outline: none;
   }
 
   &-list__wrap {

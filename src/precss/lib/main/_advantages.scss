@@ -1,10 +1,15 @@
 .advantages {
+  &--stats {
+    background-color: #f0f0f0;
+  }
   &__wrap {
     @include row-flex();
 
 @include xs-block() {
-      justify-content: center;
-    }
+    }  margin-top: -15px;
+    margin-bottom: -15px;
+
+    justify-content: center;
   }
 
   &__item {
@@ -14,15 +19,51 @@
       max-width: 270px;
 
       text-align: center;
-    };
-
-@include col();
-
-@include size(4);
-
-@include sm-block() {
+    }; @include col(); @include size(4); @include sm-block() {
       @include size(6);
     };
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    border: 2px solid $c-blue;
+
+    // background-color: white;
+
+    .subheader {
+      // display: flex;
+
+
+      &::before {
+        margin-right: 5px;
+        margin-left: 15px;
+      }
+      &::after {
+        margin-right: 15px;
+        margin-left: 5px;
+      }
+      &::before,
+      &::after {
+        // content: '';
+        height: 2px;
+
+        margin-top: .7em;
+
+        background-color: $c-blue;
+
+        flex-grow: 1;
+      }
+    }
+
+    &--stats {
+      @include size(6);
+
+      padding-top: 30px;
+
+      border: 0;
+
+      background-color: white;
+    }
   };
 
 
@@ -34,11 +75,15 @@
     };
 
     padding: 15px;
-    padding-top: 180px;
+    padding-top: 120px;
 
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 150px;
+    background-size: 100px;
+
+    text-align: center;
+
+
     &--process {
       background-image: url('../img/icons/list.svg');
     }

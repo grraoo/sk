@@ -101,7 +101,8 @@ var changeClass = function (item, myClass, flag) {
  * https://gist.github.com/topsite-studio/188d4ff4d6c34e1358139078991a86e9
  * При прокрутке страницы делаем навбар тёмным
  */
-window.onscroll = function () {
+
+var fixMenu = function () {
 	var scrolled = window.pageYOffset || document.documentElement.scrollTop;
 	var navObject = document.querySelector('.header-top');
 	var navActiveClass = 'header-top--dark';
@@ -112,8 +113,8 @@ window.onscroll = function () {
 		changeClass(navObject, navActiveClass, 0);
 	}
 };
-
-
+window.addEventListener('scroll', fixMenu);
+fixMenu();
 
 var fixBody = function() {
   

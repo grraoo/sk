@@ -74,7 +74,7 @@
   &--left {
     @include scroll-btn();
 
-@include xxs-block() {
+@include xs-block() {
       // left: 20px;
       display: none !important;
     };
@@ -91,7 +91,7 @@
   &--right {
     @include scroll-btn();
 
-@include xxs-block() {
+@include xs-block() {
       // right: 20px;
       display: none !important;
     };

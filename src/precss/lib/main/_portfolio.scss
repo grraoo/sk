@@ -38,6 +38,10 @@
     * {
       pointer-events: none;
     }
+
+    &:hover img {
+      filter: sepia(.5);
+    }
   }
 
   &__img {
@@ -47,6 +51,8 @@
     }  border: 3px solid #cbcdca;
 
     background-color: lightgrey;
+
+    transition-duration: .2s;
   }
 
   &__square {

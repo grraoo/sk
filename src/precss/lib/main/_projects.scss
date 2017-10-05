@@ -1,20 +1,24 @@
 .projects {
-  .scroll-btn--left {
-@include sm(left, 0);
+  background-color: #f0f0f0;
 
-    left: 20px;
-  }
-  .scroll-btn--right {
-@include sm(right, 0);
 
-    right: 20px;
-  }
   &__wrap {
+    @include sm-block() {
+      width: 350px;
+
+      margin: 0 auto;
+    };
+
+@include xxs(width, 270px);
+
+@include xxs(margin, 0 auto);
+
     display: flex;
 
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: 50px;
+    margin-left: 50px;
   }
+
   &__item {
     @include col();
 
@@ -26,11 +30,9 @@
 
     flex-direction: column;
 
-    width: 480px;
-
     margin-right: 20px;
     margin-left: 20px;
-    padding: 15px 15px 0;
+    padding: 0;
     padding-bottom: 25px;
 
     border: 1px solid #dddddd;
@@ -40,11 +42,26 @@
     text-align: center;
 
     img {
+      @include xxs(width, 300px);
+
       margin: 0 auto;
       margin-bottom: 30px;
 
+      border: 3px solid #cbcdca;
+
       cursor: pointer;
+      transition-duration: .2s;
+      &:hover {
+        border-color: $c-green;
+
+        box-shadow: 0 0 5px $c-green;
+        // filter: sepia(.4);
+      }
     }
+  }
+
+  &__info-wrap {
+    padding: 0 15px;
   }
 
   &__name {
@@ -104,6 +121,8 @@
   }
 
   &__icon {
+    @include xxs(font-size, 13px);
+
     margin: 0 10px 30px;
     padding-top: 50px;
 

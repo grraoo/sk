@@ -32,9 +32,14 @@
       align-items: flex-end;
       .main-menu__link {
         display: block;
+
+        color: white;
       }
       .callback {
         display: block;
+        .callback__btn {
+          color: white;
+        }
       }
     }
   };
@@ -79,6 +84,8 @@
         background-color: white;
 
         transition-duration: .3s;
+        transition-property: transform  background-color;
+
         .header-top--dark & {
           background-color: black;
         }
@@ -98,6 +105,7 @@
         &::before {
           top: 50%;
 
+          background-color: white !important;
           box-shadow: 0 0 0 transparent;
 
           transform: translateY(-50%) rotate(45deg);
@@ -107,6 +115,8 @@
         }
         &::after {
           bottom: 50%;
+
+          background-color: white !important;
 
           transform: translateY(50%) rotate(-45deg);
         }
