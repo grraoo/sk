@@ -46,8 +46,8 @@ var calculatePrice = function () {
 	if (houseSquare.value > 0) {
 		houseSquare.classList.remove('text-input--error');
 		houseSquare.parentNode.dataset.error = '';
-		items.forEach( function(item) {
-			
+		items.forEach(function (item) {
+
 			var curitem = document.getElementById(item);
 
 			index = curitem.value;
@@ -85,15 +85,15 @@ calcForm.addEventListener('reset', function (e) {
 });
 
 calculatePrice();
-var goodKeys = ["ArrowRight", "ArrowLeft", "Backspace", "Delete", "Tab"]
+var goodKeys = ["ArrowRight", "ArrowLeft", "Backspace", "Delete", "Tab"];
+var onlyNumbers = function (e) {
 
-houseSquare.addEventListener('keydown', function(e) {
-console.log(this.value.length);
-
-if(parseInt(e.key, 10) != e.key || this.value.length > 3) {
-	if(goodKeys.indexOf(e.key) < 0) {
-		e.preventDefault();
+	if (parseInt(e.key, 10) != e.key || this.value.length > 3) {
+		if (goodKeys.indexOf(e.key) < 0) {
+			e.preventDefault();
+		}
 	}
-}
 
-})
+};
+
+houseSquare.addEventListener('keydown', onlyNumbers)
