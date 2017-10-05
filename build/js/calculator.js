@@ -36,11 +36,12 @@ timberSelect.addEventListener('change', function () {
 	buildSelect.value = this.value;
 });
 
+var houseSquare = calcForm.querySelector('#square');
+
 var calculatePrice = function () {
 	var totalSum = 0;
 	var curValue = 0;
 	var index = 0;
-	var houseSquare = calcForm.querySelector('#square');
 	floorNum = calcForm.querySelector('#floors').value;
 	if (houseSquare.value > 0) {
 		houseSquare.classList.remove('text-input--error');
@@ -84,3 +85,15 @@ calcForm.addEventListener('reset', function (e) {
 });
 
 calculatePrice();
+var goodKeys = ["ArrowRight", "ArrowLeft", "Backspace", "Delete", "Tab"]
+
+houseSquare.addEventListener('keydown', function(e) {
+console.log(this.value.length);
+
+if(parseInt(e.key, 10) != e.key || this.value.length > 3) {
+	if(goodKeys.indexOf(e.key) < 0) {
+		e.preventDefault();
+	}
+}
+
+})
