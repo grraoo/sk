@@ -40,12 +40,12 @@
     }
 
     &:hover img {
-      filter: sepia(.4);
+      filter: sepia(.5);
     }
   }
 
   &__img {
-@include xxs-block() {
+    @include xxs-block() {
       width: 100%;
       height: auto;
     }  border: 3px solid #cbcdca;
