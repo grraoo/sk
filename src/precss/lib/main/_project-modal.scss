@@ -92,7 +92,7 @@
   }
   &__item {
     margin: 15px;
-    background-image: url(../img/icons/house.svg);
+    background-image: url(../img/icons/house-blue.svg);
     background-repeat: no-repeat;
     background-position: center 10px;
     background-size: auto 50px;
@@ -104,11 +104,31 @@
     @include sm(width, calc(33.33% - 30px));
     @include xs(width, calc(50% - 30px));
     @include xxs(width, calc(100% - 30px));
+    &--key {
+      background-image: url(../img/icons/key.svg);
+    }
+    &--pool {
+      background-image: url(../img/icons/swimingpool.svg);
+    }
+    &--plumbing {
+      background-image: url(../img/icons/plumbing.svg);
+    }
+    &--socket {
+      background-image: url(../img/icons/socket.svg);
+    }
+    &--radiator {
+      background-image: url(../img/icons/radiator.svg);
+    }
+    &--paint {
+      background-image: url(../img/icons/paint-roller.svg);
+    }
     &--house {
-      background-image: url(../img/icons/house.svg);
+      background-image: url(../img/icons/house-blue.svg);
     }
     &--foundation {
-      background-image: url(../img/icons/foundation.svg);
+      background-image: url(../img/icons/foundation-blue.svg);
+      background-size: auto 40px;
+      background-position: center 20px;
     }
   }
   &__icon {
