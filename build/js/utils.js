@@ -73,7 +73,10 @@ var initSlickOnPortfolio = function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
-		infinite: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
 		asNavFor: '.project-info__thumbs-slider'
 	})
 };
@@ -84,7 +87,7 @@ var initSlickOnPortfolio = function() {
  * @param item Dom-node
  * @param myClass string - класс
  * @param flag string/bool
- * 
+ *
  */
 var T = 'toggle';
 var changeClass = function (item, myClass, flag) {
@@ -117,7 +120,7 @@ window.addEventListener('scroll', fixMenu);
 fixMenu();
 
 var fixBody = function() {
-  
+
   document.body.style.top = '-' + offsetTop + 'px';
   document.body.style.position = 'fixed';
   document.body.style.width = '100vw';
