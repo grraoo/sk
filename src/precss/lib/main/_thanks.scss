@@ -19,9 +19,16 @@
     flex-direction: column;
 
     margin: 15px;
+    cursor: pointer;
 
     background-color: $c-white;
-    box-shadow: 0 0 5px $c-blue;
+    border: 2px solid #cbcdca;
+
+    &:hover {
+      border: 2px solid $c-green;
+      outline: 0;
+      box-shadow: 0 0 3px $c-green;
+    }
   }
   &__inner {
     overflow: hidden;
