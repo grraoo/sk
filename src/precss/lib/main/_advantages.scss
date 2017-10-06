@@ -23,7 +23,21 @@
     ;
     margin-top: 15px;
     margin-bottom: 15px;
-
+&--adv {
+  cursor: help;
+  p {
+    display: none;
+    position: absolute;
+    padding: 15px;
+    top: 1.5em;
+    background-color: white;
+    z-index: 1;
+    min-height: 100%;
+  }
+  &:hover p {
+    display: block;
+  }
+}
     &--stats {
       @include size(6);
       padding-top: 30px;
@@ -39,27 +53,14 @@
     @include xs-block() {
       padding-top: 80px;
       background-size: auto 70px;
-    }
-    ;
-    cursor: zoom-in;
+    };
     padding: 15px;
     padding-top: 120px;
-    cursor: help;
+
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100px;
-    p {
-      display: none;
-      position: absolute;
-      padding: 15px;
-      top: 1.5em;
-      background-color: white;
-      z-index: 1;
-      min-height: 100%;
-    }
-    &:hover p {
-      display: block;
-    }
+
     &--process {
       background-image: url('../img/icons/list.svg');
     }
