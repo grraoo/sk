@@ -27,29 +27,16 @@
   &::after {
     @include angles();
   }
-
-  &__header-block {
-    display: inline-flex;
-
-    flex-basis: 75%;
-  }
-  &__btn-block {
-    @include sm(margin-top, 30px);
-
-    display: inline-flex;
-
-    flex-direction: column;
-
-    flex-basis: 25%;
-  }
-  &__container {
-    @include wrapper(); @include sm(flex-direction, column);
-
+  &__wrap {
     display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    @include sm(flex-direction, column);
+    @include sm(padding, 15px);
+  }
 
-    flex-direction: row;
-
-    align-items: center;
+  &__headers {
+    flex-basis: 60%;
   }
   &__header {
     position: relative;
@@ -61,23 +48,20 @@
     color: #ffffff;
     font-size: 28px;
     line-height: 1.4;
-    font-weight: 600;
+    font-weight: 400;
 
-    text-transform: uppercase;
-
-    letter-spacing: .5px;
   }
   &__btn {
+    @include sm(margin-top, 30px);
     position: relative;
     z-index: 1;
-
-    margin-top: 30px;
-  }
-  &--columned &__btn {
-    margin-top: 0;
-
     align-self: center;
+    padding: 15px;
+    font-size: 18px !important;
+    margin: 0;
+    flex-grow: 1;
   }
+
   &__contacts {
     @include xs(font-size, 16px);
 
@@ -100,23 +84,21 @@
       padding-right: 0;
       padding-left: 0;
     };
-
-@include lg(left, 15px);
-
-@include lg(max-width, calc(50% - 15px));
-
-@include sm-block() {
+    @include lg(left, 15px);
+    @include lg(max-width, calc(50% - 15px));
+    @include sm-block() {
+      background: transparent;
       position: static;
       top: 0;
 
       width: 100%;
       max-width: none;
-
+padding-top: 50px;
       transform: none;
       &::after {
-        @include angles-top;
+        // @include angles-top;
 
-        display: block;
+        display: none;
       }
     };
 
@@ -128,6 +110,7 @@
     padding: 15px;
 
     background-color: rgba(#f0f0f0, .8);
+
     background-image: none;
 
     transform: translateY(-50%);
@@ -185,4 +168,3 @@
     }
   }
 }
-

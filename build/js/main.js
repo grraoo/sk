@@ -259,14 +259,14 @@ $(document).ready(function () {
 			breakpoint: 1000,
 			settings: {
 				slidesToShow: 3,
-				slidesToScroll: 3,
+				slidesToScroll: 1,
 			}
 		},
 		{
 			breakpoint: 780,
 			settings: {
 				slidesToShow: 2,
-				slidesToScroll: 2
+				slidesToScroll: 1
 			}
 		},
 		{
@@ -359,12 +359,12 @@ $(document).ready(function () {
 		arrows: true,
 		// dots: false,
 		slidesToShow: 4,
-		slidesToScroll: 4,
+		slidesToScroll: 1,
 		speed: 500,
 		pauseOnHover: true,
 		autoplay: true,
 		draggable: false,
-		autoplaySpeed: 8000,
+		autoplaySpeed: 6000,
 		infinite: false,
 		responsive: teamResponsive
 	})

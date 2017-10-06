@@ -3,118 +3,76 @@
     padding: 0;
   }
   &__wrap {
-    @include lg-block() {
-      flex-direction: column;
-    };
-
+    flex-direction: column;
     display: flex;
-
-    overflow: auto;
-
+    overflow: hidden;
     width: 100%;
     min-height: 60vh;
-
-    flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
   }
   &__photos {
     @include lg(width, 100%);
-
     display: block;
-
     position: relative;
-
     float: left;
-
-    width: 45%;
-
+    width: 100%;
     .scroll-btn--left {
       @include sm(display, none !important);
-
       top: 50%;
       left: 0;
     }
     .scroll-btn--right {
       @include sm(display, none !important);
-
       top: 50%;
       right: 0;
     }
   }
   &__description {
-    @include lg-block() {
-      width: 100%;
-
-      margin-top: 30px;
-      margin-left: 0;
-    };
-
+    width: 100%;
+    margin-left: 0;
     display: block;
-
     position: relative;
-
     float: left;
-
-    width: calc(55% - 15px);
-
-    margin-left: 15px;
-
-    .text:first-of-type {
-      margin-top: 0;
-    }
   }
   &__main {
     &-slider {
       display: block;
-
       position: relative;
-
       margin: 0;
-      margin-bottom: 8px;
-      //   padding: 0 3px;
+      margin-bottom: 8px; //   padding: 0 3px;
     }
     &-slide {
       display: block;
-
       position: relative;
-
       width: 100%;
       img {
         display: block;
-
-        width: 100%;
+        width: 1000px;
+        min-width: 100%;
+        max-width: 100%;
       }
     }
   }
   &__thumbs {
     &-slider {
       $arrow-border: 2px solid #383838;
-
-//   display: flex;
+      //   display: flex;
       //   flex-direction: row;
-
       position: relative;
-
       margin: 0;
     }
     &-slide {
       // height: 100px;
       display: block;
-
       position: relative;
-
-      overflow: hidden;
-
-      //      padding: 0 3px;
+      overflow: hidden; //      padding: 0 3px;
       &.slick-current {
         outline: 2px solid $c-green;
       }
       img {
         display: block;
-
         width: 100%;
-
         border: 2px solid transparent;
       }
       &--active img {
@@ -122,46 +80,60 @@
       }
     }
   }
-
   &__list {
     display: flex;
-
-    flex-direction: column;
-
-    margin: 0;
+    flex-wrap: wrap;
+    margin: -15px;
+    margin-bottom: 15px;
     padding: 0;
-
     list-style: none;
-
     justify-content: flex-start;
     align-items: flex-start;
   }
   &__item {
-    display: inline-flex;
-
-    flex-direction: row;
-
-    margin: 0 0 15px;
-    padding-left: 2em;
-
-    background-image: url(../img/icons/house.svg);
+    margin: 15px;
+    background-image: url(../img/icons/house-blue.svg);
     background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: auto 1.4em;
-
+    background-position: center 10px;
+    background-size: auto 50px;
+    padding: 15px;
+    padding-top: 70px;
+    width: calc(25% - 30px);
     align-items: center;
+    font-size: 16px;
+    @include sm(width, calc(33.33% - 30px));
+    @include xs(width, calc(50% - 30px));
+    @include xxs(width, calc(100% - 30px));
+    &--key {
+      background-image: url(../img/icons/key.svg);
+    }
+    &--pool {
+      background-image: url(../img/icons/swimingpool.svg);
+    }
+    &--plumbing {
+      background-image: url(../img/icons/plumbing.svg);
+    }
+    &--socket {
+      background-image: url(../img/icons/socket.svg);
+    }
+    &--radiator {
+      background-image: url(../img/icons/radiator.svg);
+    }
+    &--paint {
+      background-image: url(../img/icons/paint-roller.svg);
+    }
     &--house {
-      background-image: url(../img/icons/house.svg);
+      background-image: url(../img/icons/house-blue.svg);
     }
     &--foundation {
-      background-image: url(../img/icons/foundation.svg);
+      background-image: url(../img/icons/foundation-blue.svg);
+      background-size: auto 40px;
+      background-position: center 20px;
     }
   }
   &__icon {
     display: inline-block;
-
     position: relative;
-
     width: 75px;
   }
   &__caption {
@@ -169,15 +141,12 @@
   }
   &__buttons {
     display: block;
-
     position: relative;
-
     width: 100%;
-
     text-align: center;
   }
-
   &__thumbs-slider {
     @include xxs(display, none);
   }
 }
+

@@ -4,76 +4,56 @@
   }
   &__wrap {
     @include row-flex();
-
-@include xs-block() {
-    }  margin-top: -15px;
+    @include xs-block() {}
+    margin-top: -15px;
     margin-bottom: -15px;
-
     justify-content: center;
   }
-
   &__item {
     @include xs-block() {
       @include size(12);
-
       max-width: 270px;
-
-      text-align: center;
-    }; @include col(); @include size(4); @include sm-block() {
+    }
+    ;
+    @include col();
+    @include size(4);
+    @include sm-block() {
       @include size(6);
-    };
-
+    }
+    ;
     margin-top: 15px;
     margin-bottom: 15px;
-
-    border: 2px solid $c-blue;
-
-    // background-color: white;
-
-    .subheader {
-      // display: flex;
-
-
-      &::before {
-        margin-right: 5px;
-        margin-left: 15px;
-      }
-      &::after {
-        margin-right: 15px;
-        margin-left: 5px;
-      }
-      &::before,
-      &::after {
-        // content: '';
-        height: 2px;
-
-        margin-top: .7em;
-
-        background-color: $c-blue;
-
-        flex-grow: 1;
-      }
-    }
-
+&--adv {
+  cursor: help;
+  p {
+    display: none;
+    position: absolute;
+    padding: 15px;
+    top: 1.5em;
+    background-color: white;
+    z-index: 1;
+    min-height: 100%;
+  }
+  &:hover p {
+    display: block;
+  }
+}
     &--stats {
       @include size(6);
-
       padding-top: 30px;
-
       border: 0;
-
+      padding-left: 15px;
+      padding-right: 15px;
       background-color: white;
     }
-  };
-
-
+    position: relative;
+  }
+  ;
   &__descr {
     @include xs-block() {
       padding-top: 80px;
-
       background-size: auto 70px;
     };
-
     padding: 15px;
     padding-top: 120px;
 
@@ -81,11 +61,14 @@
     background-position: top;
     background-size: 100px;
 
-    text-align: center;
-
-
     &--process {
-      background-image: url('../img/icons/list.svg');
+      background-image: url('../img/icons/blueprint.svg');
+    }
+    &--garantee {
+      background-image: url('../img/icons/guarantee.svg');
+    }
+    &--list {
+      background-image: url('../img/icons/checklist.svg');
     }
     &--time {
       background-image: url('../img/icons/calendar.svg');
@@ -101,6 +84,11 @@
     }
     &--flat {
       background-image: url('../img/icons/plans.svg');
+    }
+    &--russia {
+      background-image: url('../img/icons/russia.svg');
+      background-size: 120px;
+      background-position: center 15px;
     }
     &--gift {
       background-image: url('../img/icons/giftbox.svg');
