@@ -62,7 +62,13 @@
     background-size: 100px;
 
     &--process {
-      background-image: url('../img/icons/list.svg');
+      background-image: url('../img/icons/blueprint.svg');
+    }
+    &--garantee {
+      background-image: url('../img/icons/guarantee.svg');
+    }
+    &--list {
+      background-image: url('../img/icons/checklist.svg');
     }
     &--time {
       background-image: url('../img/icons/calendar.svg');
