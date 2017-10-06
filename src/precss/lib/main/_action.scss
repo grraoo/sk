@@ -87,6 +87,7 @@
     @include lg(left, 15px);
     @include lg(max-width, calc(50% - 15px));
     @include sm-block() {
+      background: transparent;
       position: static;
       top: 0;
 
@@ -95,9 +96,9 @@
 
       transform: none;
       &::after {
-        @include angles-top;
+        // @include angles-top;
 
-        display: block;
+        display: none;
       }
     };
 
@@ -109,6 +110,7 @@
     padding: 15px;
 
     background-color: rgba(#f0f0f0, .8);
+
     background-image: none;
 
     transform: translateY(-50%);
