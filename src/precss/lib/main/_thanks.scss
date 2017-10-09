@@ -21,12 +21,15 @@
 
       margin: 0 auto;
     }
+      @include xxs-block() {width: 100%;}
 
     display: flex !important;
 
     justify-content: center;
   }
   &__item {
+    @include xxs-block() {margin: 0;}
+
     display: flex !important;
 
     flex-direction: column;
@@ -50,7 +53,7 @@
   &__inner {
     overflow: hidden;
 
-    height: 448px;
+    padding-top: 140%;
 
     margin-bottom: auto;
 
