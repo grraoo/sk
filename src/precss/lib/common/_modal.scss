@@ -17,8 +17,7 @@
 
     width: 40px;
     height: 40px;
-
-// border: 2px solid $c-blue;
+    // border: 2px solid $c-blue;
 
     border-radius: 50%;
 
@@ -85,8 +84,7 @@
     overflow: auto;
 
     max-width: 1000px;
-
-// max-height: 90vh;
+    // max-height: 90vh;
 
     padding-bottom: 10px;
 
@@ -131,12 +129,9 @@
   }
   &__img-wrap {
     @include md(width, 600px);
-
-@include sm(width, 500px);
-
-@include xs(width, 400px);
-
-@include xxs(width, 300px);
+    @include sm(width, 500px);
+    @include xs(width, 400px);
+    @include xxs(width, 300px);
 
     width: 790px;
     height: 100%;
@@ -161,6 +156,7 @@
     top: calc(100% + 20px);
   }
 
+  &--project,
   &--quest {
     max-width: 1200px;
   }
