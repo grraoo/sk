@@ -233,6 +233,22 @@ $(document).ready(function () {
 		}
 	];
 
+	var adoptReviews = [{
+			breakpoint: 1210,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+			}
+		},
+		{
+			breakpoint: 777,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+	];
+
 	var adoptSlider4 = [{
 			breakpoint: 1000,
 			settings: {
@@ -304,7 +320,7 @@ $(document).ready(function () {
 		slidesToScroll: 2,
 		autoplay: true,
 		autoplaySpeed: 4000,
-		responsive: adoptSlider,
+		responsive: adoptReviews,
 		pauseOnHover: true
 
 	});
@@ -370,7 +386,6 @@ $(document).ready(function () {
 	})
 
 });
-
 
 /**
  * скроллим плавно
