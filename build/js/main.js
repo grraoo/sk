@@ -104,7 +104,8 @@ var openModal = function (e, obj) {
         (function() {
           reviewImg.src = btn.dataset.img;
           var content = btn.querySelector('.thanks__template').innerHTML;
-          modal.querySelector('.modal-review__text').innerHTML = content;}());
+          modal.querySelector('.modal-review__text').innerHTML = content;
+        }());
 				break;
 			case 'imgs':
 				var preloadTimer = setInterval(function () {
@@ -128,11 +129,13 @@ var openModal = function (e, obj) {
 					}
 				}, 200);
 				break;
-			case 'project-modal':
+      case 'project-modal':
+      (function() {
 				var projectInfo = btn.querySelector('.portfolio__info').content.querySelector('.project-info') || btn.querySelector('.project-info');
 				var modalContent = modal.querySelector('.modal__content');
 				modalContent.appendChild(projectInfo.cloneNode(true));
-				initSlickOnPortfolio();
+        initSlickOnPortfolio();
+        }());
 				break;
 			default:
 				break;
