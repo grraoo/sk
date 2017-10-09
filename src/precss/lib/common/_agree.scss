@@ -1,4 +1,10 @@
 .agree {
+  &--error &__label {
+    color: red;
+    &::before {
+      border-color: red
+    }
+  }
   &__label {
     display: block;
 
@@ -30,6 +36,7 @@
     }
   }
   input:checked + &__label {
+    color: #787878;
     &::before {
       border-color: $c-darkgreen;
 
@@ -50,4 +57,6 @@
       color: $c-blue;
     }
   }
+
+
 }
