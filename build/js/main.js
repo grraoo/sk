@@ -101,7 +101,10 @@ var openModal = function (e, obj) {
 
 		switch (modal.id) {
 			case 'reviewModal':
-				reviewImg.src = btn.dataset.img;
+        (function() {
+          reviewImg.src = btn.dataset.img;
+          var content = btn.querySelector('.thanks__template').innerHTML;
+          modal.querySelector('.modal-review__text').innerHTML = content;}());
 				break;
 			case 'imgs':
 				var preloadTimer = setInterval(function () {

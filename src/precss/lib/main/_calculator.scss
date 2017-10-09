@@ -1,5 +1,5 @@
 .calculator {
-  @include animatedBg();
+  // @include animatedBg();
 
   &__text-input {
     width: calc(75% - 10px);
@@ -192,4 +192,3 @@
     margin-left: auto;
   }
 }
-

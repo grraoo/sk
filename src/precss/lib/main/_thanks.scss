@@ -7,7 +7,9 @@
   &::before {
     @include angles-top;
   }
-
+  &__template {
+    display: none;
+  }
   &__wrap {
     @include lg-block() {
       width: 720px;
