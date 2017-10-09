@@ -73,7 +73,8 @@ var openModal = function (e, obj) {
 			houseName.name = 'house-address';
 			houseName.value = btn.dataset.house;
 			modal.querySelector('.section-header').innerText = title;
-			modal.querySelector('.feedback__form').appendChild(houseName);
+      modal.querySelector('.feedback__form').appendChild(houseName);
+      modal.querySelector('[name="id"]').value = 'houseOrder';
 
 		} else {
 			/**
