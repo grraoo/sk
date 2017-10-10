@@ -55,4 +55,8 @@
   &--action {
     padding: 15px 40px;
   }
+
+  &--nohover {
+    pointer-events: none;
+  }
 }
