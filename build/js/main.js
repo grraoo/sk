@@ -362,8 +362,9 @@ $(document).ready(function () {
   var headSlider = $('#head-slider')
 
   function playSliderVideo() {
-    var currentSlide = headSlider.find('.slick-active')
-    currentSlide.find('video')[0].play()
+    // var currentSlide = headSlider.find('.slick-active')
+    // currentSlide.find('video')[0].play()
+    console.log('slide');
   }
 
   // headSlider;

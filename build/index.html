@@ -38,7 +38,7 @@
     </div>
     <section class="head-slider" id="head-slider">
       <div class="head-slider__slide">
-        <video class="head-slider__video" id="video" width="100%" height="100%" loop muted>
+        <video class="head-slider__back" id="video" width="100%" height="100%" loop muted>
           <source media="(min-width: 800px)" src="video/videoback1.webm" type="video/webm">
           <source media="(min-width: 800px)" src="video/videoback1.mp4" type="video/mp4">
         </video>
@@ -47,31 +47,39 @@
             <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
             <sup>3</sup>
           </h2>
-          <a href="#compare" class="btn btn--white head-slider__btn js-scroll">преимущества материала</a>
+          <a href="#compare" class="btn btn--green head-slider__btn js-scroll">преимущества материала</a>
         </div>
       </div>
       <div class="head-slider__slide">
-        <video class="head-slider__video" width="100%" height="100%" loop muted>
-          <source media="(min-width:800px)" src="video/test-videoback-2.mp4" type="video/mp4">
-        </video>
+        <div class="head-slider__back head-slider__back--img" style="background-image: url(img/bg/bg-slide2.jpg)" ></div>
         <div class="head-slider__wrap">
           <h2 class="head-slider__header">Строим экологичные дома
             <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
             <sup>3</sup>
           </h2>
-          <a href="#compare" class="btn btn--white head-slider__btn js-scroll">преимущества материала</a>
+          <a href="#compare" class="btn btn--green head-slider__btn js-scroll">преимущества материала</a>
         </div>
       </div>
       <div class="head-slider__slide">
-        <video class="head-slider__video" width="100%" height="100%" loop muted>
-          <source media="(min-width:800px)" src="video/test-videoback-3.mp4" type="video/mp4">
-        </video>
+          <div class="head-slider__back head-slider__back--img" style="background-image: url(img/bg/bg-slide3.jpg)" ></div>
+
         <div class="head-slider__wrap">
           <h2 class="head-slider__header">Строим экологичные дома
             <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
             <sup>3</sup>
           </h2>
-          <a href="#compare" class="btn btn--white head-slider__btn js-scroll">преимущества материала</a>
+          <a href="#compare" class="btn btn--green head-slider__btn js-scroll">преимущества материала</a>
+        </div>
+      </div>
+      <div class="head-slider__slide">
+          <div class="head-slider__back head-slider__back--img" style="background-image: url(img/bg/4.jpg)" ></div>
+
+        <div class="head-slider__wrap">
+          <h2 class="head-slider__header">Строим экологичные дома
+            <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
+            <sup>3</sup>
+          </h2>
+          <a href="#compare" class="btn btn--green head-slider__btn js-scroll">преимущества материала</a>
         </div>
       </div>
     </section>
@@ -490,10 +498,21 @@
         </div>
       </div>
     </section>
-    <section class="action">
-      <h2 class="action__header">Заголовок акции</h2>
-      <a href="" class="btn btn--green action__btn js-modalOpen" data-target="#modal" data-title="Акция: Заказать дом">Заказать дом</a>
-      <a href="" class="btn btn--white btn--border-0 btn--pointer action__btn js-modalOpen" data-target="#offer-info" data-title="Информация об акции">Подробнее</a>
+    <section class="action action--columned">
+      <div class="container">
+        <div class="action__wrap">
+          <div class="action__headers">
+            <h2 class="action__header">
+              <strong class="uppercase">Акция!</strong>
+            </h2>
+            <p class="action__header">Построить дом за зиму?
+              <strong class="uppercase">ЛЕГКО</strong>!</p>
+            <p class="action__header">Заключите с нами договор на строительство дома этой <strong class="uppercase">ЗИМОЙ</strong> и празднуйте новоселье уже следующим летом!
+            </p>
+          </div>
+          <button class="btn btn--green btn--action action__btn js-modalOpen" data-target="#modal" data-title="Акция: проект бесплатно!">Заказать дом</button>
+        </div>
+      </div>
     </section>
     <section id="projects" class="projects">
       <div class="container">
@@ -1277,7 +1296,8 @@
                       </li>
                       <li class="project-info__item project-info__item--foundation">
                         <span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, ламинат, вагонка, покраска стен, натяжные потолки,
-                          перегородки);</span>
+                          перегородки);
+                        </span>
                       </li>
                       <li class="project-info__item project-info__item--foundation">
                         <span class="project-info__caption">Фасадные отделочные работы (покраска).</span>
@@ -1404,7 +1424,7 @@
                       </li>
                       <li class="project-info__item project-info__item--foundation">
                         <span class="project-info__caption">Монтаж утеплённой кровли с металлочерепицей.</span>
-                        </li>
+                      </li>
                     </ul>
                   </section>
                   <section class="project-info__photos">
@@ -1421,14 +1441,14 @@
                       <div class="project-info__main-slide">
                         <img src="img\postroyennyye-obekty\postob11-5.jpg" alt="">
                       </div>
-                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в пос.«Пивовариха»">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в пос.«Пивовариха»">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -1466,14 +1486,14 @@
                       <div class="project-info__main-slide">
                         <img src="img\postroyennyye-obekty\postob12-5.jpg" alt="">
                       </div>
-                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом в 130-ом квартале, г.Иркутск">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом в 130-ом квартале, г.Иркутск">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -1535,14 +1555,14 @@
                       <div class="project-info__main-slide">
                         <img src="img\postroyennyye-obekty\postob13-1.jpg" alt="">
                       </div>
-                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом и баня из клеёного бруса в г.Улан-Удэ">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом и баня из клеёного бруса в г.Улан-Удэ">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -1582,7 +1602,8 @@
                       </li>
                       <li class="project-info__item project-info__item--foundation">
                         <span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, ламинат, вагонка, покраска стен, натяжные потолки,
-                          перегородки);</span>
+                          перегородки);
+                        </span>
                       </li>
                       <li class="project-info__item project-info__item--foundation">
                         <span class="project-info__caption">Фасадные отделочные работы (покраска);</span>
@@ -1632,14 +1653,14 @@
                       <div class="project-info__thumbs-slide">
                         <img src="img\postroyennyye-obekty\postob14-13.jpg" alt="">
                       </div>
-                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Баня из клеёного бруса в пос.Бурдугуз">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Баня из клеёного бруса в пос.Бурдугуз">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -1684,7 +1705,8 @@
                       </li>
                       <li class="project-info__item project-info__item--foundation">
                         <span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, паркет, вагонка, покраска стен, натяжные потолки,
-                          перегородки);</span>
+                          перегородки);
+                        </span>
                       </li>
                       <li class="project-info__item project-info__item--foundation">
                         <span class="project-info__caption">Фасадные отделочные работы (покраска);</span>
@@ -1704,15 +1726,15 @@
                       </div>
                       <div class="project-info__main-slide">
                         <img src="img\postroyennyye-obekty\postob15-6.jpg" alt="">
-                        </div>
-                        </div>
+                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в клубном поселке Royal Park, г.Иркутск.">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в клубном поселке Royal Park, г.Иркутск.">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -1752,7 +1774,8 @@
                       </li>
                       <li class="project-info__item project-info__item--foundation">
                         <span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, паркет, вагонка, покраска стен, натяжные потолки,
-                          перегородки);</span>
+                          перегородки);
+                        </span>
                       </li>
                       <li class="project-info__item project-info__item--foundation">
                         <span class="project-info__caption">Фасадные отделочные работы (покраска);</span>
@@ -1791,14 +1814,14 @@
                       <div class="project-info__main-slide">
                         <img src="img\postroyennyye-obekty\postob16-11.jpg" alt="">
                       </div>
-                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом и баня из клеёного бруса в ДНТ «Берёзка», пос.Молодежный, г.Иркутск.">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом и баня из клеёного бруса в ДНТ «Берёзка», пос.Молодежный, г.Иркутск.">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -1851,14 +1874,14 @@
                       <div class="project-info__main-slide">
                         <img src="img\postroyennyye-obekty\postob17-9.jpg" alt="">
                       </div>
-                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Баня из клеёного бруса в пос.Молодежный, г.Иркутск.">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Баня из клеёного бруса в пос.Молодежный, г.Иркутск.">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -1919,14 +1942,14 @@
                       <div class="project-info__main-slide">
                         <img src="img\postroyennyye-obekty\postob18-9.jpg" alt="">
                       </div>
-                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в пос. Бурдугуз,39-ый км Байкальского тракта.">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в пос. Бурдугуз,39-ый км Байкальского тракта.">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -2019,14 +2042,14 @@
                       <div class="project-info__main-slide">
                         <img src="img\postroyennyye-obekty\postob20-6.jpg" alt="">
                       </div>
-                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Гостевой дом из клеёного бруса в пос. Молодёжный, г.Иркутска">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Гостевой дом из клеёного бруса в пос. Молодёжный, г.Иркутска">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -2074,14 +2097,14 @@
                       <div class="project-info__main-slide">
                         <img src="img\postroyennyye-obekty\postob21-5.jpg" alt="">
                       </div>
-                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом и баня из клеёного бруса в пос.Бурдаковка, г.Иркутска">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом и баня из клеёного бруса в пос.Бурдаковка, г.Иркутска">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -2134,15 +2157,15 @@
                       </div>
                       <div class="project-info__main-slide">
                         <img src="img\postroyennyye-obekty\postob22-7.jpg" alt="">
-                        </div>
-                        </div>
+                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного в ДНТ «Континент», г.Иркутска">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного в ДНТ «Континент», г.Иркутска">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
@@ -2211,73 +2234,71 @@
                       </div>
                       <div class="project-info__thumbs-slide">
                         <img src="img\postroyennyye-obekty\postob23-15.jpg" alt="">
-                        </div>
-                        </div>
+                      </div>
+                    </div>
                   </section>
-                  </div>
-                  <div class="project-info__buttons">
-                    <p>
-                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Баня из клеёного бруса в пос. Мельничная">Хочу такой дом!</button>
-                    </p>
-                  </div>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Баня из клеёного бруса в пос. Мельничная">Хочу такой дом!</button>
+                  </p>
+                </div>
               </article>
             </template>
           </article>
-          </div>
-          <button class="btn btn--green js-show-more">Посмотреть больше работ</button>
-          </div>
-    </section>
-    <article class="portfolio__item portfolio__item--hidden" data-target="#project-modal" id="project-25" data-title="Дом из клеёного в ДНТ «Континент»,17-ый км Байкальского тракта">
-      <div class="portfolio__img-wrap">
-        <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob24-1.jpg" alt="">
+          <article class="portfolio__item portfolio__item--hidden" data-target="#project-modal" id="project-25" data-title="Дом из клеёного в ДНТ «Континент»,17-ый км Байкальского тракта">
+            <div class="portfolio__img-wrap">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob24-1.jpg" alt="">
+            </div>
+            <h4 class="subheader">Дом из клееного бруса</h4>
+            <p class="text portfolio__address">в ДНТ „Континент“,
+              <br>17-й км Байкальского тракта</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Заливка ж/б фундамента;»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Сборка домокомплекта из клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Устройство битумной мягкой кровли.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob24-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob24-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob24-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob24-5.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного в ДНТ «Континент», г.Иркутска">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
+          </article>
+        </div>
+        <button class="btn btn--green js-show-more">Посмотреть больше работ</button>
       </div>
-      <h4 class="subheader">Дом из клееного бруса</h4>
-      <p class="text portfolio__address">в ДНТ „Континент“,
-        <br>17-й км Байкальского тракта</p>
-      <template class="portfolio__info">
-        <article class="project-info">
-          <div class="project-info__wrap">
-            <section class="project-info__description">
-              <h3 class="subheader">Выполнены следующие работы:</h3>
-              <ul class="project-info__list">
-                <li class="project-info__item project-info__item--key">
-                  <span class="project-info__caption">Заливка ж/б фундамента;»</span>
-                </li>
-                <li class="project-info__item project-info__item--foundation">
-                  <span class="project-info__caption">Сборка домокомплекта из клееного бруса;</span>
-                </li>
-                <li class="project-info__item project-info__item--foundation">
-                  <span class="project-info__caption">Устройство битумной мягкой кровли.</span>
-                </li>
-              </ul>
-            </section>
-            <section class="project-info__photos">
-              <div class="project-info__main-slider">
-                <div class="project-info__main-slide">
-                  <img src="img\postroyennyye-obekty\postob24-2.jpg" alt="">
-                </div>
-                <div class="project-info__main-slide">
-                  <img src="img\postroyennyye-obekty\postob24-3.jpg" alt="">
-                </div>
-                <div class="project-info__main-slide">
-                  <img src="img\postroyennyye-obekty\postob24-4.jpg" alt="">
-                </div>
-                <div class="project-info__main-slide">
-                  <img src="img\postroyennyye-obekty\postob24-5.jpg" alt="">
-                </div>
-                </div>
-            </section>
-            </div>
-            <div class="project-info__buttons">
-              <p>
-                <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного в ДНТ «Континент», г.Иркутска">Хочу такой дом!</button>
-              </p>
-            </div>
-        </article>
-      </template>
-    </article>
-
-    <button class="btn btn--green js-show-more">Посмотреть больше работ</button>
+    </section>
 
     <section class="work-scheme">
       <div class="container">
@@ -2308,7 +2329,7 @@
     </section>
     <section class="action">
       <h2 class="action__header">Заголовок акции</h2>
-      <a href="" class="btn btn--green action__btn js-modalOpen" data-target="#modal" data-title="Акция: Заказать звонок">Заказать дом</a>
+      <a href="" class="btn btn--green action__btn js-modalOpen" data-target="#modal" data-title="Акция: Заказать дом">Заказать дом</a>
       <a href="" class="btn btn--white btn--border-0 btn--pointer action__btn js-modalOpen" data-target="#offer-info" data-title="Информация об акции">Подробнее</a>
     </section>
     <section id="calculator" class="calculator">

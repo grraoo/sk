@@ -66,7 +66,7 @@
 
     &::before,
     &::after {
-      content: '';
+      // content: '';
 
       display: block;
 
@@ -78,7 +78,7 @@
       background-color: #ffffff;
     }
   }
-  &__video {
+  &__back {
     @include md(display, none);
 
     display: block;
@@ -93,6 +93,23 @@
     transform: translate(-50%, -50%);
 
     object-fit: cover;
+
+    &--img {
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+
+    &::before {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0,0,0,.3);
+      background-image: url(../img/bg/bg-hex.png);
+      background-size: 20px;
+    }}
   }
   &__header {
     @include sm-block() {
@@ -110,7 +127,10 @@
     font-size: 50px;
 
     text-align: center;
-    text-shadow: 0 0 3px black, 0 0 6px black, 0 0 10px black;
+    // text-shadow: 0 0 3px black, 0 0 6px black;
+    background-color: rgba(black, 0.4);
+    padding: 15px;
+
   }
 
   &__large {
@@ -137,5 +157,9 @@
   &-track,
   &-list {
     height: 100%;
+  }
+  &__btn {
+    text-shadow: 0 0 3px black, 0 0 6px black;
+
   }
 }
