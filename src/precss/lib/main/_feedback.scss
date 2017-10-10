@@ -3,7 +3,7 @@
 
 
   &__form {
-    @include xs(padding, 15px);
+    @include md(padding, 15px);
 
     padding: 30px 50px;
 
@@ -18,7 +18,7 @@
     margin-bottom: 30px;
   }
   &__inputs {
-    @include col(); @include size(6); @include xs(width, 100%);
+    @include col(); @include size(6); @include sm(width, 100%);
 
     display: flex;
 
@@ -39,7 +39,7 @@
     }
   }
   &__item {
-    @include xs-block() {
+    @include sm-block() {
       margin-bottom: 10px;
 
       &.feedback__inputs {
