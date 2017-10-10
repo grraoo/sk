@@ -53,7 +53,6 @@
   &__inner {
     overflow: hidden;
 
-    padding-top: 140%;
 
     margin-bottom: auto;
 
@@ -64,7 +63,12 @@
     font-size: 16px;
 
     text-align: left;
+    &::before {
+      padding-top: 140%;
+    content:'';
+    display: block;
 
+}
     p {
       overflow: auto;
 

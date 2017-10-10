@@ -1,4 +1,5 @@
 .head-slider {
+  $border: 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -23,6 +24,10 @@
     left: 0;
   }
   &__slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
 
     overflow: hidden;
@@ -48,6 +53,10 @@
   }
 
   &__wrap {
+
+    padding: 45px;
+    border-right: $border solid white;
+
     display: flex;
 
     flex-direction: column;
@@ -55,28 +64,39 @@
     position: relative;
     z-index: 1;
 
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
 
     padding-right: 45px;
     padding-left: 45px;
 
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
+    position: relative;
 
     &::before,
     &::after {
-      // content: '';
+      content: '';
 
-      display: block;
+position: absolute;
+      width: 80%;
+      border: $border solid white;
+      border-right: 0;
 
-      width: 20%;
-      height: 2px;
-
-      margin: 40px 0;
-
-      background-color: #ffffff;
+      flex-grow: 1;
+      height: 40px;
+      right: 0;
     }
+    &::before {
+      border-bottom: 0;
+      top: 0;
+
+    }
+    &::after {
+      border-top: 0;
+      bottom: 0;
+    }
+
   }
   &__back {
     @include md(display, none);
@@ -111,6 +131,15 @@
       background-size: 20px;
     }}
   }
+
+  &__shift {
+    position: relative;
+    width: calc(100% + 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
   &__header {
     @include sm-block() {
       font-size: 35px;
@@ -126,10 +155,9 @@
     color: $c-white;
     font-size: 50px;
 
-    text-align: center;
+    text-align: left;
     // text-shadow: 0 0 3px black, 0 0 6px black;
-    background-color: rgba(black, 0.4);
-    padding: 15px;
+
 
   }
 
@@ -151,15 +179,19 @@
   &::after {
     @include angles();
   }
+  &__btn {
+  position: absolute;
+  bottom: -100px;
+  right: 40%;
+  transform: translateX(50%);
+// bottom: -25px;
+// right: 15px;
+  }
 }
 
 .slick {
   &-track,
   &-list {
     height: 100%;
-  }
-  &__btn {
-    text-shadow: 0 0 3px black, 0 0 6px black;
-
   }
 }
