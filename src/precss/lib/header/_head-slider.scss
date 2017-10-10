@@ -1,4 +1,5 @@
 .head-slider {
+  $border: 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -23,6 +24,10 @@
     left: 0;
   }
   &__slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
 
     overflow: hidden;
@@ -48,6 +53,10 @@
   }
 
   &__wrap {
+
+    padding: 0 15px;
+    border-left: $border solid $c-green;
+
     display: flex;
 
     flex-direction: column;
@@ -55,30 +64,41 @@
     position: relative;
     z-index: 1;
 
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
 
-    padding-right: 45px;
-    padding-left: 45px;
+    // padding-right: 45px;
+    // padding-left: 45px;
 
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
+    position: relative;
 
     &::before,
     &::after {
-      content: '';
+      // content: '';
 
-      display: block;
+position: absolute;
+      width: 80%;
+      border: $border solid white;
+      border-right: 0;
 
-      width: 20%;
-      height: 2px;
-
-      margin: 40px 0;
-
-      background-color: #ffffff;
+      flex-grow: 1;
+      height: 40px;
+      right: 0;
     }
+    &::before {
+      border-bottom: 0;
+      top: 0;
+
+    }
+    &::after {
+      border-top: 0;
+      bottom: 0;
+    }
+
   }
-  &__video {
+  &__back {
     @include md(display, none);
 
     display: block;
@@ -93,6 +113,32 @@
     transform: translate(-50%, -50%);
 
     object-fit: cover;
+
+    &--img {
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+
+    &::before {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0,0,0,.3);
+      background-image: url(../img/bg/bg-hex.png);
+      background-size: 20px;
+    }}
+  }
+
+  &__shift {
+    position: relative;
+    width: calc(100% + 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: rgba(black, .5);
   }
   &__header {
     @include sm-block() {
@@ -104,13 +150,15 @@
     z-index: 10;
 
     margin-top: 0;
-    margin-bottom: 2vh;
+    margin-bottom: 0;
 
     color: $c-white;
     font-size: 50px;
 
-    text-align: center;
-    text-shadow: 0 0 3px black, 0 0 6px black, 0 0 10px black;
+    text-align: left;
+    text-shadow: 0 0 3px black, 0 0 6px black, 0 0 9px black;
+
+
   }
 
   &__large {
@@ -130,6 +178,14 @@
   }
   &::after {
     @include angles();
+  }
+  &__btn {
+  position: absolute;
+  // bottom: -100px;
+  // right: 40%;
+  // transform: translateX(50%);
+bottom: -65px;
+left: 26px;
   }
 }
 

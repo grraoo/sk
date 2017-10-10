@@ -38,40 +38,62 @@
     </div>
     <section class="head-slider" id="head-slider">
       <div class="head-slider__slide">
-        <video class="head-slider__video" id="video" width="100%" height="100%" loop muted>
+        <video class="head-slider__back" id="video" width="100%" height="100%" loop muted>
           <source media="(min-width: 800px)" src="video/videoback1.webm" type="video/webm">
           <source media="(min-width: 800px)" src="video/videoback1.mp4" type="video/mp4">
         </video>
         <div class="head-slider__wrap">
-          <h2 class="head-slider__header">Строим экологичные дома
-            <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
-            <sup>3</sup>
-          </h2>
-          <a href="#compare" class="btn btn--white head-slider__btn js-scroll">преимущества материала</a>
+          <div class="head-slider__shift">
+
+            <h2 class="head-slider__header">Строим экологичные дома
+              <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
+              <sup>3</sup>
+            </h2>
+
+            <a href="#compare" class="btn btn--green head-slider__btn js-scroll">преимущества материала</a>
+          </div>
         </div>
       </div>
       <div class="head-slider__slide">
-        <video class="head-slider__video" width="100%" height="100%" loop muted>
-          <source media="(min-width:800px)" src="video/test-videoback-2.mp4" type="video/mp4">
-        </video>
+        <div class="head-slider__back head-slider__back--img" style="background-image: url(img/bg/bg-slide2.jpg)"></div>
         <div class="head-slider__wrap">
-          <h2 class="head-slider__header">Строим экологичные дома
-            <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
-            <sup>3</sup>
-          </h2>
-          <a href="#compare" class="btn btn--white head-slider__btn js-scroll">преимущества материала</a>
+          <div class="head-slider__shift">
+            <h2 class="head-slider__header">Строим экологичные дома
+              <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
+              <sup>3</sup>
+            </h2>
+            <a href="#compare" class="btn btn--green head-slider__btn js-scroll">преимущества материала</a>
+          </div>
         </div>
       </div>
       <div class="head-slider__slide">
-        <video class="head-slider__video" width="100%" height="100%" loop muted>
-          <source media="(min-width:800px)" src="video/test-videoback-3.mp4" type="video/mp4">
-        </video>
+        <div class="head-slider__back head-slider__back--img" style="background-image: url(img/bg/bg-slide3.jpg)"></div>
+
         <div class="head-slider__wrap">
-          <h2 class="head-slider__header">Строим экологичные дома
-            <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
-            <sup>3</sup>
-          </h2>
-          <a href="#compare" class="btn btn--white head-slider__btn js-scroll">преимущества материала</a>
+          <div class="head-slider__shift">
+
+            <h2 class="head-slider__header">Строим экологичные дома
+              <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
+              <sup>3</sup>
+            </h2>
+            <a href="#compare" class="btn btn--green head-slider__btn js-scroll">преимущества материала</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="head-slider__slide">
+        <div class="head-slider__back head-slider__back--img" style="background-image: url(img/bg/4.jpg)"></div>
+
+        <div class="head-slider__wrap">
+          <div class="head-slider__shift">
+
+            <h2 class="head-slider__header">Строим экологичные дома
+              <span class="head-slider__large">из клеёного бруса</span> за 27 тысяч ₽/м
+              <sup>3</sup>
+            </h2>
+            <a href="#compare" class="btn btn--green head-slider__btn js-scroll">преимущества материала</a>
+
+          </div>
         </div>
       </div>
     </section>
@@ -490,10 +512,23 @@
         </div>
       </div>
     </section>
-    <section class="action">
-      <h2 class="action__header">Заголовок акции</h2>
-      <a href="" class="btn btn--green action__btn js-modalOpen" data-target="#modal" data-title="Акция: Заказать дом">Заказать дом</a>
-      <a href="" class="btn btn--white btn--border-0 btn--pointer action__btn js-modalOpen" data-target="#offer-info" data-title="Информация об акции">Подробнее</a>
+    <section class="action action--columned">
+      <div class="container">
+        <div class="action__wrap">
+          <div class="action__headers">
+            <h2 class="action__header">
+              <strong class="uppercase btn btn--green btn--nohover btn--action">Акция!</strong>
+            </h2>
+            <p class="action__header">Построить дом за зиму?
+              <strong class="uppercase">ЛЕГКО</strong>!</p>
+            <p class="action__header">Заключите с нами договор на строительство дома этой
+              <strong class="uppercase">ЗИМОЙ</strong> и празднуйте новоселье уже следующим летом!
+            </p>
+            <a href="" class="btn btn--white  action__btn  js-modalOpen" data-target="#offer-info" data-title="Информация об акции">Подробнее</a>
+          </div>
+          <button class="btn btn--green btn--action action__btn js-modalOpen" data-target="#modal" data-title="Акция: проект бесплатно!">Заказать дом</button>
+        </div>
+      </div>
     </section>
     <section id="projects" class="projects">
       <div class="container">
@@ -639,12 +674,12 @@
         <div class="action__wrap">
           <div class="action__headers">
             <h2 class="action__header">
-              <strong class="uppercase">Акция!</strong>
+              <strong class="uppercase btn btn--green btn--nohover btn--action">Акция!</strong>
             </h2>
             <p class="action__header">Заключите договор на строительство и получите проект
               <strong class="uppercase">бесплатно</strong>!</p>
           </div>
-          <button class="btn btn--green btn--action action__btn js-modalOpen" data-target="#modal" data-title="Акция: проект бесплатно!">Заказать дом</button>
+          <button class="btn btn--green btn--action action__btn js-modalOpen" data-target="#modal" data-title="Акция: проект бесплатно!">Заказать дом</button>
         </div>
       </div>
     </section>
@@ -735,8 +770,8 @@
         <div class="portfolio__wrap">
           <article class="portfolio__item js-modalOpen" data-target="#project-modal" id="project-1" data-title="Дом из клеёного бруса в&nbsp;пос.&nbsp;«Идиллия Эстейт»">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img js-modalOpen" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-1.jpg"
-                alt="">
+              <img class="portfolio__img js-modalOpen" width="370" height="250" src="img/postroyennyye-obekty/postob1-1.jpg" alt="">
+
             </div>
             <h4 class="subheader">Дом из клеёного бруса</h4>
             <p class="portfolio__square">217 м
@@ -780,70 +815,73 @@
                   <section class="project-info__photos">
                     <div class="project-info__main-slider">
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=1" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-1.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=2" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-2.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=3" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-3.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=4" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-4.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=5" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-5.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=6" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-6.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=7" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-7.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=8" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-8.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=9" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-9.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=10" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-10.jpg" alt="">
                       </div>
                     </div>
                     <div class="project-info__thumbs-slider">
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=1" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-1.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=2" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-2.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=3" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-3.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=4" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-4.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=5" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-5.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=6" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-6.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=7" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-7.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=8" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-8.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=9" alt="">
+                        <img src="img\postroyennyye-obekty\postob1-9.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=10" alt="">
+                        <img src="img\postroyennyye-obekty\postob3-2.jpg" alt="">
                       </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob1-10.jpg" alt="">
+                      </div>
+
                     </div>
                   </section>
-
                 </div>
                 <div class="project-info__buttons">
                   <p>
@@ -855,7 +893,7 @@
           </article>
           <article class="portfolio__item js-modalOpen" data-target="#project-modal" id="project-2" data-title="Дом из клеёного бруса в&nbsp;пос.&nbsp;«Идиллия Эстейт»">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-2.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob2-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом из клеёного бруса</h4>
             <p class="portfolio__square">192 м
@@ -885,40 +923,39 @@
                   <section class="project-info__photos">
                     <div class="project-info__main-slider">
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=1" alt="">
+                        <img src="img\postroyennyye-obekty\postob2-1.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=2" alt="">
+                        <img src="img\postroyennyye-obekty\postob2-2.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=3" alt="">
+                        <img src="img\postroyennyye-obekty\postob2-3.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=4" alt="">
+                        <img src="img\postroyennyye-obekty\postob2-4.jpg" alt="">
                       </div>
                       <div class="project-info__main-slide">
-                        <img src="//placehold.it/721x500?text=5" alt="">
+                        <img src="img\postroyennyye-obekty\postob2-5.jpg" alt="">
                       </div>
                     </div>
                     <div class="project-info__thumbs-slider">
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=1" alt="">
+                        <img src="img\postroyennyye-obekty\postob2-1.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=2" alt="">
+                        <img src="img\postroyennyye-obekty\postob2-2.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=3" alt="">
+                        <img src="img\postroyennyye-obekty\postob2-3.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=4" alt="">
+                        <img src="img\postroyennyye-obekty\postob2-4.jpg" alt="">
                       </div>
                       <div class="project-info__thumbs-slide">
-                        <img src="//placehold.it/144x100?text=5" alt="">
+                        <img src="img\postroyennyye-obekty\postob2-5.jpg" alt="">
                       </div>
                     </div>
                   </section>
-
                 </div>
                 <div class="project-info__buttons">
                   <p>
@@ -928,9 +965,9 @@
               </article>
             </template>
           </article>
-          <article class="portfolio__item">
+          <article class="portfolio__item js-modalOpen" data-target="#project-modal" id="project-3" data-title="Баня из клеёного бруса в пос.«Ново-Разводная»">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-3.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob3-1.jpg" alt="">
             </div>
             <h4 class="subheader">Баня из клеёного бруса</h4>
             <p class="portfolio__square">85 м
@@ -938,10 +975,94 @@
             </p>
             <p class="text portfolio__address">в пос. Ново-Разводная,
               <br>в пригороде г. Иркутска</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption"> Баня под ключ: Внешние коммуникации;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж винтового фундамента;</span>
+                      </li>
+                      <li class="project-info__item">
+                        <span class="project-info__caption">Сборка комплекта клеёного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--plumbing">
+                        <span class="project-info__caption">Монтаж кровли с водостоками и карнизами;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--radiator">
+                        <span class="project-info__caption">Внутренние коммуникации (теплый водяной пол, элетромонтаж, вентиляция, водоснабжение и канализирование);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--socket">
+                        <span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, ламинат, вагонка, покраска стен, натяжные потолки,
+                          перегородки);
+                        </span>
+                      </li>
+                      <li class="project-info__item project-info__item--paint">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска), терраса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--pool">
+                        <span class="project-info__caption">Отделка мойки с бассейном и парилки (липой).</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob3-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob3-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob3-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob3-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob3-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob3-6.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob3-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob3-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob3-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob3-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob3-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob2-6.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Ново-Разводная, в пригороде г.Иркутск.">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item">
+          <article class="portfolio__item js-modalOpen" data-target="#project-modal" id="project-4" data-title="Барбекю-беседка из клееного бруса в пос.«Молодёжный»">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-4.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob4-1.jpg" alt="">
             </div>
             <h4 class="subheader">Барбекю-беседка из клеёного бруса</h4>
             <p class="portfolio__square">20 м
@@ -949,10 +1070,80 @@
             </p>
             <p class="text portfolio__address">в пос. Молодёжный,
               <br>пригороде г. Иркутска</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption"> Срок реализации проекта-2 месяца;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Одновременно со строительством, выполнено благоустройство участка.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob4-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob4-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob4-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob4-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob4-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob4-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob4-7.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob4-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob4-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob4-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob4-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob4-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob4-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob4-7.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Пос.Молодежный,пригороде г.Иркутск">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item">
+          <article class="portfolio__item js-modalOpen" data-target="#project-modal" id="project-5" data-title="Баня из клеёного бруса в СНТ «Нефтехимик»">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-5.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob5-1.jpg" alt="">
             </div>
             <h4 class="subheader">Баня из клеёного бруса</h4>
             <p class="portfolio__square">125 м
@@ -960,20 +1151,174 @@
             </p>
             <p class="text portfolio__address">в СНТ «Нефтехимик»,
               <br>в пригороде г. Ангарска</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption"> Баня под ключ: Внешние коммуникации (скважина, выгребная яма);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж винтового фундамента;</span>
+                      </li>
+                      <li class="project-info__item">
+                        <span class="project-info__caption">Сборка комплекта клеёного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--plumbing">
+                        <span class="project-info__caption">Монтаж кровли компазитной черепицей, с водостоками и деревянными карнизами;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--plumbing">
+                        <span class="project-info__caption">Остекление объекта;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--plumbing">
+                        <span class="project-info__caption">Внутренние коммуникации (теплый водяной пол, элетромонтаж, вентиляция, водоснабжение и канализирование);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--socket">
+                        <span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, ламинат, вагонка, покраска стен, натяжные потолки,
+                          перегородки);
+                        </span>
+                      </li>
+                      <li class="project-info__item project-info__item--paint">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска), терраса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--pool">
+                        <span class="project-info__caption">Отделка парилки.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob5-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob5-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob5-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob5-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob5-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob5-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob5-7.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob5-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob5-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob5-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob5-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob5-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob5-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob5-7.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="СНТ «Нефтехимик»,в пригороде г.Ангарска">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item">
+          <article class="portfolio__item js-modalOpen" data-target="#project-modal" id="project-6" data-title="Дом из клеёного бруса, 17-ый км Байкальского тракта">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-6.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob6-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом из клеёного бруса</h4>
             <p class="portfolio__square">165 м
               <sup>2</sup>
             </p>
             <p class="text portfolio__address">17-й км Байкальского тракта</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Фундамент на винтовых сваях;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж кровли из гибкой черепицы; Монтаж электропроводки и отопления;</span>
+                      </li>
+                      <li class="project-info__item">
+                        <span class="project-info__caption">Сборка комплекта клеёного бруса.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob6-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob6-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob6-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob6-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob6-5.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob6-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob6-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob5-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob5-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob5-5.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="17-ый км Байкальского тракта">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-7" data-title="Баня из клеёного бруса в пос.«Зеленый мыс»">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-7.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob7-1.jpg" alt="">
             </div>
             <h4 class="subheader">Баня из клеёного бруса</h4>
             <p class="portfolio__square">65 м
@@ -981,68 +1326,551 @@
             </p>
             <p class="text portfolio__address">Зелёный Мыс,
               <br>28-й км Байкальского тракта</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Внешние коммуникации (скважина, выгребная яма);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Заливка ж/б фундамента;</span>
+                      </li>
+                      <li class="project-info__item">
+                        <span class="project-info__caption">Сборка комплекта клеёного бруса;</span>
+                      </li>
+                      <li class="project-info__item">
+                        <span class="project-info__caption"> Монтаж кровли с гибкой битумной черепицей.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob7-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob7-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob7-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob7-4.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob7-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob7-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob7-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob7-4.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Зеленый мыс, 28-ой км Байкальского тракта">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-8" data-title="Туристическая база на берегу залива «Малое Море»">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-8.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob8-1.jpg" alt="">
             </div>
-            <h4 class="subheader">«Фрегат» — туристическая база и ресторан</h4>
+            <h4 class="subheader">»Фрегат» — туристическая база и ресторан</h4>
             <p class="portfolio__square">430 м
               <sup>2</sup>
             </p>
             <p class="text portfolio__address">на берегу залива «Малое Море»,
               <br>озеро Байкал</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Сборка домокомплекта клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption"> Монтаж кровли.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob8-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob8-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob8-3.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob8-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob8-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob8-3.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="«Фрегат» — туристическая база и ресторан на Байкале.">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-9" data-title="Дом из клеёного бруса в с. «Максимиха»">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-9.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob9-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом из клеёного бруса</h4>
             <p class="portfolio__square">255 м
               <sup>2</sup>
             </p>
             <p class="text portfolio__address">в с. Максимиха (Бурятия)</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Дом под ключ: Внешние коммуникации (скважина, выгребная яма);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Сборка комплекта клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж кровли с композитной черепицей Джерард, водостоками и деревянными карнизами;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Остекление объекта;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренние коммуникации (теплый водяной пол, элетромонтаж, вентиляция, водоснабжение и канализирование);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, ламинат, вагонка, покраска стен, натяжные потолки,
+                          перегородки);
+                        </span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска).</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob9-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob9-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob9-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob9-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob9-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob9-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob9-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob9-8.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob9-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob9-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob9-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob9-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob9-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob9-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob9-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob9-8.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в с. «Максимиха»">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-10" data-title="Дом из клеёного бруса в ДНТ «Медгородок», Мельничный тракт">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-10.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob10-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом из клеёного бруса</h4>
             <p class="portfolio__square">98 м
               <sup>2</sup>
             </p>
             <p class="text portfolio__address">в ДНТ «Медгородок», Мельничный тракт</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Внешние коммуникации (выгребная яма);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Заливка ж/б фундамента;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Сборка комплекта клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж кровли с металлочерепицей, водостоками и пластиковыми карнизами;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Остекление объекта;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренние коммуникации (элетромонтаж, водоснабжение и канализирование);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска).</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob10-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob10-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob10-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob10-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob10-5.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob10-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob10-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob10-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob10-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob10-5.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__buttons">
+                      <p>
+                        <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в ДНТ «Медгородок»">Хочу такой дом!</button>
+                      </p>
+                    </div>
+                  </section>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-11" data-title="Дом из клеёного бруса в пос.«Пивовариха»">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-11.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob11-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом из клеёного бруса</h4>
             <p class="portfolio__square">150 м
               <sup>2</sup>
             </p>
             <p class="text portfolio__address">в пос. Пивовариха</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Заливка ж/б фундамента;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Сборка комплекта клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж утеплённой кровли с металлочерепицей.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob11-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob11-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob11-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob11-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob11-5.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob11-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob11-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob11-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob11-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob11-5.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в пос.«Пивовариха»">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-12" data-title="Дом в 130-ом квартале">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-12.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob12-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом в 130-м квартале</h4>
             <p class="text portfolio__address">г. Иркутск</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Сборка 2-го этажа из клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Устройство кровли.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob12-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob12-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob12-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob12-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob12-5.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob12-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob12-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob12-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob12-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob12-5.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом в 130-ом квартале, г.Иркутск">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-13" data-title="Дом и баня из клеёного бруса в г.Улан-Удэ">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-13.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob13-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом и баня из клеёного бруса</h4>
             <p class="portfolio__square">215 м
               <sup>2</sup>
             </p>
             <p class="text portfolio__address">г. Улан-Удэ</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Сборка домокомплекта и комплекта бани из клееного бруса;»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж кровли с композитной черепицей Джерард, водостоками и деревянными карнизами;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренние коммуникации (элетромонтаж);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска).</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob13-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob13-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob13-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob13-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob13-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob13-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob13-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="/img\postroyennyye-obekty\postob13-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob13-9.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob13-10.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob13-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob13-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob13-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob13-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob13-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob13-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob13-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob13-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob13-9.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob13-10.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом и баня из клеёного бруса в г.Улан-Удэ">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-14" data-title="Баня из клеёного бруса в пос. Бурдугуз">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-14.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob14-1.jpg" alt="">
             </div>
             <h4 class="subheader">Баня из клеёного бруса</h4>
             <p class="portfolio__square">79 м
@@ -1050,20 +1878,235 @@
             </p>
             <p class="text portfolio__address">в пос. Бурдугуз,
               <br>39-й км Байкальского тракта</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Под ключ: Внешние коммуникации (скважина, выгребная яма);»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Заливка ж/б фундамента с плитой перекрытия;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Сборка комплекта клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж кровли с гибкой битумной черепицей Дёке, водостоками и деревянными карнизами;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Остекление объекта;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренние коммуникации (теплый водяной пол, элетромонтаж, вентиляция, водоснабжение и канализирование);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, ламинат, вагонка, покраска стен, натяжные потолки,
+                          перегородки);
+                        </span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Отделка парилки (липа).</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-9.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-10.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-11.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-12.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob14-13.jpg" alt="">
+                      </div>
+                    </div>
+
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-9.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-10.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-11.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-12.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-13.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Баня из клеёного бруса в пос.Бурдугуз">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-15" data-title="Дом из клеёного бруса в клубном поселке Royal Park">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-15.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob15-3.jpg" alt="">
             </div>
             <h4 class="subheader">Дом из клеёного бруса</h4>
             <p class="portfolio__square">222 м
               <sup>2</sup>
             </p>
             <p class="text portfolio__address">в клубном поселке Royal Park (Иркутск)</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Дом под ключ: Внешние коммуникации (скважина, выгребная яма);»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Заливка ж/б фундамента с плитой перекрытия;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Сборка домокомплекта клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж кровли с металлочерепицей Супермонтеррей, водостоками и деревянными карнизами;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Остекление объекта;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж гаражных ворот</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Разработка дизайн-проекта интерьера;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренние коммуникации (теплый водяной пол, элетромонтаж, вентиляция, водоснабжение и канализирование);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, паркет, вагонка, покраска стен, натяжные потолки,
+                          перегородки);
+                        </span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Ландшафтные работы и проектирование.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob15-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob15-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob15-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob15-6.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob15-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob14-6.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в клубном поселке Royal Park, г.Иркутск.">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-16" data-title="Дом и баня из клеёного бруса в ДНТ «Берёзка»">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-16.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob16-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом и баня из клеёного бруса </h4>
             <p class="portfolio__square">260 м
@@ -1071,17 +2114,217 @@
             </p>
             <p class="text portfolio__address">в ДНТ «Берёзка»,
               <br>пос. Молодежный (Иркутск)</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Дом и баня под ключ: Сборка домокомплекта и комплекта бани из клееного бруса;»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж кровли с гибкой битумной черепицей, водостоками и деревянными карнизами;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Остекление объекта;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж гаражных ворот;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Разработка дизайн-проекта интерьера;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренние коммуникации (элетромонтаж, вентиляция);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренняя чистовая отделка всех помещений (плитка, паркет, вагонка, покраска стен, натяжные потолки,
+                          перегородки);
+                        </span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска);</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-9.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-10.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob16-11.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-9.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-10.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob16-11.jpg" alt="">
+                      </div>
+
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом и баня из клеёного бруса в ДНТ «Берёзка», пос.Молодежный, г.Иркутск.">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-17" data-title="Баня из клеёного бруса в пос. Молодежный">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-17.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob17-1.jpg" alt="">
             </div>
             <h4 class="subheader">Баня из клеёного бруса</h4>
             <p class="text portfolio__address">в пос. Молодежный (Иркутск)</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Устройство утепленной кровли с покрытием металлочерепицей;»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Внутренние отделочные работы.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob17-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob17-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob17-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob17-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob17-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob17-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob17-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob17-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob17-9.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob17-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob17-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob17-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob17-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob17-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob17-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob17-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob17-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob17-9.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Баня из клеёного бруса в пос.Молодежный, г.Иркутск.">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-18" data-title="Дом из клеёного бруса в пос. Бурдугуз">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-18.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob18-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом из клеёного бруса</h4>
             <p class="portfolio__square">187 м
@@ -1089,28 +2332,322 @@
             </p>
             <p class="text portfolio__address">в пос. Бурдугуз,
               <br>39-й км Байкальского тракта</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Внешние коммуникации (скважина, выгребная яма); Заливка ж/б фундамента;»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Сборка домокомплекта клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Монтаж кровли с покрытием композитной черепицей; Внутренние коммуникации (теплый водяной пол, элетромонтаж,
+                          вентиляция, водоснабжение и канализирование);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">отделочные работы (покраска).</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob18-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob18-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob18-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob18-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob18-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob18-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob18-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob18-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob18-9.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob18-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob18-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob18-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob18-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob18-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob18-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob18-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob18-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob18-9.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Баня из клеёного бруса в пос.Молодежный, г.Иркутск.">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-19" data-title="Дом из клеёного бруса в пос. Бурдугуз">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-20.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob19-1.jpg" alt="">
+            </div>
+            <h4 class="subheader">Дом из клеёного бруса</h4>
+            <p class="portfolio__square">256 кв. м.
+              <sup>2</sup>
+            </p>
+            <p class="text portfolio__address">26 км. Байкальского тракта</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">борка домокомплекта клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска);</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Устройство кровли с покрытием гибкой черепицей.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob19-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob19-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob19-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob19-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob19-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob19-6.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob19-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob19-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob19-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob19-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob19-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob19-6.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса, 26-ой км. Байкальского тракта">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
+          </article>
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-20" data-title="Дом из клеёного бруса в г.Улан-Батор">
+            <div class="portfolio__img-wrap">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob20-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом из клеёного бруса</h4>
             <p class="portfolio__square">176 м
               <sup>2</sup>
             </p>
             <p class="text portfolio__address">г. Улан-Батор (Монголия)</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Внешние коммуникации (скважина, выгребная яма); Заливка ж/б фундамента;»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Сборка домокомплекта клееного бруса.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob20-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob20-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob20-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob20-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob20-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob20-6.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob20-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob20-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob20-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob20-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob20-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob20-6.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного бруса в г.Улан-Батор">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-21" data-title="Гостевой дом из клеёного бруса в пос. Молодёжный,(пригород г. Иркутска)">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-21.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob21-1.jpg" alt="">
             </div>
             <h4 class="subheader">Гостевой дом из клеёного бруса</h4>
             <p class="text portfolio__address">в пос. Молодёжный
               <br>(пригород г. Иркутска)</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Фасадные отделочные работы (покраска);»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption"> Внутренняя чистовая отделка.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob21-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob21-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob21-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob21-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob21-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob21-6.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob21-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob21-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob21-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob21-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob21-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob21-6.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Гостевой дом из клеёного бруса в пос. Молодёжный, г.Иркутска">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-22" data-title="Дом и баня из клеёного бруса, 16-ый км Байкальского тракта">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-23.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob22-1.jpg" alt="">
             </div>
             <h4 class="subheader">Дом и баня из клеёного бруса</h4>
             <p class="portfolio__square">240 м
@@ -1118,29 +2655,290 @@
               <sup>2</sup> — баня</p>
             <p class="text portfolio__address">в пос. Бурдаковка
               <br>(пригород г. Иркутска)</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Внешние коммуникации (скважина, выгребная яма);»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Заливка ж/б фундамента;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Сборка домокомплекта и комплекта бани клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Устройство композитной кровли.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob22-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob22-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob22-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob22-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob22-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob22-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob22-7.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob22-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob22-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob22-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob22-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob22-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob22-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob22-7.jpg" alt="">
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом и баня из клеёного бруса в пос.Бурдаковка, г.Иркутска">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-23" data-title="Дом и баняиз клеёного в пос. Бурдаковка, пригород Иркутска">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-24.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob23-1.jpg" alt="">
             </div>
-            <h4 class="subheader">Дом из клеёного бруса</h4>
-            <p class="portfolio__square">190 м
+            <h4 class="subheader">Дом и баня из клеёного бруса</h4>
+            <p class="portfolio__square">240 кв.м (Дом), 57 кв.м (Баня)
               <sup>2</sup>
             </p>
-            <p class="text portfolio__address">в ДНТ «Континент»,
-              <br>17-й км Байкальского тракта</p>
+            <p class="text portfolio__address">в пос. Бурдаковка
+              <br>пригород Иркутска</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Внешние коммуникации (скважина, выгребная яма);»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Заливка ж/б фундамента;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Сборка домокомплекта и комплекта бани клееного бруса;</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption">Устройство композитной кровли.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-9.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-10.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-11.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-12.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-13.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-14.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob23-15.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-5.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-6.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-7.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-8.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-9.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-10.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-11.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-12.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-13.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-14.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob23-15.jpg" alt="">
+                      </div>
+
+                    </div>
+                  </section>
+                </div>
+                <div class="project-info__buttons">
+                  <p>
+                    <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Дом из клеёного в ДНТ «Континент», г.Иркутска">Хочу такой дом!</button>
+                  </p>
+                </div>
+              </article>
+            </template>
           </article>
-          <article class="portfolio__item portfolio__item--hidden">
+          <article class="portfolio__item portfolio__item--hidden js-modalOpen" data-target="#project-modal" id="project-24" data-title="Баня из клеёного бруса в пос. Мельничная">
             <div class="portfolio__img-wrap">
-              <img class="portfolio__img" width="370" height="250" src="img/postroyennyye-obekty/wm_postroyennyye-obekt-25.jpg" alt="">
+              <img class="portfolio__img" width="370" height="250" src="img\postroyennyye-obekty\postob24-1.jpg" alt="">
             </div>
             <h4 class="subheader">Баня из клеёного бруса</h4>
             <p class="text portfolio__address">в пос. Мельничная Падь</p>
+            <template class="portfolio__info">
+              <article class="project-info">
+                <div class="project-info__wrap">
+                  <section class="project-info__description">
+                    <h3 class="subheader">Выполнены следующие работы:</h3>
+                    <ul class="project-info__list">
+                      <li class="project-info__item project-info__item--key">
+                        <span class="project-info__caption">Сборка комплекта бани из клееного бруса;»</span>
+                      </li>
+                      <li class="project-info__item project-info__item--foundation">
+                        <span class="project-info__caption"> Устройство кровли композитной черепицей.</span>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="project-info__photos">
+                    <div class="project-info__main-slider">
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob24-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob24-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob24-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob24-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__main-slide">
+                        <img src="img\postroyennyye-obekty\postob24-5.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="project-info__thumbs-slider">
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob24-1.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob24-2.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob24-3.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob24-4.jpg" alt="">
+                      </div>
+                      <div class="project-info__thumbs-slide">
+                        <img src="img\postroyennyye-obekty\postob24-5.jpg" alt="">
+                      </div>
+                    </div>
+
+                  </section>
+                  <div class="project-info__buttons">
+                    <p>
+                      <button class="btn btn--green js-modalOpen js-modalClose" data-target="#modal" data-title="Заказать дом" data-house="Баня из клеёного бруса в пос. Мельничная">Хочу такой дом!</button>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </template>
           </article>
         </div>
         <button class="btn btn--green js-show-more">Посмотреть больше работ</button>
       </div>
     </section>
+
     <section class="work-scheme">
       <div class="container">
         <h2 class="section-header">Как мы работаем</h2>
@@ -1168,10 +2966,23 @@
         </ol>
       </div>
     </section>
-    <section class="action">
-      <h2 class="action__header">Заголовок акции</h2>
-      <a href="" class="btn btn--green action__btn js-modalOpen" data-target="#modal" data-title="Акция: Заказать звонок">Заказать дом</a>
-      <a href="" class="btn btn--white btn--border-0 btn--pointer action__btn js-modalOpen" data-target="#offer-info" data-title="Информация об акции">Подробнее</a>
+    <section class="action action--columned">
+      <div class="container">
+        <div class="action__wrap">
+          <div class="action__headers">
+            <h2 class="action__header">
+              <strong class="uppercase btn btn--green btn--nohover btn--action">Акция!</strong>
+            </h2>
+            <p class="action__header">Построить дом за зиму?
+              <strong class="uppercase">ЛЕГКО</strong>!</p>
+            <p class="action__header">Заключите с нами договор на строительство дома этой
+              <strong class="uppercase">ЗИМОЙ</strong> и празднуйте новоселье уже следующим летом!
+            </p>
+            <a href="" class="btn btn--white  action__btn  js-modalOpen" data-target="#offer-info" data-title="Информация об акции">Подробнее</a>
+          </div>
+          <button class="btn btn--green btn--action action__btn js-modalOpen" data-target="#modal" data-title="Акция: проект бесплатно!">Заказать дом</button>
+        </div>
+      </div>
     </section>
     <section id="calculator" class="calculator">
       <form class="container calculator__form feedback__form" method="get" action="#">
@@ -1289,24 +3100,26 @@
             </div>
             <div class="feedback calculator__wrap">
               <p class="feedback__item feedback__item--wide">
-                <input class="feedback__input text-input" name="name" type="text" id="username" size="30" value="" placeholder="Ваше имя" required>
+                <input class="feedback__input text-input" name="name" type="text" id="username" size="30" value="" placeholder="Ваше имя"
+                  required>
                 <label class="feedback__label feedback__label--name" for="username" accesskey="U">Ваше имя</label>
               </p>
             </div>
             <div class="feedback calculator__wrap">
               <p class="feedback__item feedback__item--wide">
-                <input class="feedback__input text-input" name="email" type="email" id="usermail" size="30" value="" placeholder="Ваш E-mail" required>
+                <input class="feedback__input text-input" name="email" type="email" id="usermail" size="30" value="" placeholder="Ваш E-mail"
+                  required>
                 <label class="feedback__label feedback__label--email" for="usermail" accesskey="U" required>Ваш E-mail</label>
               </p>
             </div>
             <div class="agree">
-                <input type="checkbox" class="visually-hidden" id="agree-calc">
-                <label for="agree-calc" class="agree__label text">Даю согласие на обработку персональных данных
-                  <sup>*</sup>
-                </label>
-                <a href="stuff/icons/003-gift.svg" download class="agree__link text">
-                  <sup>*</sup>Положение об обработке персональных данных</a>
-              </div>
+              <input type="checkbox" class="visually-hidden" id="agree-calc">
+              <label for="agree-calc" class="agree__label text">Даю согласие на обработку персональных данных
+                <sup>*</sup>
+              </label>
+              <a href="stuff/icons/003-gift.svg" download class="agree__link text">
+                <sup>*</sup>Положение об обработке персональных данных</a>
+            </div>
             <div class="calculator__btns">
               <button type="submit" class="btn btn--green calculator__btn">Заказать такой дом</button>
             </div>
@@ -1575,7 +3388,8 @@
               <label class="feedback__label feedback__label--name" for="name-2" accesskey="U">Ваше имя</label>
             </p>
             <p class="feedback__item feedback__item--callback">
-              <input class="feedback__input text-input" name="number" type="text" id="userphone" size="30" value="" placeholder="Ваш телефон" required>
+              <input class="feedback__input text-input" name="number" type="text" id="userphone" size="30" value="" placeholder="Ваш телефон"
+                required>
               <label class="feedback__label feedback__label--phone" for="userphone" accesskey="U">Ваш телефон</label>
             </p>
           </section>
@@ -1609,11 +3423,13 @@
                       <label class="feedback__label feedback__label--name" for="name" accesskey="U">Ваше имя</label>
                     </p>
                     <p class="feedback__item">
-                      <input class="feedback__input text-input" name="email" type="email" id="email" size="60" value="" placeholder="Ваш E-mail" required>
+                      <input class="feedback__input text-input" name="email" type="email" id="email" size="60" value="" placeholder="Ваш E-mail"
+                        required>
                       <label class="feedback__label feedback__label--email" for="email" accesskey="U">Ваш E-mail</label>
                     </p>
                     <p class="feedback__item">
-                      <input class="feedback__input text-input" name="phone" type="text" id="phone" size="30" value="" placeholder="Ваш телефон" required>
+                      <input class="feedback__input text-input" name="phone" type="text" id="phone" size="30" value="" placeholder="Ваш телефон"
+                        required>
                       <label class="feedback__label feedback__label--phone" for="phone" accesskey="U">Ваш телефон</label>
                     </p>
                   </section>
@@ -1648,14 +3464,18 @@
           <div class="subheader">Стоимость строительства дома для каждого проекта рассчитывается индивидуально и зависит от целого ряда факторов,
             основные из которых:</div>
           <ol class="text list">
-            <li><b>Разновидность фундамента</b>. Исходя из типа грунта, предназначения строения и пожеланий клиента, возможно выбрать
-              фундамент, начиная от самого простого свайно-винтового и заканчивая тяжелым и дорогим цокольным этажом.</li>
-            <li><b>Этажность и площадь постройки</b>. 1 м² двухэтажного дома будет дешевле, чем 1 м² одноэтажного, так как цена строительства
-              фундамента и кровли распределяется на два этажа.</li>
-            <li><b>Толщина стен дома</b> из клеёного бруса может быть от 185 до 245 мм.</li>
+            <li>
+              <b>Разновидность фундамента</b>. Исходя из типа грунта, предназначения строения и пожеланий клиента, возможно
+              выбрать фундамент, начиная от самого простого свайно-винтового и заканчивая тяжелым и дорогим цокольным этажом.</li>
+            <li>
+              <b>Этажность и площадь постройки</b>. 1 м² двухэтажного дома будет дешевле, чем 1 м² одноэтажного, так как цена
+              строительства фундамента и кровли распределяется на два этажа.</li>
+            <li>
+              <b>Толщина стен дома</b> из клеёного бруса может быть от 185 до 245 мм.</li>
             <li>Разновидность отделочных материалов. Этот фактор является существенным на этапе строительства и в большей степени
               влияет на итоговую стоимость дома.</li>
-            <li><b>Объем работ</b>.</li>
+            <li>
+              <b>Объем работ</b>.</li>
           </ol>
           <b class="text modal__text">В вопросах ценовой политики компания «Строй Комфорт» действует гибко и предлагает своим клиентам выгодные цены
             и условия финансирования.</b>
