@@ -80,7 +80,21 @@
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100px;
-    ;
+
+
+    &--measure {
+      background-image: url('../img/icons/measure.svg');
+    }
+    &--quality {
+      background-image: url('../img/icons/green-earth.svg');
+    }
+    &--cold {
+      background-image: url('../img/icons/freezing.svg');
+    }
+    &--tree {
+      background-image: url('../img/icons/log.svg');
+    }
+
     &--process {
       background-image: url('../img/icons/blueprint.svg');
     }
