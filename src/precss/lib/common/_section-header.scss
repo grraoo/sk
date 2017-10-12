@@ -1,7 +1,11 @@
 .section-header {
   @include xxs-block() {
     font-size: 24px;
-  }  position: relative;
+  }
+
+  display: flex;
+
+  position: relative;
 
   margin: 0;
 
@@ -10,45 +14,30 @@
   font-weight: 600;
 
   text-align: center;
-
-
-  //   &::after {
-  //   content: '';
-
-  //   display: block;
-
-  //   width: 20%;
-  //   min-width: 250px;
-  //   max-width: 100%;
-  //   height: 3px;
-
-  //   margin: 35px auto 35px;
-
-  //   border: 0;
-
-  //   background: $c-darkgreen;
-  // }
-
+  &::before,
   &::after {
     content: '';
 
     display: block;
 
-    width: 13px;
-    height: 13px;
+    min-width: 30px;
+    height: 3px;
 
-// min-width: 250px;
-    // height: 2px;
-
-    margin: 30px auto 35px;
+    margin: auto 0;
 
     border: 0;
 
-// border-radius: 50%;
+    background: #599a42;
 
-    background: $c-darkgreen;
-    box-shadow: -26px 0 0 0 $c-green,
-    26px 0 0 0 $c-blue;
+    flex-grow: 1;
+  }
+  &::after {
+    margin-left: 10px;
+  }
+  &::before {
+    content: '';
+
+    margin-right: 10px;
   }
   &--inner {
     font-style: normal;
