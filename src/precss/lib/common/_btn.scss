@@ -118,4 +118,15 @@
       background-color: transparent;
     }
   }
+  &--map {
+    margin-left: 30px;
+
+    background-image: url(../img/bg/map.jpg);
+    background-position: center;
+    background-size: cover;
+
+    color: silver;
+
+    flex-grow: 1;
+  }
 }

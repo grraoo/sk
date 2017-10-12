@@ -2985,7 +2985,7 @@
       </div>
     </section>
     <section id="calculator" class="calculator">
-        <h2 class="section-header">Сколько стоит построить дом?</h2>
+      <h2 class="section-header">Сколько стоит построить дом?</h2>
       <form class="container calculator__form feedback__form" method="get" action="#">
         <button type="button" class="btn btn--green calculator__btn-top js-modalOpen" data-title="Ценовая политика нашей компании"
           data-target="#info">Ценовая политика нашей компании</button>
@@ -3340,23 +3340,21 @@
     </section>
     <section class="contacts" id="contacts">
       <h2 class="section-header">Наши контакты</h2>
-      <section class="action action--contacts">
+      <section class="container contacts__wrap">
         <div class="action__contacts">
           <p class="action__info action__info--phone">
             <a href="tel:+73952676600">+7 3952 67-66-00</a>
           </p>
           <p class="action__info action__info--address">
-            <a href="#map">г. Иркутск, ул. Пискунова, 160, оф. 504</a>
+            <a href="#map" class="js-modalOpen"  data-target="#map-popup" data-title="Карта">г. Иркутск, ул. Пискунова, 160, оф. 504</a>
           </p>
           <p class="action__info action__info--email">
             <a href="mailto:inbox@stroi-comfort.com">inbox@stroi-comfort.com</a>
           </p>
         </div>
+        <button class="btn btn--green btn--map js-modalOpen" data-target="#map-popup" data-title="Карта">посмотреть на карте</button>
       </section>
-      <section id="map" class="map">
-        <h2 class="visually-hidden">Карта</h2>
-        <img src="img/bg/map.jpg" alt="">
-      </section>
+
       <button class="btn btn--green js-modalOpen contacts__btn" data-target="#questions" data-title="Отправить сообщение">Остались вопросы?</button>
 
     </section>
@@ -3566,13 +3564,25 @@
       </div>
     </div>
 
+    <div class="overlay overlay--active" id="map-popup">
+      <div class="modal modal--map">
+        <div class="modal__close js-modalClose"></div>
+        <h2 class="section-header"></h2>
+        <div class="modal__content">
+          <section id="map" class="map">
+            <h2 class="visually-hidden">Карта</h2>
+            <img src="img/bg/map.jpg" alt="">
+          </section>
+          <script src="js/map.js?v=11"></script>
+        </div>
+      </div>
+    </div>
+
   </template>
   <script src="js/calculator.js?v=12"></script>
   <script src="js/utils.js?v=12"></script>
   <script src="js/main.js?v=12"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ5zYZm8MbG4CPOH4uIy6Uhpc7jGFQzRU"
-    asycn></script>
-  <script src="js/map.js?v=11"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ5zYZm8MbG4CPOH4uIy6Uhpc7jGFQzRU"></script>
 
 </body>
 

@@ -1,6 +1,9 @@
 .contacts {
   position: relative;
 
+  background-image: url('../img/bg/bg-stats.jpg');
+  background-position: center;
+  background-size: cover;
   // padding-top: 0;
 
   &__btn {
@@ -8,5 +11,11 @@
 
     margin: 0 auto;
     margin-top: 30px;
+  }
+
+  &__wrap {
+    display: flex;
+
+    justify-content: space-between;
   }
 }

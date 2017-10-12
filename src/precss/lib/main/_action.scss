@@ -82,6 +82,8 @@
 
     margin-bottom: 0;
 
+    background-color: rgba(255, 255, 255, .7);
+
     font-size: 20px;
 
     text-align: center;
@@ -91,61 +93,61 @@
       color: $c-gray;
     }
   }
-  &--contacts {
-    @include xxs-block() {
-      padding-right: 0;
-      padding-left: 0;
-    };
-    @include lg(left, 15px);
-    @include lg(max-width, calc(50% - 15px));
-    @include sm-block() {
-      position: static;
-      top: 0;
+  // &--contacts {
+  //   @include xxs-block() {
+  //     padding-right: 0;
+  //     padding-left: 0;
+  //   };
+  //   @include lg(left, 15px);
+  //   @include lg(max-width, calc(50% - 15px));
+  //   @include sm-block() {
+  //     position: static;
+  //     top: 0;
 
-      width: 100%;
-      max-width: none;
+  //     width: 100%;
+  //     max-width: none;
 
-      padding-top: 50px;
+  //     padding-top: 50px;
 
-      background: transparent;
+  //     background: transparent;
 
-      transform: none;
-      &::after {
-        // @include angles-top;
-        display: none;
-      }
-    };
+  //     transform: none;
+  //     &::after {
+  //       // @include angles-top;
+  //       display: none;
+  //     }
+  //   };
 
-    position: absolute;
-    top: 367px;
-    left: calc(50% - 585px);
-    z-index: 1;
+  //   position: absolute;
+  //   top: 367px;
+  //   left: calc(50% - 585px);
+  //   z-index: 1;
 
-    padding: 15px;
+  //   padding: 15px;
 
-    background-color: rgba(#f0f0f0, .8);
-    background-image: none;
+  //   background-color: rgba(#f0f0f0, .8);
+  //   background-image: none;
 
-    transform: translateY(-50%);
+  //   transform: translateY(-50%);
 
-    // background-repeat: no-repeat;
-    // background-attachment: scroll;
-    // background-position: left center, right 15%;
-    // background-size: 25%;
+  //   // background-repeat: no-repeat;
+  //   // background-attachment: scroll;
+  //   // background-position: left center, right 15%;
+  //   // background-size: 25%;
 
-    .action__header {
-      color: $c-gray;
-    }
-    &::before {
-      // content: '';
-      display: none;
+  //   .action__header {
+  //     color: $c-gray;
+  //   }
+  //   &::before {
+  //     // content: '';
+  //     display: none;
 
-      background-color: transparent;
-    }
-    &::after {
-      display: none;
-    }
-  }
+  //     background-color: transparent;
+  //   }
+  //   &::after {
+  //     display: none;
+  //   }
+  // }
   &__info {
     text-align: left;
     a {
