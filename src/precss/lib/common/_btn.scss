@@ -5,17 +5,25 @@
     font-size: 12px;
     line-height: 1.2;
   }
+
   display: inline-block;
+
   padding: 10px 18px;
+
   border: 2px solid currentColor;
+
   background-color: transparent;
+
   font-size: 14px;
   line-height: 1;
   font-weight: 600;
+
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+
   letter-spacing: .2em;
+
   cursor: pointer;
   transition-duration: .3s;
 
@@ -23,6 +31,7 @@
     color: $c-white;
     &:hover {
       background-color: $c-white;
+
       color: black;
     }
   }
@@ -44,12 +53,13 @@
     display: none;
   }
 
-	&--border-0 {
-		border-color: transparent;
-		&:hover {
-			background-color: transparentize(#fff,.8);
-			color: #fff
-		}
+  &--border-0 {
+    border-color: transparent;
+    &:hover {
+      background-color: transparentize(#ffffff,.8);
+
+      color: #ffffff;
+    }
   }
 
   &--action {
@@ -58,5 +68,17 @@
 
   &--nohover {
     pointer-events: none;
+  }
+
+  &--callback {
+    border-color: $c-darkgreen;
+
+    background-color: $c-blue;
+
+    color: white;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 }

@@ -27,6 +27,8 @@
 
   &__btn {
     .header-top--dark & {
+      background-color: transparent;
+
       color: black;
     }
   }
