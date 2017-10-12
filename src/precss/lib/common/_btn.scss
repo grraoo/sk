@@ -119,6 +119,16 @@
     }
   }
   &--map {
+    @include sm-block() {
+      margin-top: 30px;
+      margin-left: 0;
+
+      background-position: bottom left;
+
+      color: $c-green;
+      line-height: 15;
+    };
+
     margin-left: 30px;
 
     background-image: url(../img/bg/map.jpg);
