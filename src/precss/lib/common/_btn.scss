@@ -67,7 +67,44 @@
   }
 
   &--nohover {
+    display: flex;
+
+    border: 0;
+
+    font-size: 22px;
+
     pointer-events: none;
+    &::before,
+    &::after {
+      @include xs(min-width, 20px);
+
+      content: '';
+
+      display: block;
+
+      min-width: 30px;
+      height: 5px;
+
+      margin: auto 0;
+
+      border: 0;
+
+      background: white;
+
+      flex-grow: 1;
+    }
+    &::after {
+      @include xs(margin-left, 10px);
+
+      margin-left: 30px;
+    }
+    &::before {
+      @include xs(margin-right, 10px);
+
+      content: '';
+
+      margin-right: 30px;
+    }
   }
 
   &--callback {

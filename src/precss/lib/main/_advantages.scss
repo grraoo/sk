@@ -1,66 +1,86 @@
 .advantages {
   &--stats {
+    padding-top: 0;
+
     background-color: #f0f0f0;
+    background-image: url(../img/bg/bg-stats.jpg);
+    background-position: bottom right;
+    background-size: cover;
   }
   &__wrap {
     @include row-flex();
-    @include xs-block() {}
+    @include xs-block() {
+    }
+
     margin-top: -15px;
     margin-bottom: -15px;
+
     justify-content: center;
   }
   &__item {
     @include xs-block() {
       @include size(12);
+
       max-width: 270px;
     }
-    ;
     @include col();
     @include size(4);
     @include sm-block() {
       @include size(6);
     }
-    ;
+
+    position: relative;
+
     margin-top: 15px;
     margin-bottom: 15px;
-&--adv {
-  cursor: help;
-  p {
-    display: none;
-    position: absolute;
-    padding: 15px;
-    top: 1.5em;
-    background-color: white;
-    z-index: 1;
-    min-height: 100%;
-  }
-  &:hover p {
-    display: block;
-  }
-}
+    ;
+    ;
+    &--adv {
+      cursor: help;
+      p {
+        display: none;
+
+        position: absolute;
+        top: 1.5em;
+        z-index: 1;
+
+        min-height: 100%;
+
+        padding: 15px;
+
+        background-color: white;
+      }
+      &:hover p {
+        display: block;
+      }
+    }
     &--stats {
       @include size(6);
+
       padding-top: 30px;
-      border: 0;
-      padding-left: 15px;
       padding-right: 15px;
+      padding-left: 15px;
+
+      border: 0;
+
       background-color: white;
     }
-    position: relative;
   }
   ;
   &__descr {
     @include xs-block() {
       padding-top: 80px;
+
       background-size: auto 70px;
-    };
+    }
+
     padding: 15px;
     padding-top: 120px;
 
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100px;
-
+    ;
     &--process {
       background-image: url('../img/icons/blueprint.svg');
     }
@@ -87,8 +107,8 @@
     }
     &--russia {
       background-image: url('../img/icons/russia.svg');
-      background-size: 120px;
       background-position: center 15px;
+      background-size: 120px;
     }
     &--gift {
       background-image: url('../img/icons/giftbox.svg');
