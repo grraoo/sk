@@ -253,7 +253,7 @@ $(document).ready(function () {
       breakpoint: 1210,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
       }
     },
     {
@@ -290,8 +290,7 @@ $(document).ready(function () {
     }
   ];
 
-  var teamResponsive = [
-    {
+  var teamResponsive = [{
       breakpoint: 961,
       settings: {
         slidesToShow: 2,
@@ -325,11 +324,12 @@ $(document).ready(function () {
     arrows: true,
     dots: false,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
     responsive: adoptReviews,
-    pauseOnHover: true
+    pauseOnHover: true,
+    infinite: false
 
   });
 
@@ -355,9 +355,15 @@ $(document).ready(function () {
 
   var headSlider = $('#head-slider')
 
+  var played = false;
+
   function playSliderVideo() {
-    // var currentSlide = headSlider.find('.slick-active')
-    // currentSlide.find('video')[0].play()
+    var currentSlide = headSlider.find('.slick-active')
+    var video = currentSlide.find('video')[0];
+    if (video && !played) {
+      video.play();
+      played = true;
+    }
     console.log('slide');
   }
 
@@ -367,13 +373,13 @@ $(document).ready(function () {
     init: playSliderVideo,
     afterChange: playSliderVideo
   }).slick({
-    arrows: true,
-    dots: false,
+    arrows: false,
+    dots: true,
     draggable: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
-    // pauseOnHover: true,
+    pauseOnHover: true,
     autoplay: true,
     autoplaySpeed: 7000
   })

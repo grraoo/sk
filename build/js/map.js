@@ -14,7 +14,7 @@ function init() {
 	// Add your coordinates. How to know coordinates: https://support.google.com/maps/answer/18539?hl=en
 	var myLatlng = new google.maps.LatLng(52.274169, 104.339510);
 	var markerLatLng = new google.maps.LatLng(52.268286, 104.342564)
-	
+
 
 	// Add your company name and some text about company
 	var maptooltipbold = 'Строй Комфорт';
@@ -32,10 +32,10 @@ function init() {
 		// The latitude and longitude to center the map (always required)
 		center: myLatlng,
 		styles: [
-			
-			
+
+
 			{elementType: 'labels.text.fill', stylers: [{color: '#000000'}]},
-		
+
 			{
 				featureType: 'poi',
 				elementType: 'labels.text.fill',
@@ -60,6 +60,11 @@ function init() {
 				featureType: 'road',
 				elementType: 'geometry.stroke',
 				stylers: [{color: '#000000'}]
+			},
+			{
+				featureType: 'road',
+				elementType: 'labels.text.stroke',
+				stylers: [{color: '#ffffff'}]
 			},
 			{
 				featureType: 'road',
@@ -138,6 +143,8 @@ function init() {
 
 	google.maps.event.addListener(marker, 'click', function () {
 		infowindow.open(map, marker);
-	});
+  });
+  console.log('ok');
 
 }
+init();

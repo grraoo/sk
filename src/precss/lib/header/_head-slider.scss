@@ -1,5 +1,6 @@
 .head-slider {
   $border: 10px;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -25,15 +26,18 @@
   }
   &__slide {
     display: flex !important;
+
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
     position: relative;
 
     overflow: hidden;
 
     width: 100%;
     height: 100%;
+
+    align-items: center;
+    justify-content: center;
 
     &:focus {
       outline: none;
@@ -53,50 +57,52 @@
   }
 
   &__wrap {
-
-    padding: 0 15px;
-    border-left: $border solid $c-green;
-
     display: flex;
 
     flex-direction: column;
 
-    position: relative;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 20%;
     z-index: 1;
 
-    // width: 100%;
-    // height: 100%;
+    padding: 15px 30px;
 
-    // padding-right: 45px;
-    // padding-left: 45px;
+    border: 3px solid $c-green;
+    border-right-width: 0;
+    border-left-width: 10px;
 
-    align-items: center;
-    // justify-content: center;
-    position: relative;
+    background-image: linear-gradient(to right, rgba(22, 50, 109, .8) 40%, rgba(22, 50, 109, .4));
+
+    transform: translateY(-50%);
+
+    align-items: flex-start;
 
     &::before,
     &::after {
       // content: '';
+      position: absolute;
+      right: 0;
 
-position: absolute;
       width: 80%;
+      height: 40px;
+
       border: $border solid white;
       border-right: 0;
 
       flex-grow: 1;
-      height: 40px;
-      right: 0;
     }
     &::before {
-      border-bottom: 0;
       top: 0;
 
+      border-bottom: 0;
     }
     &::after {
-      border-top: 0;
       bottom: 0;
-    }
 
+      border-top: 0;
+    }
   }
   &__back {
     @include md(display, none);
@@ -115,28 +121,32 @@ position: absolute;
     object-fit: cover;
 
     &--img {
-    background-size: cover;
-    background-position: center;
-    min-height: 100%;
+      min-height: 100%;
 
-    &::before {
-      content:'';
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background-color: rgba(0,0,0,.3);
-      background-image: url(../img/bg/bg-hex.png);
-      background-size: 20px;
-    }}
+      background-position: center;
+      background-size: cover;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background-color: rgba(0,0,0,.3);
+        background-image: url(../img/bg/bg-hex.png);
+        background-size: 20px;
+      }
+    }
   }
 
   &__shift {
-    position: relative;
-    width: calc(100% + 100px);
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
     // background-color: rgba(black, .5);
   }
@@ -157,8 +167,6 @@ position: absolute;
 
     text-align: left;
     text-shadow: 0 0 3px black, 0 0 6px black, 0 0 9px black;
-
-
   }
 
   &__large {
@@ -176,16 +184,17 @@ position: absolute;
 
     text-transform: uppercase;
   }
-  &::after {
-    @include angles();
-  }
+
   &__btn {
-  position: absolute;
-  // bottom: -100px;
-  // right: 40%;
-  // transform: translateX(50%);
-bottom: -65px;
-left: 26px;
+    margin-top: 15px;
+    margin-right: auto;
+    // position: absolute;
+    // bottom: -100px;
+    // right: 40%;
+    // transform: translateX(50%);
+    // bottom: -65px;
+    // left: 26px;
+    margin-bottom: 15px;
   }
 }
 
@@ -193,5 +202,39 @@ left: 26px;
   &-track,
   &-list {
     height: 100%;
+  }
+  .head-slider &-dots {
+    bottom: 50px;
+
+    button {
+      opacity: 1;
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 20px;
+        height: 20px;
+
+        border: 3px solid white;
+        border-radius: 50%;
+
+        opacity: 1;
+        // opacity: .25;
+
+        text-align: center;
+
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+    .slick-active {
+      button::before {
+        opacity: 1;
+
+        background-color: white;
+      }
+    }
   }
 }

@@ -2,13 +2,11 @@
   @include lg-block() {
     min-width: 200px;
   }
-
-@include xs-block() {
+  @include xs-block() {
     margin-top: 15px;
     margin-right: 0;
   }
-
-@include md-block() {
+  @include md-block() {
     flex-direction: row;
 
     min-width: 0;
@@ -29,22 +27,25 @@
 
   &__btn {
     .header-top--dark & {
+      background-color: transparent;
+
       color: black;
     }
   }
   &__code {
     display: inline-block;
 
-    font-size: .8em;
-    line-height: 1.75;
+    font-size: .7em;
+    line-height: 2;
+    font-weight: 400;
 
     vertical-align: top;
   }
   &__phone {
     @include sm-block() {
       font-size: 0;
-    } 
-// @include md-block() {
+    }
+    // @include md-block() {
     //       margin-right: 20px;
     //     }
     @include lg-block() {
@@ -60,7 +61,8 @@
     font-weight: bold;
 
     text-decoration: none;
- transition-duration: .3s;
+
+    transition-duration: .3s;
     &:hover {
       color: $c-darkgreen;
     }

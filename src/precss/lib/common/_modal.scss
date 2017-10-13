@@ -1,6 +1,5 @@
 .modal {
   position: relative;
-  animation: popupShow .7s ease-in-out;
 
   max-width: 100%;
 
@@ -9,6 +8,8 @@
   padding-top: 50px;
 
   background: white;
+
+  animation: popupShow .7s ease-in-out;
 
   &__close {
     position: absolute;
@@ -161,5 +162,22 @@
   &--quest {
     width: 100%;
     max-width: 1200px;
+  }
+
+  &--map {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    .modal__content {
+      display: flex;
+
+      flex-direction: column;
+
+      flex-grow: 1;
+    }
   }
 }

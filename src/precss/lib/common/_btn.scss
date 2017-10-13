@@ -5,17 +5,25 @@
     font-size: 12px;
     line-height: 1.2;
   }
+
   display: inline-block;
+
   padding: 10px 18px;
+
   border: 2px solid currentColor;
+
   background-color: transparent;
+
   font-size: 14px;
   line-height: 1;
   font-weight: 600;
+
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+
   letter-spacing: .2em;
+
   cursor: pointer;
   transition-duration: .3s;
 
@@ -23,6 +31,7 @@
     color: $c-white;
     &:hover {
       background-color: $c-white;
+
       color: black;
     }
   }
@@ -44,12 +53,13 @@
     display: none;
   }
 
-	&--border-0 {
-		border-color: transparent;
-		&:hover {
-			background-color: transparentize(#fff,.8);
-			color: #fff
-		}
+  &--border-0 {
+    border-color: transparent;
+    &:hover {
+      background-color: transparentize(#ffffff,.8);
+
+      color: #ffffff;
+    }
   }
 
   &--action {
@@ -57,6 +67,76 @@
   }
 
   &--nohover {
+    display: flex;
+
+    border: 0;
+
+    font-size: 22px;
+
     pointer-events: none;
+    &::before,
+    &::after {
+      @include xs(min-width, 20px);
+
+      content: '';
+
+      display: block;
+
+      min-width: 30px;
+      height: 5px;
+
+      margin: auto 0;
+
+      border: 0;
+
+      background: white;
+
+      flex-grow: 1;
+    }
+    &::after {
+      @include xs(margin-left, 10px);
+
+      margin-left: 30px;
+    }
+    &::before {
+      @include xs(margin-right, 10px);
+
+      content: '';
+
+      margin-right: 30px;
+    }
+  }
+
+  &--callback {
+    border-color: $c-darkgreen;
+
+    background-color: $c-blue;
+
+    color: white;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  &--map {
+    @include sm-block() {
+      margin-top: 30px;
+      margin-left: 0;
+
+      background-position: bottom left;
+
+      color: $c-green;
+      line-height: 15;
+    };
+
+    margin-left: 30px;
+
+    background-image: url(../img/bg/map.jpg);
+    background-position: center;
+    background-size: cover;
+
+    color: silver;
+
+    flex-grow: 1;
   }
 }

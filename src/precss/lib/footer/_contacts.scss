@@ -1,12 +1,25 @@
 .contacts {
   position: relative;
 
-  padding-top: 0;
+  background-image: url('../img/bg/bg-stats.jpg');
+  background-position: center;
+  background-size: cover;
+  // padding-top: 0;
 
   &__btn {
     display: block;
 
     margin: 0 auto;
     margin-top: 30px;
+  }
+
+  &__wrap {
+    @include sm-block() {
+      flex-direction: column;
+    };
+
+    display: flex;
+
+    justify-content: space-between;
   }
 }

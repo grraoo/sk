@@ -1,4 +1,5 @@
 .compare {
+  background: #f0f0f0;
   &__items {
     @include md-block() {
       flex-wrap: wrap;
@@ -13,8 +14,7 @@
 
   &__item {
     @include size(4);
-
-@include xs-block() {
+    @include xs-block() {
       @include size(12);
 
       padding: 0 5%;
@@ -55,7 +55,16 @@
   }
 
   &__slider {
+    @include sm(padding-bottom, 0);
+
     display: flex;
+
+    padding-bottom: 30px;
+
+    border: 3px solid #cbcdca;
+
+    background: white;
+
 
     &-item {
       &:focus {
