@@ -3,7 +3,7 @@
     padding-top: 0;
 
     background-color: #f0f0f0;
-    background-image: url(../img/bg/bg-stats.jpg);
+    background-image: url(../img/bg/bg-newstats.jpg);
     background-position: bottom right;
     background-size: cover;
   }
@@ -22,19 +22,18 @@
       @include size(12);
 
       max-width: 270px;
-    }
+    };
     @include col();
     @include size(4);
     @include sm-block() {
       @include size(6);
-    }
+    };
 
     position: relative;
 
     margin-top: 15px;
     margin-bottom: 15px;
-    ;
-    ;
+
     &--adv {
       cursor: help;
       p {
