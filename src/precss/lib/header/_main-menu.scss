@@ -56,9 +56,11 @@
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: center;
+  // justify-content: space-between;
 
   &__switch {
     @include md-block() {
+      display: block;
       visibility: visible;
 
       position: absolute;
@@ -122,9 +124,9 @@
       }
     };
 
-    cursor: pointer;
+    display: none;
 
-    flex-shrink: 100;
+    cursor: pointer;
   }
   &__link {
     @include md-block() {
@@ -134,7 +136,9 @@
       padding: 15px 2% 0;
 
       font-size: 16px;
-    }  padding: 15px 2%;
+    };
+
+    padding: 15px;
 
     color: $c-white;
     font-size: 18px;
@@ -142,6 +146,8 @@
     text-decoration: none;
 
     letter-spacing: .5px;
+
+    flex: 0 0 auto;
 
     .header-top--dark & {
       color: black;

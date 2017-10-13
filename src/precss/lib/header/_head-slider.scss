@@ -57,6 +57,14 @@
   }
 
   &__wrap {
+    @include xs-block() {
+      left: 0;
+
+      padding: 10px 15px;
+
+      border-left: 0;
+    };
+
     display: flex;
 
     flex-direction: column;
@@ -143,6 +151,8 @@
   }
 
   &__shift {
+    @include xs(align-self, stretch);
+
     display: flex;
 
     flex-direction: column;
@@ -155,6 +165,10 @@
       font-size: 35px;
     }; @include xxs-block() {
       font-size: 27px;
+    }; @include xs-block() {
+      text-align: center;
+
+      align-self: stretch;
     };
 
     z-index: 10;
@@ -186,6 +200,12 @@
   }
 
   &__btn {
+    @include xs-block() {
+      margin: 15px 0;
+
+      align-self: stretch;
+    };
+
     margin-top: 15px;
     margin-right: auto;
     // position: absolute;
