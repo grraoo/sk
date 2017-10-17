@@ -6,9 +6,6 @@
       "message": "HEX цвета буквами строчными указывать следует",
       "severity": "warning"
     }],
-    "color-named": ["never", {
-      "message": "Цвета ключевыми словами нельзя писать"
-    }],
     "color-no-invalid-hex": [true, {
       "message": "HEX цвета правильно написаны быть должны"
     }],
@@ -40,7 +37,7 @@
     "function-whitespace-after": ["always", {
       "message": "Всегда нужны пробелы между функциями"
     }],
-    "number-leading-zero": ["always", {
+    "number-leading-zero": ["never", {
       "message": "Нуль перед точкой явно указать следует"
     }],
     "number-max-precision": [6, {
@@ -173,11 +170,11 @@
     "selector-combinator-space-before": ["always", {
       "message": "Перед комбинатором в селекторе пробел нужен"
     }],
-    "selector-no-id": [true, {
+  "selector-max-id": [0, {
       "message": "По ID джедай стилизовать не должен"
     }],
-    "selector-max-compound-selectors": [3, {
-      "message": "Селектор более чем 3-составной не хочешь ты",
+    "selector-max-compound-selectors": [5, {
+      "message": "Селектор более чем 5-составной не хочешь ты",
       "severity": "warning"
     }],
     "selector-no-qualifying-type": [true, {
@@ -221,10 +218,7 @@
     "selector-list-comma-space-before": ["never", {
       "message": "Перед запятой пробела быть не должно"
     }],
-    "rule-empty-line-before": ["always", {
-      "message": "Перед селектором вложенным строку пустую оставь",
-      ignore: ["after-comment"]
-    }],
+
     "media-feature-colon-space-after": ["always", {
       "message": "В @media после «:» пробелы необходимы"
     }],
@@ -307,9 +301,7 @@
     "no-eol-whitespace": [true, {
       "message": "Пустые символы в конце строки. Используй https://goo.gl/Co2tZ8"
     }],
-    "no-extra-semicolons": [true, {
-      "message": "Две точки с запятой подряд не хочешь ты"
-    }],
+
     "no-missing-end-of-source-newline": [true, {
       "message": "Файл пустой строкой кончаться должен: https://goo.gl/Co2tZ8"
     }],

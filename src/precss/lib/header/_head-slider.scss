@@ -14,16 +14,17 @@
   background-color: rgba(0, 0, 0, .3);
   background-image: url('../img/bg/bg-hex.png');
   background-position: top;
-  background-size: cover;
   background-size: 20px;
 
 
   .scroll-btn--right {
     right: 0;
   }
+
   .scroll-btn--left {
     left: 0;
   }
+
   &__slide {
     display: flex !important;
 
@@ -42,6 +43,7 @@
     &:focus {
       outline: none;
     }
+
     &::before {
       content: '';
 
@@ -63,14 +65,14 @@
       padding: 10px 15px;
 
       border-left: 0;
-    };
+    }
 
     display: flex;
 
     flex-direction: column;
 
     position: absolute;
-    top: 55%;
+    top: 65%;
     right: 0;
     left: 27%;
     z-index: 1;
@@ -79,6 +81,7 @@
 
     border: 5px solid $c-green;
     border-right-width: 0;
+    border-bottom-width: 10px;
     border-left-width: 15px;
 
     background-image: linear-gradient(to right, rgba(22, 50, 109, .6) 40%, rgba(22, 50, 109, .2));
@@ -101,17 +104,20 @@
 
       flex-grow: 1;
     }
+
     &::before {
       top: 0;
 
       border-bottom: 0;
     }
+
     &::after {
       bottom: 0;
 
       border-top: 0;
     }
   }
+
   &__back {
     @include md(display, none);
 
@@ -143,8 +149,8 @@
         bottom: 0;
         left: 0;
 
-        background-color: rgba(0,0,0,.3);
-        background-image: url(../img/bg/bg-hex.png);
+        background-color: rgba(0, 0, 0, .3);
+        background-image: url('../img/bg/bg-hex.png');
         background-size: 20px;
       }
     }
@@ -160,16 +166,19 @@
     align-items: center;
     // background-color: rgba(black, .5);
   }
+
   &__header {
     @include sm-block() {
       font-size: 35px;
-    }; @include xxs-block() {
+    }
+    @include xxs-block() {
       font-size: 27px;
-    }; @include xs-block() {
+    }
+    @include xs-block() {
       text-align: center;
 
       align-self: stretch;
-    };
+    }
 
     z-index: 10;
 
@@ -180,23 +189,24 @@
     font-size: 50px;
 
     text-align: left;
-    text-shadow: 0 0 3px black, 0 0 6px black, 0 0 9px black;
   }
 
   &__large {
     @include sm-block() {
       font-size: 50px;
-    }; @include xs-block() {
+    }
+    @include xs-block() {
       font-size: 30px;
-    }; @include xxs-block() {
+    }
+    @include xxs-block() {
       font-size: 27px;
-    };
+    }
 
     display: block;
 
     font-size: 70px;
 
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
 
   &__btn {
@@ -204,7 +214,7 @@
       margin: 15px 0;
 
       align-self: stretch;
-    };
+    }
 
     margin-top: 15px;
     margin-right: auto;
@@ -223,11 +233,13 @@
   &-list {
     height: 100%;
   }
+
   .head-slider &-dots {
     bottom: 50px;
 
     button {
       opacity: 1;
+
       &::before {
         content: '';
 
@@ -249,6 +261,7 @@
         -webkit-font-smoothing: antialiased;
       }
     }
+
     .slick-active {
       button::before {
         opacity: 1;
