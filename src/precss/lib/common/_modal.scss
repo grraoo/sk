@@ -85,8 +85,9 @@
         background-color: rgba(white, .7);
         font-size: 16px;
         line-height: 1.2;
+        margin-right: 15px;
         &::after {
-          display: none;
+          // display: none;
         }
       }
     }

@@ -129,8 +129,7 @@ var openModal = function (e, obj) {
                 slidesToScroll: 1,
                 arrows: true,
                 dots: false,
-                infinite: true,
-                initialSlide: 1
+                infinite: true
               });
             }
             clearInterval(preloadTimer);

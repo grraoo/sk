@@ -37,6 +37,7 @@
   &::after {
     @include xs(margin-left, 10px);
 
+    content: '';
     margin-left: 30px;
   }
   &::before {
@@ -51,7 +52,7 @@
 
     text-align: left;
     &::after {
-      display: none;
+      // display: none;
     }
   }
   &--dark {
