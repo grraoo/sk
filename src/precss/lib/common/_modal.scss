@@ -63,8 +63,7 @@
     @include xs-block() {
       margin-right: auto;
       margin-left: auto;
-    }
-    ;
+    };
     overflow: auto;
     max-width: 1000px; // max-height: 90vh;
     padding-bottom: 10px;
@@ -86,9 +85,6 @@
         font-size: 16px;
         line-height: 1.2;
         margin-right: 15px;
-        &::after {
-          // display: none;
-        }
       }
     }
     &--video {
@@ -108,7 +104,8 @@
     @include xxs(width, 300px);
     width: 790px;
     height: 100%;
-    margin: 0 10px;
+    // margin: 0 10px;
+    margin: 0x;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -120,7 +117,7 @@
     // }
   }
   .scroll-btn {
-    top: calc(100% + 20px);
+    top: calc(50% - 20px);
   }
   &--project,
   &--quest {
@@ -140,4 +137,3 @@
     }
   }
 }
-
