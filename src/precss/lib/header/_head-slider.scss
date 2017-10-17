@@ -70,18 +70,18 @@
     flex-direction: column;
 
     position: absolute;
-    top: 50%;
+    top: 55%;
     right: 0;
-    left: 20%;
+    left: 27%;
     z-index: 1;
 
     padding: 15px 30px;
 
-    border: 3px solid $c-green;
+    border: 5px solid $c-green;
     border-right-width: 0;
-    border-left-width: 10px;
+    border-left-width: 15px;
 
-    background-image: linear-gradient(to right, rgba(22, 50, 109, .8) 40%, rgba(22, 50, 109, .4));
+    background-image: linear-gradient(to right, rgba(22, 50, 109, .6) 40%, rgba(22, 50, 109, .2));
 
     transform: translateY(-50%);
 
@@ -131,7 +131,7 @@
     &--img {
       min-height: 100%;
 
-      background-position: center;
+      background-position: top;
       background-size: cover;
 
       &::before {
